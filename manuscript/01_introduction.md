@@ -1,0 +1,61 @@
+## 1. Introduction
+
+### 1.1 A degree of freedom that has to be actuated
+
+A reconfigurable intelligent surface (RIS) changes how it scatters by changing the electromagnetic state of its meta-atoms. A flexible intelligent metasurface changes how it scatters by changing where its elements are. In the system-level formulation, each radiating element carries a coordinate along the surface normal; the vector of those coordinates defines the surface shape; the shape enters the array response through the propagation phase; and it is then optimised jointly with beamforming or sensing objectives, subject to a morphing range [1, Eqs. (1a)–(3), p. 13321; 2, Eq. (1)]. Simulated gains are reported across several formulations — a transmit-power reduction of about 3 dB at a one-wavelength morphing range for a multiuser downlink [2], further gains from introducing and then optimising a surface in a doubly dispersive multiple-input multiple-output ISAC setting [1, p. 13328], and element movement reported as more effective than passive phase control at enhancing received signal strength in a single-input single-output multipath scenario, with joint optimisation better still [3, p. 6823].
+
+What separates this degree of freedom from every other one in the reconfigurable-surface literature is that exercising it requires moving matter. An electromagnetic state change propagates at the speed of a tuning mechanism. A geometry change propagates at the speed of an actuator, a structure and its damping. The system models do not represent the difference, and are not obliged to: in all four FIM system papers reviewed here the shape is a variable that may be set, and the mechanism that sets it lies outside the model.
+
+### 1.2 Why high mobility turns an omission into a question
+
+Idealised actuation is a harmless abstraction while the environment is quasi-static. It stops being harmless when the same framework is carried into high mobility, because the state the surface was configured for goes on changing while the surface responds, and nobody has measured how long the surface takes.
+
+It is worth being precise about what mobility does and does not establish, because the imprecision is the origin of much of what follows. At the operating point of the high-mobility FIM–ISAC study reviewed here — 28 GHz, a maximum velocity of 208 m/s — the maximum Doppler shift is approximately 19 kHz.¹ That figure fixes a *regime*: strongly time-selective, well beyond the carriers and velocities at which reconfigurable-surface hardware has been characterised. It does not fix an *interval*, because a coherence interval is a threshold-dependent correlation statistic and the threshold is a choice. And it does not fix a *deadline*, because a deadline additionally requires a performance tolerance that somebody has selected. This review keeps the three apart throughout, converts none of them into the others, and defines no deadline of its own.
+
+The question that remains is not whether the surface is "fast enough", which cannot be answered without a deadline. It is which operations in the loop are bound to the fast-varying state at all — and that is a question about physical processes and measurements, not about modelling preferences.
+
+### 1.3 Why one reported response time cannot answer it
+
+The natural move is to look up how quickly a flexible metasurface reconfigures. The literature appears to supply the number. It does not, and the reason organises this entire review.
+
+Consider one measured platform: a scalable one-bit PIN-diode RIS with an FPGA integrated into each tile [4]. Its abstract reports an update time below 0.1 ms; its results section reports that a tile can be reconfigured in under 10 ms. Both are correct, and they differ by up to two orders of magnitude, because they time different objects — one element, and then 256 of them. Neither is the interval a system designer needs, which begins when the channel or the geometry is observed and ends when the far field is stable.
+
+The pattern repeats at every level of the stack. A liquid-crystal RIS reports approximately 15 ms and 72 ms, but those are switch-on and switch-off transitions of a 4.6 μm material layer between 10 % and 90 % thresholds [5]. A flexible microwave metasurface reports 16.76 ms, but that interval runs from shape acquisition to bias-voltage supply and contains neither the deformation that produced the shape nor any settling afterwards [6]. A programmable mechanical surface reports response times within 0.1 s, but the object is a filamentary metal mesh with no meta-atoms, no bias network and no ground plane [7]. A soft shape-programmable surface reports approximately 30 ms — for an isolated ribbon, against approximately 300 ms for a full surface developing from flat [8].
+
+These are not competing estimates of one quantity. They are measurements of different quantities, on different architectures, with different definitions of when the clock starts and stops. Averaging them, ranking them, or quoting any one of them as *the* FIM response time yields a figure with no physical referent. The useful alternative is to keep them apart and ask what survives the separation.
+
+### 1.4 What the adjacent reviews already establish
+
+Three broad reviews in the reviewed set border this territory and partition it cleanly enough to leave a specific hole.
+
+Saifullah *et al.* classify tunable metasurfaces by tuning mechanism and rank their speeds qualitatively: electrical tuning is preferred above kilohertz modulation rates, liquid crystal modulates below about 1 kHz, microfluidic tuning operates on a millisecond scale, and mechanically stretchable substrates are slow, environmentally sensitive and unable to address individual unit cells [9]. The coverage of mechanisms is thorough and there is no discussion of ISAC. Tishchenko *et al.* survey multi-functional and hybrid RIS for ISAC, treat controller and network latency as a practical constraint, and link higher carrier frequencies to shorter coherence times [10]; there is no discussion of mechanical tuning. Ma *et al.* survey reconfigurable and movable antennas and state the position closest to ours: mechanical movement is generally slower than electronic reconfiguration; instantaneous-CSI position optimisation suits quasi-static environments with long coherence times, while fast fading calls for statistical-CSI approaches that reduce movement frequency; and hierarchical cross-layer control, in which statistical information guides slow movement while rapid state changes are decoupled, is an open direction [11, pp. 3, 20, 26–27]. The same survey argues that future models should incorporate inertia, settling time, friction, backlash, movement accuracy and energy rather than idealised instantaneous positioning.
+
+Two consequences follow, and the first is a constraint on what this manuscript may claim. **The slow-geometry, fast-electronics division of labour is established rather than novel**, and neither this review nor any FIM paper may present it as new: statistical-CSI FIM optimisation has been published [12, 13], a two-rate schedule — element movement per subframe, phase adjustment per time slot — is already embedded in a FIM channel-estimation protocol [3, p. 6829], and delay-aware modelling of reconfigurable apertures has begun in the adjacent fluid-antenna literature [14]. The second is that none of the three reviews concerns FIMs at all: a full-text search of each returns no occurrence of "FIM" or "flexible intelligent metasurface".² Ma *et al.* recommend that models include movement time, settling and energy; no reviewed source establishes which of those quantities have been measured, on what object, or under what definition.
+
+### 1.5 The question, and how it is answered
+
+> **Which operations in a FIM-assisted high-mobility ISAC system must track fast channel variation, which may follow slower geometric or statistical change, and how well are the resulting timescales supported by existing hardware and control demonstrations?**
+
+We answer it as an evidence-mapping problem rather than a design problem. Three instruments do the work, and each is introduced where it is first needed. An architecture taxonomy (Section 3) separates systems that share a name but not a physical mechanism, and states which measurements may transfer between them. A ten-stage decomposition of the adaptation chain (Section 5) makes it possible to say which process a given number times. A timing register (Section 6) records, for every reported value, the object timed, the start event, the end event, the measured-or-simulated status and the architecture — so that a measurement made on a mechanical mesh is never permitted to stand in for a measurement on a radiating aperture.
+
+### 1.6 Contributions
+
+Within the literature reviewed here and the searches recorded in Section 2:
+
+**C1 — A stage-resolved adaptation-chain decomposition specific to FIMs.** Ten stages from sensing to stabilised radiation, with each source's treatment of each stage classified as demonstrated, measured, simulated, assumed, absent or unclear. No reviewed source measures more than five of the ten stages; the largest linked set on a single platform covers S1–S2 and S4–S6, with channel estimation absent; no source measures channel estimation together with a commanded shape change; and the stages that carry measurements are distributed across four physically non-equivalent architectures whose timing quantities are not interchangeable.
+
+**C2 — A timing register with explicit definitions, and the two simplifications it qualifies.** Recording start and end events shows that an element-level update time cannot be substituted for a tile- or aperture-level configuration time — the same panel reports both, up to two orders of magnitude apart — and that the ranges reported for electronic and for mechanical processes overlap once the tuning mechanism is named, a liquid-crystal switch-off exceeding a measured multi-stage electronic compensation chain on a flexible surface.
+
+**C3 — A traceability audit of the hardware-feasibility premises used by the FIM system papers examined here.** Three premises are traced to their primary sources, and the primary measurement is compared with the value in circulation. A forward citation search of the three primary hardware sources — 262 citing records screened (Section 8) — finds the substitution in four papers, and finds no author-disjoint publication group reproducing it: every instance shares an author with the others. It also finds papers citing the same hardware and attaching no timing value at all. This is therefore a documented finding about one collaboration network, not a measurement of the field, and no prevalence claim is made.
+
+**C4 — A reporting framework** in which each field is motivated by a recurring reporting deficiency or by a specific unresolved quantity identified in the reviewed set, and which prescribes definitions rather than acceptance thresholds.
+
+We propose no hardware, no algorithm and no control architecture. The manuscript is an audit, and its value stands or falls on the accuracy of its citations.
+
+---
+
+*Footnotes*
+
+¹ Derived by us from the source's stated parameters (f_c = 28 GHz, v_max = 208 m/s) as f_D = v f_c / c; the source does not report this quantity. Converting a Doppler shift into a coherence time requires a correlation criterion that varies by convention, so we do not do so. Section 4 restates the figure at the precision the argument needs.
+
+² Full-text search with ligature normalisation — the extracted text renders "fi" and "fl" as single glyphs, which defeats naive searching — returning zero occurrences in each of the three documents.
