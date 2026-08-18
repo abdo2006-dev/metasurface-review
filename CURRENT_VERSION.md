@@ -4,13 +4,13 @@ Manuscript: v0.22
 Documentation: v1.9
 
 Private source repository commit:
-`63424622b7fa1a543e7bf2a1117f702e251cdd72`
+`63424622b7fa1a543e7bf2a1117f702e251cdd72` (private working tree was NOT clean at sync time -- see below)
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-08-18 22:32 UTC`
+`2026-08-18 22:33 UTC`
 
 Scientific freeze status:
 `Evidence base frozen at documentation v1.6. Manuscript v0.22 / documentation v1.9. The v0.21 pass recoded the adaptation chain on two axes and re-executed the forward citation search against an explicit published query; the v0.22 pass repaired the C1 stage count, collapsed a conference/journal pair the dataset had counted as two studies, and published the reproducibility scripts. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.9.`
