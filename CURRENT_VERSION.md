@@ -10,7 +10,7 @@ Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-08-18 19:01 UTC`
+`2026-08-18 19:12 UTC`
 
 Scientific freeze status:
 `Evidence base frozen at documentation v1.6; not revised in the v0.20 authoring pass except two factual corrections (CH-96, CH-97). See CHANGELOG.md.`
