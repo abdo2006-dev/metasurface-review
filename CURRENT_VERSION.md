@@ -4,22 +4,23 @@ Manuscript: v0.21
 Documentation: v1.8
 
 Private source repository commit:
-`deaf88e585bdeefeee3e5e200fab5a83399e7c29`
+`0937ac6a9273968801b0150ed84e657e9415af5f`
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-08-18 19:12 UTC`
+`2026-08-18 22:01 UTC`
 
 Scientific freeze status:
-`Evidence base frozen at documentation v1.6; not revised in the v0.20 authoring pass except two factual corrections (CH-96, CH-97). See CHANGELOG.md.`
+`Evidence base frozen at documentation v1.6. The v0.20 authoring pass made two factual corrections (CH-96, CH-97). The v0.21 reviewer-blocker revision re-executed the forward citation search against an explicit published query and corrected three of its counts, added one source (reference [34]), recoded the adaptation chain on two axes, and withdrew four over-reaches (CH-100 to CH-110). No other evidence was re-opened. See CHANGELOG.md v1.8.`
 
 Known unresolved blockers:
-- no domain-expert review has occurred
-- no timing interval in the manuscript carries an uncertainty (no reviewed source reports one)
-- seven identified system papers are behind publisher paywalls and unread -- every forward-citation count is a lower bound
-- some sources are identified bibliographically only and are marked in bold in manuscript/99_references.md
+- no domain-expert review has occurred; extraction and classification were performed by a single reviewer and were not independently duplicated or adjudicated
+- no *headline* response, morphing or adaptation interval in the manuscript carries an uncertainty, because no reviewed source reports repetitions or dispersion for one -- this is not universal across the register: Table 5 row 28 carries 0.35 +/- 0.15 s
+- seven of the 21 identified system studies are behind publisher paywalls and unread -- every forward-citation count is a lower bound, and an author-disjoint instance among them cannot be excluded
+- stage-2 screening and full-text extraction remain single-reader judgements; retrieval and stage-1 screening are exactly reproducible from tools/ but stages 2-3 are auditable per work rather than re-derivable
+- some sources are identified bibliographically only and are marked in bold in manuscript/99_references.md; documentation/source_inventory.md section 5b classifies each as load-bearing or peripheral
 
 Files synchronized from private source:
 - `CHANGELOG.md`
