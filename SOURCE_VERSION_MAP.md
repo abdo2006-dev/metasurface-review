@@ -1,6 +1,6 @@
 # Source Version Map
 
-**Snapshot: manuscript v0.21, documentation v1.8, generated 2026-08-18 22:01 UTC.**
+**Snapshot: manuscript v0.22, documentation v1.9, generated 2026-08-18 22:32 UTC.**
 
 Bibliographic identity and version-inspection status for every source cited in the manuscript's numbered reference list (`manuscript/99_references.md`), plus every external source verified for the bibliography but cited only in passing. **This is metadata only — no source PDF is distributed in this repository.** Every DOI and arXiv identifier here was resolved against the publisher-deposited Crossref record or the arXiv metadata endpoint on 18 August 2026 (`documentation/source_inventory.md` §3b). Full extraction detail, per-quantity locators, and independence-group definitions are in `documentation/source_inventory.md` and `documentation/audits/independence_audit.md`; this table is a navigation aid, not a replacement for them.
 
@@ -24,7 +24,7 @@ Bibliographic identity and version-inspection status for every source cited in t
 | [31] | XIA-26 | Channel estimation for FIMs: model-based approaches to neural operators | Xiao, J. Wang, Cui, Y. Yang, X. Li, Niyato, Yuen | 2026 | *IEEE TWC* 25:10684–10701 · 10.1109/TWC.2026.3654581 | N | Y (read as arXiv:2508.00268v4) | shares author (Yuen) with [1], [3] | 8 |
 | [32] | ANJ-25J | FIMs for downlink multiuser MISO communications | An, Yuen, Di Renzo, Debbah, Poor, Hanzo | 2025 | *IEEE TWC* 24(4):2940–2955 · 10.1109/TWC.2025.3526843 | N (read from an open institutional repository, not archived locally) | Y | **IG-2 — journal extension of [2]**, same result, not independent | 8 |
 
-**Cross-cutting authorship note.** An and/or Yuen appear as authors on [1], [2], [29], [30], [31] and [32] — the majority of the FIM system-modelling literature cited in this manuscript. Simulated-gain claims drawn from more than one of these papers are reported in the manuscript as coming from *several formulations*, not from *independent* ones (`documentation/manuscript_argument_map.md`; this wording was corrected during the v0.20 self-review — see `CHANGELOG.md` CH-98).
+**Cross-cutting authorship note.** An and/or Yuen appear as authors on [1], [2], [29], [30], [31] and [32] — the majority of the FIM system-modelling literature cited in this manuscript. Simulated-gain claims drawn from more than one of these papers are reported in the manuscript as coming from *several formulations*, not from *independent* ones (`documentation/manuscript_argument_map.md`; this wording was corrected during the v0.20 self-review — see `CHANGELOG.md` CH-98 (historical)).
 
 ## Hardware evidence sources
 
@@ -59,8 +59,8 @@ Bibliographic identity and version-inspection status for every source cited in t
 | [26] | CHE-26 | Wide-angle conformal active metasurface for dynamic beam steering and OAM generation | H. Chen, T. Liu, M. Chen, D. Wang, W. Li, Wu, L. Wang, Liu, L. Wang | **2026** | *Laser Photon. Rev.* 20(3), art. e01500 · 10.1002/lpor.202501500 (online 28 Sep 2025; issue dated Feb 2026) | Y (rasterised; read from rendered page images) | **IG-23** | 3 |
 | [27] | HAR-20 | Continuously tunable reflectarray element for 5G metrology in the K-band | Harz, Kleine-Ostmann, Schrader | 2020 | *Adv. Radio Sci.* 18:1–5 · 10.5194/ars-18-1-2020 | Y | **IG-20** with [28] — same group, same design lineage | 3 |
 | [28] | HAR-22 | Measurement and optimisation of a continuously tunable 10×10 reflectarray for 5G metrology | Harz, Kleine-Ostmann | 2022 | *Adv. Radio Sci.* 19:215–220 · 10.5194/ars-19-215-2022 | Y | **IG-20** with [27] — not independent | 3 |
-| [33] | HUA-25 | Flexible RIS-aided covert communications in UAV networks | C. Huang, G. Chen, Z. Xu, J. Zhu, **T. Pan**, Tafazolli, W. Huang | 2026 | *IEEE JSAC* 44:1577–1588 · 10.1109/JSAC.2025.3639197 | N | Crossref author-list metadata inspected; full text not confirmed read. **Shares author Taisong Pan with [6] (LI-25)** — this is the corrected independence finding behind manuscript Table 7 row N1 (`CHANGELOG.md` CH-97): disjoint from the FIM system-paper lineage that §8's forward search measured, but not disjoint from the cited hardware source | 8 |
+| [33] | HUA-25 | Flexible RIS-aided covert communications in UAV networks | C. Huang, G. Chen, Z. Xu, J. Zhu, **T. Pan**, Tafazolli, W. Huang | 2026 | *IEEE JSAC* 44:1577–1588 · 10.1109/JSAC.2025.3639197 | N | Crossref author-list metadata inspected; full text not confirmed read. **Shares author Taisong Pan with [6] (LI-25)** — this is the corrected independence finding behind manuscript Table 7 (`CHANGELOG.md` CH-97): disjoint from the FIM system-paper lineage that §8's forward search measured, but not disjoint from the cited hardware source | 8 |
 
-## Held but not cited in the v0.20 manuscript text
+## Held but not cited in the manuscript text (as of v0.22)
 
 `TAG-20` (Taghvaee, *Scalability Analysis of Programmable Metasurfaces for Beam Steering*, arXiv:2004.06917) is present in the project corpus and belongs to the separate, out-of-scope CST/full-wave companion project (`documentation/article_type_assessment.md` §6). It does not appear in `manuscript/99_references.md` and carries no manuscript-section citation.

@@ -2,7 +2,7 @@
 """
 Publication figures for:
   "Flexible Intelligent Metasurfaces for High-Mobility ISAC:
-   Hardware Evidence, Adaptation Timescales, and Validation Gaps"  (draft v0.21)
+   Hardware Evidence, Adaptation Timescales, and Validation Gaps"  (draft v0.22)
 
 Every value drawn here is transcribed from `Documentation/evidence_matrix.md`
 Part B and `Documentation/timescale_matrix.md`.  No value is invented, derived
@@ -103,7 +103,7 @@ def figure2():
 
     Fill colour  = stage evidence status (Q quantitative / D demonstrated / A assumed).
     Appended "T" = timing status: the DURATION of that stage was measured.
-    "(T)"        = duration reported but incompletely defined or not resolved
+    "(T)"        = partially delimited -- aggregate share, rate factor, residual or chosen wait
                    from an adjacent stage.
     The point of the figure is the cells that are Q with no T: a radiation
     pattern, a gain or a delivered power is a measurement but not a timing.
@@ -163,8 +163,8 @@ def figure2():
               loc="upper left", bbox_to_anchor=(-0.30, -0.01), frameon=False,
               fontsize=7, handlelength=1.1, ncol=2, columnspacing=1.4)
     ax.text(-3.05, -1.42,
-            "·T  the duration of the stage was measured, with identifiable start and end events\n"
-            "·(T)  a duration is reported but incompletely defined, or not resolved from an adjacent stage\n"
+            "·T  fully delimited: a duration with identifiable start AND end events, separable from its neighbours\n"
+            "·(T)  partially delimited: a share of an aggregate interval, a rate factor, a residual, or a chosen wait\n"
             "*  geometry held static throughout the timed interval",
             ha="left", va="bottom", fontsize=6.6, style="italic", color="#555555",
             linespacing=1.6)

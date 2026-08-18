@@ -1,6 +1,6 @@
 # Copyright and Distribution Notice
 
-**Snapshot: manuscript v0.21, documentation v1.8, generated 2026-08-18 22:01 UTC.**
+**Snapshot: manuscript v0.22, documentation v1.9, generated 2026-08-18 22:32 UTC.**
 
 ## Status of the manuscript text and original analysis
 
@@ -8,7 +8,7 @@ The manuscript (`manuscript/`), the evidence matrices, audits and other analysis
 
 ## Status of cited third-party works
 
-The bibliography (`manuscript/99_references.md`) and the source register (`review/SOURCE_VERSION_MAP.md`) identify third-party publications by title, authorship, venue, and DOI or arXiv identifier, consistent with normal scholarly citation practice. **Copyright in each cited work remains with its respective authors and publishers.** Quotations from cited works in the manuscript text are limited, attributed excerpts used for scholarly commentary and criticism.
+The bibliography (`manuscript/99_references.md`) and the source register (`SOURCE_VERSION_MAP.md`) identify third-party publications by title, authorship, venue, and DOI or arXiv identifier, consistent with normal scholarly citation practice. **Copyright in each cited work remains with its respective authors and publishers.** Quotations from cited works in the manuscript text are limited, attributed excerpts used for scholarly commentary and criticism.
 
 ## What this repository does not contain
 

@@ -80,7 +80,7 @@ The timed mode is **not** an S10 timing following deformation, and this matrix d
 
 ### 3.1 The maximum is five timed stages, and two platforms reach it — disjointly
 
-**No source in the corpus times more than five of the ten stages.** Two reach five, and the pair is the review's central structural finding stated in stage terms:
+**No source in the corpus fully delimits (`·T`) more than five of the ten stages, and only BAI-22 reaches five.** Counting partially delimited stages (`·(T)`) as well, the maximum is six and two platforms reach it. The pair is the review's central structural finding stated in stage terms:
 
 | Platform | Arch. | The five stages it times | What it cannot do |
 |---|---|---|---|

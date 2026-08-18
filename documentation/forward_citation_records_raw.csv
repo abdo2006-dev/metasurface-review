@@ -1,0 +1,307 @@
+record_seed,seed_openalex_id,seed_doi,openalex_id,doi,title,year,publication_date,type
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4323653529,10.1021/acsnano.2c12606,Technology Roadmap for Flexible Sensors,2023,2023-03-09,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4393977312,10.1002/adma.202313939,"MXene‐Enabled Pneumatic Multiscale Shape Morphing for Adaptive, Programmable and Multimodal Radar‐infrared Compatible Camouflage",2024,2024-04-05,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4386498201,10.1021/acs.chemrev.3c00335,Mechanically-Guided 3D Assembly for Architected Flexible Electronics,2023,2023-09-07,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4384525023,10.1115/1.4062966,Recent Advances and Applications of Machine Learning in Experimental Solid Mechanics: A Review,2023,2023-07-17,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4387430582,10.1016/j.mser.2023.100755,"Rational designs of mechanical metamaterials: Formulations, architectures, tessellations and prospects",2023,2023-10-07,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4406629728,10.1002/advs.202405835,"Multi‐Physical Lattice Metamaterials Enabled by Additive Manufacturing: Design Principles, Interaction Mechanisms, and Multifunctional Applications",2025,2025-01-20,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4388076714,10.20517/ss.2023.42,Morphing matter: from mechanical principles to robotic applications,2023,2023-10-31,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4384008500,10.1002/adma.202302824,A 3D‐Printed Ferromagnetic Liquid Crystal Elastomer with Programmed Dual‐Anisotropy and Multi‐Responsiveness,2023,2023-07-12,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4407736505,10.1126/sciadv.ads3058,Weaving liquid crystal elastomer fiber actuators for multifunctional soft robotics,2025,2025-02-19,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4385074017,10.1038/s41467-023-40109-z,Coaxially printed magnetic mechanical electrical hybrid structures with actuation and sensing functionalities,2023,2023-07-22,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4400199226,10.1038/s41467-024-49775-z,Machine learning-enabled forward prediction and inverse design of 4D-printed active plates,2024,2024-06-29,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4387097881,10.1038/s41467-023-41708-6,Embedded shape morphing for morphologically adaptive robots,2023,2023-09-27,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4385283871,10.1126/sciadv.adi0357,Wrap-like transfer printing for three-dimensional curvy electronics,2023,2023-07-26,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4385424581,10.1038/s41467-023-39842-2,"A multifunctional soft robotic shape display with high-speed actuation, sensing, and control",2023,2023-07-31,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4389774401,10.1093/nsr/nwad314,Bioinspired 3D flexible devices and functional systems,2023,2023-12-13,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4319264688,10.1002/admt.202201067,Advancements in Electronic Materials and Devices for Stretchable Displays,2023,2023-02-05,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4386102823,10.1016/j.ijmecsci.2023.108696,Sound absorption of space-coiled metamaterials with soft walls,2023,2023-08-23,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4400235685,10.1073/pnas.2320222121,Data-driven inverse design of flexible pressure sensors,2024,2024-07-02,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4406727975,10.1109/twc.2025.3526843,Flexible Intelligent Metasurfaces for Downlink Multiuser MISO Communications,2025,2025-01-22,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4410640243,10.1109/tap.2025.3571069,Emerging Technologies in Intelligent Metasurfaces: Shaping the Future of Wireless Communications,2025,2025-05-23,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4402222122,10.1016/j.matt.2024.06.010,Advances in materials for haptic skin electronics,2024,2024-09-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4407959015,10.1016/j.ast.2025.110102,"Recent advancements in morphing applications: Architecture, artificial intelligence integration, challenges, and future trends-a comprehensive survey",2025,2025-02-26,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4408145283,10.1109/twc.2025.3545305,Flexible Antenna Arrays for Wireless Communications: Modeling and Performance Evaluation,2025,2025-03-04,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4393001957,10.3389/fmats.2024.1361408,"Programmable mechanical metamaterials: basic concepts, types, construction strategies—a review",2024,2024-03-20,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4398161601,10.1073/pnas.2402135121,Transient charge-driven 3D conformal printing via pulsed-plasma impingement,2024,2024-05-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4401032198,10.1038/s41467-024-50497-5,Adaptive hierarchical origami-based metastructures,2024,2024-07-26,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4402831143,10.1126/sciadv.adq2024,Dynamically reconfigurable shape-morphing and tactile display via hydraulically coupled mergeable and splittable PVC gel actuator,2024,2024-09-25,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4402134439,10.1038/s41578-024-00714-w,Performance metrics for shape-morphing devices,2024,2024-09-02,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4382241535,10.1016/j.xcrp.2023.101475,"High-strength, lightweight nano-architected silica",2023,2023-06-27,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4404127660,10.1016/j.nantod.2024.102544,Emerging intelligent wearable devices for cardiovascular health monitoring,2024,2024-11-07,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4390667147,10.1016/j.ijmecsci.2023.108957,Machine learning-assisted shape morphing design for soft smart beam,2024,2024-01-08,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4409589024,10.1021/acsnano.5c03179,"3D Conformal Curvy Electronics: Design, Fabrication, and Application",2025,2025-04-19,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4367059166,10.1002/aisy.202300060,Thin‐Film‐Shaped Flexible Actuators,2023,2023-04-26,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4398250499,10.1126/sciadv.ado8431,A mechanically robust and facile shape morphing using tensile-induced buckling,2024,2024-05-23,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4404623311,10.1016/j.jbusres.2024.115057,Navigating the future of B2B marketing: The transformative impact of the industrial metaverse,2024,2024-11-22,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4386573561,10.1016/j.ijmecsci.2023.108716,Design principles for 3D-printed thermally activated shape-morphing structures,2023,2023-09-09,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4391343359,10.1073/pnas.2314661121,SonoTransformers: Transformable acoustically activated wireless microscale machines,2024,2024-01-30,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4400389481,10.1002/flm2.27,A deformation mismatch strategy enables over 120% stretchability of encapsulated serpentine silicon strips for stretchable electronics,2024,2024-07-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4408325233,10.1109/tcomm.2025.3550318,Flexible Intelligent Metasurfaces for Enhancing MIMO Communications,2025,2025-03-11,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4392885267,10.1002/adma.202313603,Freestanding Serpentine Silicon Strips with Ultrahigh Stretchability over 300% for Wearable Electronics,2024,2024-03-16,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4401478782,10.1016/j.apmt.2024.102372,"Programmable materials: Current trends, challenges, and perspectives",2024,2024-08-10,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4405103341,10.1126/sciadv.adr8421,Magnetic kirigami dome metasheet with high deformability and stiffness for adaptive dynamic shape-shifting and multimodal manipulation,2024,2024-12-06,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4400614729,10.1016/j.jmps.2024.105766,Curvature programming of freestanding 3D mesostructures and flexible electronics based on bilayer ribbon networks,2024,2024-07-14,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4411867229,10.1109/tvt.2025.3584865,Flexible Intelligent Metasurface for Enhancing Multi-Target Wireless Sensing,2025,2025-07-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4409963684,10.1002/adfm.202502678,Accelerating Cross‐Scenario Metasurface Adaptability with Plug‐and‐Play Kernel,2025,2025-04-30,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4415668541,10.1038/s41586-025-09650-3,Ultrasound-driven programmable artificial muscles,2025,2025-10-29,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4416775312,10.1126/sciadv.aeb2289,Spatiotemporally programmed dielectric liquid crystal elastomer: Electro-reversible 3D morphing via inverse 4D printing,2025,2025-11-26,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4401878406,10.1038/s41467-024-51865-x,Energy-efficient dynamic 3D metasurfaces via spatiotemporal jamming interleaved assemblies for tactile interfaces,2024,2024-08-26,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4407791164,10.1038/s44160-025-00746-2,Inverse programming of ferromagnetic domains for 3D curved surfaces of soft materials,2025,2025-02-20,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4408973635,10.1021/acsnano.4c18309,A Bilayer Microfluidics-Based Elastic Encapsulation Method of Liquid Metal Circuits with Cellular Resolution,2025,2025-03-30,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4410616116,10.1016/j.ijmecsci.2025.110355,Programmable inverse design framework for morphing hard-magnetic soft materials,2025,2025-05-22,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4414161715,10.1126/sciadv.adx4409,Autonomous codesign and fabrication of multistimuli-responsive material systems,2025,2025-09-12,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4411374884,10.1002/adfm.202508885,A Dynamically Programmable Hydrogel Surface with Rapid Magnetically Actuated Snapping of Bistable Dome Configurations,2025,2025-06-09,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4389221959,10.1016/j.matt.2023.11.002,Hierarchical tessellation enables programmable morphing matter,2023,2023-12-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4385063883,10.1126/sciadv.adg8019,Passively addressed robotic morphing surface (PARMS) based on machine learning,2023,2023-07-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4379141360,10.1016/j.matdes.2023.112053,Controlling the stiffness of bistable kirigami surfaces via spatially varying hinges,2023,2023-06-02,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4380986602,10.1021/acsami.3c05045,Soft Electromagnetic Vibrotactile Actuators with Integrated Vibration Amplitude Sensing,2023,2023-06-16,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4382501661,10.1021/acsami.3c05785,"Injectable, Tough, and Thermoplastic Supramolecular Hydrogel Coatings with Controllable Adhesion for Touch Sensing",2023,2023-06-28,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4390645594,10.1016/j.apmt.2023.102051,Laser fabrication of epidermal paper-based graphene sensors,2024,2024-01-06,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4404691662,10.1016/j.xcrp.2024.102307,Vapochromic materials based on pillar[n]arenes,2024,2024-11-25,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4318426292,10.1002/admt.202201703,Air‐Permeable Textile Bioelectronics for Wearable Energy Harvesting and Active Sensing,2023,2023-01-29,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4378953755,10.1021/acsnano.2c12679,Digital Mechanical Metasurfaces for Reprogrammable Structural Display,2023,2023-06-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4401567993,10.1109/tcomm.2024.3443738,T3DRIS: Advancing Conformal RIS Design Through In-Depth Analysis of Mutual Coupling Effects,2024,2024-08-14,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4400212092,10.1039/d4mh00628c,Programmable and resilient metamaterials with anisotropic and non-linear mechanical responses composed exclusively of stiff constituents,2024,2024-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4400852562,10.1021/acsami.4c06905,What Exactly Can Bionic Strategies Achieve for Flexible Sensors?,2024,2024-07-20,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4399595781,10.1039/d4cc01889c,Extrusion-based 3D printing of soft active materials,2024,2024-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4394819455,10.1063/5.0199052,Nano-kirigami/origami fabrications and optical applications,2024,2024-04-15,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4410101954,10.1039/d5mh00453e,Shape-morphing bioelectronic devices,2025,2025-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4395683696,10.23919/eucap60739.2024.10501383,Optimal Morphing Metasurface Lens for Next Generation RF Sensing and Communications,2024,2024-03-17,conference-paper
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4407103184,10.1063/5.0246029,Research progress on the principle and application of metalenses based on metasurfaces,2025,2025-02-03,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4408815386,10.1103/physrevapplied.23.034070,Inverse design of multistable kirigami metamaterial via geometry-enabled shape programming and transforming,2025,2025-03-25,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4399504453,10.1002/aisy.202400246,Residual Stress‐Driven Non‐Euclidean Morphing in Origami Structures,2024,2024-06-09,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4404780779,10.1088/2040-8986/ad97c9,The rise of intelligent adaptive metasurfaces,2024,2024-11-27,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4407233512,10.1002/smll.202410201,"Mask‐Free Direct Printing of Highly Customizable, Conformable, Robust, and Recyclable Microelectrodes for Advanced Curvy Electronics",2025,2025-02-07,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4409248529,10.1109/icct62411.2024.10946335,Flexible Antenna Arrays for Wireless Communications: Modeling and Performance Evaluation,2024,2024-10-18,conference-paper
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4412992181,10.1038/s41467-025-61838-3,Field-programmable robotic folding sheet,2025,2025-08-05,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4406270030,10.1089/soro.2024.0099,Reprogrammable Flexible Piezoelectric Actuator Arrays with a High Degree of Freedom for Shape Morphing and Locomotion,2025,2025-01-10,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4409568067,10.1002/adma.202417913,Cephalopod‐Inspired Magnetic Shape‐Morphing System for Complex 3D Transformations with Broad Reconfigurability in 3D Displays and Soft Robotics,2025,2025-04-17,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4415933650,10.1109/twc.2025.3627095,Flexible Intelligent Metasurface-Aided Wireless Communications: Architecture and Performance,2025,2025-11-05,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4397011767,10.3788/aos240480,超构表面偏振调控最新研究进展（特邀）,2024,2024-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4415913320,10.1038/s41467-025-64855-4,Magnetoactive bistable soft actuators for programmable large shape transformations at low magnetic fields,2025,2025-11-05,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4402648049,10.1016/j.apenergy.2024.124455,Three-dimensional flexible structures for miniature sensing and energy-harvesting devices,2024,2024-09-19,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4411026279,10.1016/j.xcrp.2025.102614,Multi-layer screen-printing of magnetic soft robots with integrated materials and functions,2025,2025-06-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4414085592,10.1021/acsnano.5c10814,Nanoimprinting Pattern on Responsive Microwrinkles for Dynamic Optical Diffraction and Reflection,2025,2025-09-09,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4416165748,10.20517/ss.2025.81,Deep learning-based inverse design and forward prediction of bi-material 4D-printed facial shells,2025,2025-11-13,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4386850892,10.1002/smll.202305460,Ligand‐Directed Shape Reconfiguration in Inorganic Materials,2023,2023-09-19,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4402285851,10.1007/s10409-024-24130-x,Postbuckling analyses of ribbon-type 3D structures assembled on cylindrical substrates,2024,2024-06-17,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4411086988,10.1073/pnas.2503313122,Programmable seconds-to-days-long delayed snapping in jumping metashells,2025,2025-06-06,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7124422891,10.1038/s41467-025-68217-y,"Advances, challenges and prospects of origami and kirigami optoelectronics",2026,2026-01-16,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7124726658,10.1016/j.jmps.2026.106524,Machine learning-energized framework for rapid and precise inverse design of programmable structures with multiple design variables,2026,2026-01-18,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7128500824,10.1021/acs.langmuir.5c05890,A Review of Magnetic Elastomers from Material Design and Fabrication Methods to Applications in Soft Robots,2026,2026-02-10,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7134133787,10.1109/twc.2026.3668992,Flexible Intelligent Metasurfaces in High-Mobility MIMO Integrated Sensing and Communications,2026,2026-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4414867837,10.1016/j.mechmachtheory.2025.106237,A novel heterogeneous polyhedral mechanism for shape morphing application,2025,2025-10-06,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4310422382,10.1115/1.4056350,From Kirigami to Hydrogels: A Tutorial on Designing Conformally Transformable Surfaces,2022,2022-11-30,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4390266240,10.3390/nanoenergyadv4010001,E-Polymers: Applications in Biological Interfaces and Organisms,2023,2023-12-27,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4411358764,10.1109/jiot.2025.3580372,Flexible Cylindrical Arrays With Movable Antennas for MISO System: Beamforming and Position Optimization,2025,2025-06-17,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4409623841,10.1016/j.mattod.2025.03.004,Morphable 3D architectures enabled by shear-guided approach,2025,2025-04-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4413368742,10.1021/acsnano.5c09771,Magnetic Kirigami Metasurfaces with Reprogrammed Multifunctionalities,2025,2025-08-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4416548650,10.1109/twc.2026.3654581,Channel Estimation for Flexible Intelligent Metasurfaces: From Model-Based Approaches to Neural Operators,2026,2026-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4416801226,10.1126/sciadv.aea5264,"Soft 3D electromagnetic structures with rapid, complex shape morphing",2025,2025-11-28,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7118319367,10.1038/s41467-025-65482-9,Shape-morphing active particles with invertible effective polarizability for configurable locomotion and steering,2026,2026-01-06,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4414056856,10.1016/j.snb.2025.138720,An acoustically actuated hydrogel shape-morphing micromachine,2025,2025-09-08,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4366235075,10.1073/pnas.2304391120,Programming material logic using magnetically controlled bistability,2023,2023-04-18,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4390085454,10.1039/d3sd00284e,Technological trends in medical robotic sensing with soft electronic skin,2023,2023-12-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4386935009,10.3390/nano13182605,Thermal Stability of Cu-Al-Ni Shape Memory Alloy Thin Films Obtained by Nanometer Multilayer Deposition,2023,2023-09-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4388764561,10.1039/d3cc04227h,Multimode opto-magnetic dual-responsive actuating fibers and fabrics programmed <i>via</i> direct ink writing,2023,2023-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4379741950,10.1088/2516-1091/acdc70,Imaging skins: stretchable and conformable on-organ beta particle detectors for radioguided surgery,2023,2023-06-07,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4404826451,10.1007/s10845-024-02527-8,Deep reinforcement learning-based energy-aware disassembly planning for end-of-life products with stimuli-activated self-disassembly,2024,2024-11-28,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4403600944,10.1109/lra.2024.3484160,Design and Shape Control of Robotic Morphing Interface With Reprogrammable Stiffness Based on Machine Learning,2024,2024-10-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4412531414,10.1002/aisy.202500457,Shape Morphing Programmable Systems for Enhanced Control in Low‐Velocity Flow Applications,2025,2025-07-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4413371405,10.1109/lra.2025.3601070,Scalable Inflatable Origami Robot Modules With Proprioceptive Closed-Loop Shape Control,2025,2025-08-20,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4405795184,10.1002/aelm.202400532,Dual‐Mode Flexible Parylene‐C‐Based In‐Memory Tactile Sensory Device with CMOS Compatibility,2024,2024-12-26,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4408378783,10.1002/aisy.202401043,An Integrated and Flexible Humidity Sensor for Noncontact Handwriting Recognition,2025,2025-03-08,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4411922406,10.1016/j.matt.2025.102248,Facet-driven folding for precise control of hydrogel pore actuation,2025,2025-07-02,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4413962147,10.1002/aisy.202500521,Shape‐Memory Alloy Torsion Strips for Soft Robotic Manipulation and Morphing,2025,2025-09-02,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4414603557,10.1109/tvt.2025.3614693,Flexible Intelligent Metasurface for Mitigating Beam Squint in Wideband Communications,2025,2025-09-29,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4416410917,10.1016/j.eml.2025.102424,High-precision fluidic Kirigami morphing surface for ultrasonic holographic lensing and haptic interfacing,2025,2025-11-20,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4416852866,10.1063/5.0299886,Experimental study of flow over a cylinder with rectangular ridges in the transitional subcritical regime,2025,2025-12-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7163141045,10.1038/s44455-026-00028-7,Crystallography-inspired hierarchical multiscale mechanical metamaterials,2026,2026-06-02,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4391816494,10.1098/rspa.2023.0430,Programming quadric metasurfaces via infinitesimal origami maps of monohedral hexagonal tessellations: Part I,2024,2024-02-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4400391533,10.1016/j.eml.2024.102187,High-stiffness reconfigurable surfaces based on bistable element assembly and bi-compatible truss attachment,2024,2024-07-05,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4403577509,10.1002/aisy.202400550,Harnessing Deep Learning of Point Clouds for Morphology Mimicking of Universal 3D Shape‐Morphing Devices,2024,2024-10-20,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4408324568,10.1109/globecom52923.2024.10901792,Downlink Multiuser Communications Relying on Flexible Intelligent Metasurfaces,2024,2024-12-08,conference-paper
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4376605704,10.1109/robosoft55895.2023.10121924,Evolving variable stiffness fiber patterns for multi-shape robotic sheets,2023,2023-04-03,conference-paper
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4391849331,10.1016/j.aeue.2024.155187,One-bit reconfigurable reflective metasurface based on electromagnetically wideband element,2024,2024-02-15,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4411055873,10.1115/1.4068826,Buckling Analysis of Circular Torus Weaves With In-Plane Curved Ribbons,2025,2025-06-05,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4415965585,10.1115/1.4070318,Mechanical Layout Optimization for Curvy Conformal Electronics With Multilayered Structures,2025,2025-11-06,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4379803758,10.2139/ssrn.4473244,Sound Absorption of Space-Coiled Metamaterials with Soft Walls,2023,2023-01-01,preprint
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4390788138,10.1101/2024.01.08.574699,Ultrasound-Driven Programmable Artificial Muscles,2024,2024-01-09,preprint
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4410529662,10.2139/ssrn.5262583,A Novel Heterogeneous Polyhedral Mechanism for Shape Morphing Application,2025,2025-01-01,preprint
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4385490614,10.1016/j.matt.2023.06.012,"Intelligent matter that senses, calculates, and reacts: A story of electronics, computation, and mechanics",2023,2023-08-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4387968846,10.1002/9783527840915.ch2,Silicone Elastomers‐Based Miniature Soft Robots,2023,2023-10-27,other
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4390018281,10.2139/ssrn.4671139,One-Bit Reconfigurable Reflective Metasurface Based on Electromagnetically Wideband Element,2023,2023-01-01,preprint
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4396853305,10.1109/robosoft60065.2024.10521946,Merging Variable Stiffness Fiber Patterns on Multi-Shape Robotic Sheets,2024,2024-04-14,conference-paper
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4404329374,10.21203/rs.3.rs-3509950/v1,A completely foldable patch elastically encapsulated by bilayer microfluidics enables high-resolution electrical imaging at human-machine interfaces,2024,2024-11-13,preprint
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4413186481,10.2139/ssrn.5389500,Mechanical Layout Optimization for Curvy Conformal Electronics with Multilayered Structures,2025,2025-01-01,preprint
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4413917023,10.1109/tbme.2025.3602094,Design of a Flexible Push-Button Two-Dimensional Ultrasound Array Probe,2025,2025-09-02,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4415313541,10.1002/adfm.202517157,Origami Twist‐Inspired Microbuilding Blocks for Multifunctional Shape‐Morphing Micromachines,2025,2025-10-18,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4415389233,10.1016/j.dt.2025.10.006,Design and fabrication of flexible igniters for transient electrical explosion,2025,2025-10-21,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4416817688,10.1016/j.ijsolstr.2025.113798,Mechanics of shape-programmable network structure actuated by electromagnetic force,2025,2025-11-29,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4417282478,10.1109/pimrc62392.2025.11274788,Harmonizing Flexibility and Intelligence: RIS-Aided Flexible Intelligent Metasurface Systems,2025,2025-09-01,conference-paper
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4417500451,10.1115/1.4070707,Accurate Discrete Simulation of Plates and Shells via Mid-Edge Formulation,2025,2025-12-19,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W4417515067,10.1088/1361-6463/ae2f6e,Post-buckling solution of flexoelectric semiconductor cylindrical shell under multi-physical coupling load,2025,2025-12-19,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7116953321,10.1016/j.tws.2025.114434,Thread-pulling-induced assembly strategy for complex 3D structures,2025,2025-12-23,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7117616820,10.1109/lwc.2025.3649732,Flexible Intelligent Metasurface for Downlink Communications Under Statistical CSI,2025,2025-12-30,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7118207423,10.1002/advs.202516891,Curvy Surface Reconstruction,2026,2026-01-04,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7125600937,10.1109/twc.2026.3654581,Channel Estimation for Flexible Intelligent Metasurfaces: From Model-Based Approaches to Neural Operators,2026,2026-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7133761709,10.1038/s44172-026-00630-7,Non-contact electroelastic modulation of conventional media leveraging two-way electromagnetic induction,2026,2026-03-05,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7136235219,10.2514/1.j065857,Elastodynamic Structural Deployment with Frangible Unfolding,2026,2026-03-16,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7140216230,10.1109/tap.2026.3673002,Joint Digital–Analog Control for Large Phase Shift Within Ultra-Wideband by Intelligent Reflector of Frequency Sensing,2026,2026-03-24,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7147424506,10.1039/d5mh02438b,Morphable architected materials with topologically variable and volumetric reconfiguration,2026,2026-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7164909508,10.1109/twc.2026.3701359,Weighted Sum-Rate Enhancement for Flexible Intelligent Metasurface-Assisted Multicell Systems,2026,2026-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7165165049,10.2139/ssrn.6963130,Laser Micromachined Auxetic NiTi Metasheet for Reversible Out-of-Plane Morphing,2026,2026-01-01,preprint
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7166049202,10.1126/sciadv.aeg0480,Magnetically levitated metasurface enabling tangible and bidirectional human-machine interaction,2026,2026-06-26,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7167212071,10.1109/lwc.2026.3709756,DRL-Based Joint Beamforming and Surface Shape Optimization for Flexible Intelligent Metasurface-Aided ISAC Systems,2026,2026-01-01,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7168251020,10.1109/icc59461.2026.11587389,Sum-Rate Maximization for Flexible Intelligent Metasurface Enhanced Multiuser MISO Communications,2026,2026-05-24,conference-paper
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7168284973,10.1109/icc59461.2026.11588131,Flexible Intelligent Metasurfaces for Enhancing MIMO Integrated Sensing and Communications,2026,2026-05-24,conference-paper
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7169518184,10.1021/acsnanomed.6c00123,Revisiting Colloid Theory for Biomedicine: Reconciling Simple Models in Complex Environments,2026,2026-07-17,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7201841701,10.1021/acs.nanolett.6c02184,Electro-Chemo-MechanicalCoupling in ElectronicallyProgrammable Surface Electrochemical Actuators,2026,2026-08-07,article
+BAI,W4296552404,10.1038/s41586-022-05061-w,W7202134615,10.1016/j.matlet.2026.141434,Laser micromachined auxetic NiTi Metasheet for recoverable out-of-plane morphing,2026,2026-08-10,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4391540578,10.1021/acs.chemrev.3c00356,Soft Sensors and Actuators for Wearable Human–Machine Interfaces,2024,2024-02-05,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4353038822,10.1126/sciadv.adf5551,Biodegradable electrohydraulic actuators for sustainable soft robots,2023,2023-03-22,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4400027520,10.1088/1361-665x/ad5c22,4D printing roadmap,2024,2024-06-26,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4385074017,10.1038/s41467-023-40109-z,Coaxially printed magnetic mechanical electrical hybrid structures with actuation and sensing functionalities,2023,2023-07-22,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4396924179,10.1038/s41578-024-00679-w,Liquid-metal-based magnetic fluids,2024,2024-05-15,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4387931919,10.1002/smll.202304147,Room‐Temperature Liquid Metals for Flexible Electronic Devices,2023,2023-10-24,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4387821385,10.1002/adfm.202309614,Controllable Flow and Manipulation of Liquid Metals,2023,2023-10-20,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4381798363,10.1126/sciadv.adh3350,Bioinspired helical-artificial fibrous muscle structured tubular soft actuators,2023,2023-06-23,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4385283871,10.1126/sciadv.adi0357,Wrap-like transfer printing for three-dimensional curvy electronics,2023,2023-07-26,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4385424581,10.1038/s41467-023-39842-2,"A multifunctional soft robotic shape display with high-speed actuation, sensing, and control",2023,2023-07-31,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4389291784,10.1002/adfm.202309989,Liquid Metal Functionalization Innovations in Wearables and Soft Robotics for Smart Healthcare Applications,2023,2023-12-03,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4389388953,10.1038/s41565-023-01530-z,Interlinking spatial dimensions and kinetic processes in dissipative materials to create synthetic systems with lifelike functionality,2023,2023-12-06,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4383480856,10.1002/adma.202303533,Liquid Metal Combinatorics toward Materials Discovery,2023,2023-07-07,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4390637335,10.1002/adfm.202313728,Conformal Fixation Strategies and Bioadhesives for Soft Bioelectronics,2024,2024-01-06,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4406727975,10.1109/twc.2025.3526843,Flexible Intelligent Metasurfaces for Downlink Multiuser MISO Communications,2025,2025-01-22,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4410640243,10.1109/tap.2025.3571069,Emerging Technologies in Intelligent Metasurfaces: Shaping the Future of Wireless Communications,2025,2025-05-23,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4398772118,10.1126/sciadv.adp5215,Multi-stimulus perception and visualization by an intelligent liquid metal-elastomer architecture,2024,2024-05-24,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4400810358,10.1126/sciadv.ado3937,Direct electromagnetic information processing with planar diffractive neural network,2024,2024-07-19,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4403141055,10.1002/adma.202406263,Digital Mechanical Metamaterial with Programmable Functionality,2024,2024-10-03,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4402831143,10.1126/sciadv.adq2024,Dynamically reconfigurable shape-morphing and tactile display via hydraulically coupled mergeable and splittable PVC gel actuator,2024,2024-09-25,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4396951138,10.1016/j.cis.2024.103183,Gallium-based liquid metals as smart responsive materials: Morphological forms and stimuli characterization,2024,2024-05-16,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4413315388,10.1021/acs.chemrev.4c00972,"From Molecules to Machines: A Multiscale Roadmap to Intelligent, Multifunctional Soft Robotics",2025,2025-08-19,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4402134439,10.1038/s41578-024-00714-w,Performance metrics for shape-morphing devices,2024,2024-09-02,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4390511324,10.1038/s44172-023-00157-1,Liquid-shaped microlens for scalable production of ultrahigh-resolution optical coherence tomography microendoscope,2024,2024-01-02,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4386779178,10.1002/adfm.202308703,Stimuli‐Responsive Liquid Metal Hybrids for Human‐Interactive Electronics,2023,2023-09-15,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4372203586,10.1016/j.talanta.2023.124626,An integrated microfluidic electrochemiluminescence device for point-of-care testing of acute myocardial infarction,2023,2023-05-05,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4367059166,10.1002/aisy.202300060,Thin‐Film‐Shaped Flexible Actuators,2023,2023-04-26,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4391343359,10.1073/pnas.2314661121,SonoTransformers: Transformable acoustically activated wireless microscale machines,2024,2024-01-30,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4409719429,10.1016/j.mattod.2025.04.005,Electromagnetic-stimulated untethered amphibious soft robot with multimodal locomotion,2025,2025-04-23,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4392793586,10.1039/d3lc01086d,Actuation for flexible and stretchable microdevices,2024,2024-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4397023863,10.1016/j.device.2024.100331,Revolutionizing flexible electronics with liquid metal innovations,2024,2024-05-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4416775312,10.1126/sciadv.aeb2289,Spatiotemporally programmed dielectric liquid crystal elastomer: Electro-reversible 3D morphing via inverse 4D printing,2025,2025-11-26,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4391690390,10.1002/adfm.202313474,Vibration‐Enabled Mobility of Liquid Metal,2024,2024-02-08,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4401878406,10.1038/s41467-024-51865-x,Energy-efficient dynamic 3D metasurfaces via spatiotemporal jamming interleaved assemblies for tactile interfaces,2024,2024-08-26,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4411374884,10.1002/adfm.202508885,A Dynamically Programmable Hydrogel Surface with Rapid Magnetically Actuated Snapping of Bistable Dome Configurations,2025,2025-06-09,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7119162085,10.1002/adma.202521268,Electromagnetic (EM)‐Driven Functional Materials,2026,2026-01-07,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4323352094,10.1002/adma.202211731,Liquid Metal Droplets‐Based Elastomers from Electric Toothbrush‐Inspired Revolving Microfluidics,2023,2023-03-07,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4393866336,10.1007/s42765-024-00399-4,Bio-imitative Synergistic Color-Changing and Shape-Morphing Elastic Fibers with a Liquid Metal Core,2024,2024-04-03,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4404287096,10.1002/adma.202413818,Neuro‐Actuating Photonic Skin Enabled by Ion‐Gel Transistor with Thermo‐Adaptive Block Copolymer,2024,2024-11-12,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4375850922,10.1002/adfm.202303312,Biomimetic Liquid Metal Mechatronic Devices,2023,2023-05-08,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4378953755,10.1021/acsnano.2c12679,Digital Mechanical Metasurfaces for Reprogrammable Structural Display,2023,2023-06-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4410101954,10.1039/d5mh00453e,Shape-morphing bioelectronic devices,2025,2025-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4402827140,10.1038/s41598-024-71919-w,A starfish-inspired 4D self-healing morphing structure,2024,2024-09-25,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4408815386,10.1103/physrevapplied.23.034070,Inverse design of multistable kirigami metamaterial via geometry-enabled shape programming and transforming,2025,2025-03-25,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4412992181,10.1038/s41467-025-61838-3,Field-programmable robotic folding sheet,2025,2025-08-05,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4387873317,10.1016/j.sna.2023.114766,Development of a flexible coil based on conductive polymer composite for PDMS-based soft electromagnetic microactuators,2023,2023-10-23,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4404621933,10.1002/adfm.202416231,Liquid Metal Chemical Plating Rheological Modification Method for Magnetic Metal Materials,2024,2024-11-21,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4406270030,10.1089/soro.2024.0099,Reprogrammable Flexible Piezoelectric Actuator Arrays with a High Degree of Freedom for Shape Morphing and Locomotion,2025,2025-01-10,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4409568067,10.1002/adma.202417913,Cephalopod‐Inspired Magnetic Shape‐Morphing System for Complex 3D Transformations with Broad Reconfigurability in 3D Displays and Soft Robotics,2025,2025-04-17,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4391142086,10.1002/aelm.202300763,Hybrid Printed Rigidity‐Programmable Substrate/Liquid Metal 3D Circuits Toward Stretchable Electronics,2024,2024-01-22,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4416165748,10.20517/ss.2025.81,Deep learning-based inverse design and forward prediction of bi-material 4D-printed facial shells,2025,2025-11-13,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4402285851,10.1007/s10409-024-24130-x,Postbuckling analyses of ribbon-type 3D structures assembled on cylindrical substrates,2024,2024-06-17,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7128038182,10.34133/research.1174,Integrated 3D Printing of Liquid Metal and Elastomer for Soft Robots and Electronics,2026,2026-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4412671495,10.1002/admt.202500446,Additive Manufacturing of Liquid‐Entrapped Architected Structures,2025,2025-07-25,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4415685169,10.1002/adfm.202519415,Multiscale‐Engineered Ionic Conductive Elastomer Paints for Direct Conformal Manufacturing of Multilayer Soft Ionotronics on 3D Curved Multi‐Material Surfaces,2025,2025-10-29,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7134133787,10.1109/twc.2026.3668992,Flexible Intelligent Metasurfaces in High-Mobility MIMO Integrated Sensing and Communications,2026,2026-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4386515498,10.1038/s41598-023-39464-0,Contactless deformation of fluid interfaces by acoustic radiation pressure,2023,2023-09-07,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4392000456,10.20517/ss.2023.50,Coupled mechanics in skin-interfaced electronics via computer vision methods,2024,2024-02-21,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4414341822,10.3390/electronics14183718,State-Space Modelling of Schottky Diode Rectifiers Including Parasitic and Coupling Effects up to the Terahertz Band,2025,2025-09-19,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4389164797,10.1088/1361-665x/ad112d,Fabric electromagnetic actuators,2023,2023-11-30,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4416548650,10.1109/twc.2026.3654581,Channel Estimation for Flexible Intelligent Metasurfaces: From Model-Based Approaches to Neural Operators,2026,2026-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4416801226,10.1126/sciadv.aea5264,"Soft 3D electromagnetic structures with rapid, complex shape morphing",2025,2025-11-28,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7135012801,10.1016/j.ijnonlinmec.2026.105352,Fast-response electrically driven actuators with complex and programmable deformation modes,2026,2026-03-13,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7141814277,10.1002/advs.202600043,Multi‐Functional Adaptive Interfaces for Next‐Generation Wearable and Implantable Bioelectronics,2026,2026-03-28,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4403600944,10.1109/lra.2024.3484160,Design and Shape Control of Robotic Morphing Interface With Reprogrammable Stiffness Based on Machine Learning,2024,2024-10-21,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4403916696,10.2478/ama-2024-0071,Multiphysics Simulation and Concept of an Electromagnetically Control Volumetric Pixel as a Step Towards a Shape Morphing Composite,2024,2024-10-30,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4412531414,10.1002/aisy.202500457,Shape Morphing Programmable Systems for Enhanced Control in Low‐Velocity Flow Applications,2025,2025-07-21,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4414603557,10.1109/tvt.2025.3614693,Flexible Intelligent Metasurface for Mitigating Beam Squint in Wideband Communications,2025,2025-09-29,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4415385124,10.1021/acsami.5c12651,"Somatosensory, Untethered Soft Robotic Muscles",2025,2025-10-20,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4416852866,10.1063/5.0299886,Experimental study of flow over a cylinder with rectangular ridges in the transitional subcritical regime,2025,2025-12-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7138939285,10.1109/globecom59602.2025.11431856,Weighted Sum-Rate Maximization for Flexible Intelligent Metasurface Aided Multicell Systems,2025,2025-12-08,conference-paper
+NI,W4297022396,10.1038/s41467-022-31092-y,W4388972868,10.1002/aisy.202300535,Monitoring Soft Shape Surface Deformation via Optical Images for the Distinction of Contact State,2023,2023-11-22,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4403577509,10.1002/aisy.202400550,Harnessing Deep Learning of Point Clouds for Morphology Mimicking of Universal 3D Shape‐Morphing Devices,2024,2024-10-20,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4408324568,10.1109/globecom52923.2024.10901792,Downlink Multiuser Communications Relying on Flexible Intelligent Metasurfaces,2024,2024-12-08,conference-paper
+NI,W4297022396,10.1038/s41467-022-31092-y,W4403875852,10.1007/978-981-97-1614-2_40,Liquid Metal Magnetic Device,2024,2024-01-01,book-chapter
+NI,W4297022396,10.1038/s41467-022-31092-y,W4415965585,10.1115/1.4070318,Mechanical Layout Optimization for Curvy Conformal Electronics With Multilayered Structures,2025,2025-11-06,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4387968846,10.1002/9783527840915.ch2,Silicone Elastomers‐Based Miniature Soft Robots,2023,2023-10-27,other
+NI,W4297022396,10.1038/s41467-022-31092-y,W4392167295,10.1002/tee.24040,Theoretical and Experimental Analysis on Liquid Metal Droplets Fiber Fabrication Via co‐Flow Microfluidic System,2024,2024-02-25,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4392906851,10.1088/1402-4896/ad3517,Stretchable and recyclable In<sub>3</sub>SnBi/PU nanofiber composite as flexible sensors for human motion monitoring,2024,2024-03-18,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4400678748,10.1007/978-981-19-2797-3_40-1,Liquid Metal Magnetic Device,2024,2024-01-01,book-chapter
+NI,W4297022396,10.1038/s41467-022-31092-y,W4404922345,10.1364/fio.2024.fm3d.6,Aberration-corrected High-resolution OCT Microprobe Using Liquid-shaped Freeform Microlens,2024,2024-01-01,conference-paper
+NI,W4297022396,10.1038/s41467-022-31092-y,W4405802526,10.1016/j.taml.2024.100566,Symmetry breaking in spoke double-ring structures formed by buckling-guided 3D assembly,2024,2024-12-26,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4413143673,10.1016/j.device.2025.100891,Reprogrammable and bistable magnetically driven pixel array with customizable surface properties,2025,2025-08-08,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4413186481,10.2139/ssrn.5389500,Mechanical Layout Optimization for Curvy Conformal Electronics with Multilayered Structures,2025,2025-01-01,preprint
+NI,W4297022396,10.1038/s41467-022-31092-y,W4415313541,10.1002/adfm.202517157,Origami Twist‐Inspired Microbuilding Blocks for Multifunctional Shape‐Morphing Micromachines,2025,2025-10-18,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4415389233,10.1016/j.dt.2025.10.006,Design and fabrication of flexible igniters for transient electrical explosion,2025,2025-10-21,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W4416817688,10.1016/j.ijsolstr.2025.113798,Mechanics of shape-programmable network structure actuated by electromagnetic force,2025,2025-11-29,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7123949023,10.1109/tmech.2025.3645095,A Vision-Based Pose-Adjustment Soft Surface With Backlit Illumination for Multiadaptive Inspection,2026,2026-01-13,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7125600937,10.1109/twc.2026.3654581,Channel Estimation for Flexible Intelligent Metasurfaces: From Model-Based Approaches to Neural Operators,2026,2026-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7125932619,10.20517/ss.2025.102,Magnetic manipulation of liquid metals for soft robotics,2026,2026-01-28,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7127317886,10.1109/tim.2026.3660414,"Design, Fabrication, and Measuring of a Pixelated Mechanical Structure With Shape Morphing and Uniform Contact Force",2026,2026-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7153065651,10.7498/aps.75.20260154,Near-field equivalent modeling and efficient analysis for electromagnetic characteristics of conformal reconfigurable intelligent surfaces,2026,2026-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7153288830,10.1007/s42114-026-01784-w,Temporal control engineering in 4D printing materials for adaptive systems: a biomedical perspective,2026,2026-04-10,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7163585384,10.1007/s11831-026-10658-9,A Review on Computational Modeling of Time-Evolving Functionality in 4d Manufacturing: From Smart Materials to Surface-Driven Systems,2026,2026-06-04,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7164909508,10.1109/twc.2026.3701359,Weighted Sum-Rate Enhancement for Flexible Intelligent Metasurface-Assisted Multicell Systems,2026,2026-01-01,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7166049202,10.1126/sciadv.aeg0480,Magnetically levitated metasurface enabling tangible and bidirectional human-machine interaction,2026,2026-06-26,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7167507910,10.1016/j.nantod.2026.103121,Toward intelligent micro/nanorobots for biomedical applications,2026,2026-07-06,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7167841907,10.1016/j.sna.2026.118218,A frequency-addressable electrothermal actuator system for multi-channel and programmable motion,2026,2026-07-09,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7168251020,10.1109/icc59461.2026.11587389,Sum-Rate Maximization for Flexible Intelligent Metasurface Enhanced Multiuser MISO Communications,2026,2026-05-24,conference-paper
+NI,W4297022396,10.1038/s41467-022-31092-y,W7168402977,10.1126/sciadv.aef3895,Digintel metasurface of extensive reprogrammable morphing,2026,2026-07-15,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7201841701,10.1021/acs.nanolett.6c02184,Electro-Chemo-MechanicalCoupling in ElectronicallyProgrammable Surface Electrochemical Actuators,2026,2026-08-07,article
+NI,W4297022396,10.1038/s41467-022-31092-y,W7203451138,10.1177/21695172261477712,Encountered-Type 3D Haptic Shape Display by Simulating Finger–Object Contact Regions,2026,2026-08-14,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7117469597,10.1016/j.cej.2025.172355,Tailored Schottky heterojunction and magnetoelectric synergy for optimizing MXene-based microwave absorbers,2025,2025-12-29,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4415383472,10.1038/s44310-025-00081-6,From performance to structure: a comprehensive survey of advanced metasurface design for next-generation imaging,2025,2025-10-21,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4416608880,10.1038/s41377-025-02072-w,Metasurface-assisted bioelectronics: bridging photonic innovation with biomedical implants,2025,2025-11-24,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4412490113,10.1016/j.iopt.2025.100004,AI-empowered optical metasurfaces: From unit-cell optimization to system-level integration,2025,2025-07-08,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7117046278,10.1002/lpor.202502303,Optically Transparent Transmissive Programmable Metasurface With Planar Huygens Resonance,2025,2025-10-06,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4414763822,10.1088/1361-665x/ae0edf,Large-scale reconfigurable metamaterials,2025,2025-10-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7108202428,10.1109/jsac.2025.3639197,Flexible Reconfigurable Intelligent Surface-Aided Covert Communications in UAV Networks,2025,2025-12-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7128083354,10.3390/s26031040,"A Hexa-Band Metamaterial Absorber for S, C, X, and Ku Band Applications",2026,2026-02-05,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4414125055,10.1103/gz3k-7hpp,Microwave Negative Refractive Index Enabled by Anti-Parity-Time Symmetry in a Coupled Photon-Magnon Hybrid System,2025,2025-08-07,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7118575462,10.1038/s41467-025-68170-w,Adaptive ionic liquid polymer microwave modulation surface with reprogrammable dielectric properties,2026,2026-01-08,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4416154367,10.1088/1361-6463/ae1e89,Inverse design of reconfigurable terahertz metasurface with wide phase modulation range via a high–precision CNN–transformer framework,2025,2025-11-12,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4416548650,10.1109/twc.2026.3654581,Channel Estimation for Flexible Intelligent Metasurfaces: From Model-Based Approaches to Neural Operators,2026,2026-01-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7115559378,10.1007/s11664-025-12593-0,The Principle of Holographic Encryption Based on Metasurfaces and Its Research Progress,2025,2025-12-16,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7160613482,10.1093/nsr/nwag263,Deep learning-enabled temporal sequencing of metasurface for rewritable and customizable electromagnetic illusions,2026,2026-05-07,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4410530307,10.1088/1361-6463/addad1,Digitally coded carbon ink based reflective surface (RS) for anomalous reflection,2025,2025-05-20,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4411887348,10.1364/oe.568932,Analysis and design of arbitrary 3D curved Pancharatnam-Berry phase THz metasurface with high aperture efficiency,2025,2025-07-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7125395148,10.1063/5.0306436,Writing metasurfaces by hand: A pen-based MXene approach for flexible and low-waste paper platforms,2026,2026-01-22,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7163538680,10.1038/s41467-026-74035-7,An in-sensor communication electronic textile for imperceptible and ultrarobust silent speech,2026,2026-06-04,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4410285604,10.3390/ma18102197,Exploiting the Modulation Effects of Epitaxial Vanadium Film in a Quasi-BIC-Based Terahertz Metamaterial,2025,2025-05-10,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4413941044,10.21203/rs.3.rs-7444154/v1,Adaptive ionic liquid polymer microwave modulation surface with reprogrammable dielectric properties,2025,2025-09-03,preprint
+LI,W4409148742,10.1038/s41467-025-58249-9,W4414867281,10.1088/2040-8986/ae0fa8,Dynamic structural color modulation using QBIC-Sb<sub>2</sub>S<sub>3</sub> phase-change metasurfaces,2025,2025-10-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4415471517,10.1002/adom.202502356,Cloaking and Antennas: From Theoretical Paradigms to Next‐Generation Intelligent Systems,2025,2025-10-23,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4415556370,10.2528/pierm25091806,Broadband Full Functional Reconfigurable Polarization Converter Based on Active Metasurface,2025,2025-01-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W4416952646,10.1021/acsaelm.5c02035,A Tree-Ring-Inspired Tunable Flexible Near-Zero-Index Metasurface for Microwave Power Transmission,2025,2025-12-03,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7116839459,10.1109/tmtt.2025.3645101,Design Approach of Broadband Phase-Dispersive Metasurface for EM Illusion Using Deep Learning-Based Method,2025,2025-12-23,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7118207423,10.1002/advs.202516891,Curvy Surface Reconstruction,2026,2026-01-04,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7124155149,10.1109/lawp.2026.3653782,Broadband Linear-Phase Metasurface for Full-Polarization Cloaking With RCS-Reduction Capability,2026,2026-01-14,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7124240270,10.1063/5.0308153,A single active metasurface for arbitrary polarization control,2026,2026-01-15,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7125600937,10.1109/twc.2026.3654581,Channel Estimation for Flexible Intelligent Metasurfaces: From Model-Based Approaches to Neural Operators,2026,2026-01-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7126033357,10.1109/lawp.2026.3658940,Integrated Multilayer Sandwich-Type Tunable Absorbing Composites for Wideband Radar Cross Section Control,2026,2026-01-29,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7129071136,10.1016/j.apmt.2026.103145,Continuously reconfigurable liquid metal metasurface for wideband and polarization-insensitive electromagnetic wavefront manipulation,2026,2026-02-17,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7131662222,10.23919/piers-fall62445.2025.11394161,Improvement of Microwave Chamber Heating Uniformity Based on Surface Vibration,2025,2025-11-04,conference-paper
+LI,W4409148742,10.1038/s41467-025-58249-9,W7134230370,10.1007/s42765-026-00700-7,"Modulus-Adjustable Smart Insole with Magneto-tunable Flexibility, High Impact-Responsive Energy Absorption and Low-Voltage Thermal Management",2026,2026-03-09,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7135059013,10.1016/j.ijmecsci.2026.111502,Mechanics-driven electromagnetic reconfiguration in smart cube origami structures,2026,2026-03-11,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7140216230,10.1109/tap.2026.3673002,Joint Digital–Analog Control for Large Phase Shift Within Ultra-Wideband by Intelligent Reflector of Frequency Sensing,2026,2026-03-24,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7148491352,10.1063/5.0315979,Multifunctional metasurfaces: From versatile electromagnetic control to array antenna applications,2026,2026-04-02,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7161115659,10.34133/research.1305,AI-Enabled Flexible Sensing Skin for Next-Generation Aircraft: Toward Embodied Intelligence,2026,2026-01-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7162320414,10.1002/apxr.202500230,Surface Charges Guided Quasi‐TEM‐mode Microwave Propagation along Dielectric Nanowire,2026,2026-05-25,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7164916831,10.1007/s40820-026-02247-z,Ultra-Broadband Microwave Absorption and Programmable Multispectral Camouflage Enabled by Neural-Network-Driven Impedance-Gradient Metadevices,2026,2026-06-16,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7166296487,10.29026/oet.2026.260014,AI-enabled electromagnetic metasurfaces for wireless communication and invisibility cloak,2026,2026-01-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7167070672,10.1016/j.isci.2026.116348,A review of reconfigurable metasurfaces for radar applications,2026,2026-07-01,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7167716748,10.1002/adma.202522736,Reprogrammable Bistable Metasurface for Arbitrary Electromagnetic Wave Manipulation,2026,2026-07-08,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7172321591,10.1038/s41598-026-52406-w,Experimental validation of a Ku-band cross-polarization converter and detailed numerical RCS investigation across multiple geometries,2026,2026-08-03,article
+LI,W4409148742,10.1038/s41467-025-58249-9,W7202295327,10.1109/iccem68495.2026.11629004,Intelligent Prediction of Far-Field Patterns for Conformal Metasurfaces Based on Neural Networks,2026,2026-04-01,conference-paper

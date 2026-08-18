@@ -9,8 +9,8 @@
 > **Scientific-freeze status.** The evidence base is frozen at documentation v1.6. The authoring pass moved claims between sections, tightened prose, produced the tables and figures, and converted the citation system to numbered references. It did **not** revise the science. Two corrections were made because they were factual errors found while completing the bibliography, and both are recorded in `CHANGELOG.md` v1.7: the DOI held for **BUD-22** was wrong, and one counterexample's author-overlap status (**E-FP-C1**, the JSAC paper) was stated too strongly.
 
 > ✅ **v2.1 — 18 August 2026, reviewer-blocker revision (`CHANGELOG.md` v1.8).** Three wording constraints below changed and are now binding:
-> 1. **C1's verb is `times`, never `measures`.** The stage count is a timing count; under a quantitative reading the maximum is six, not five. Two platforms reach five and are disjoint (LI-25 radiates without commanding its shape; BAI-22 commands its shape without an RF layer). S9 is timed by no source; S10 is quantitatively measured on five platforms and timed on one, with geometry static.
-> 2. **C3 must carry its observation window.** State "14 of 21 candidate studies read" and "an author-disjoint instance among the unread seven cannot be excluded" wherever the finding appears. Use **"one connected co-authorship network"**, not "all four share authors".
+> 1. **C1 must name which axis it counts, and `times` means `·T` only.** Three counts exist and differ: quantitatively evidenced stages (max **6**, LI-25 and BAI-22), fully delimited `·T` stages (max **5**, **BAI-22 alone**), and any timing information `·T`+`·(T)` (max **6**, both). Never write "five, reached by two platforms" — that figure follows from no consistent rule. The two platforms are disjoint under the any-timing reading (LI-25 radiates without commanding its shape; BAI-22 commands its shape without an RF layer). S9 is timed by no source; S10 is quantitatively measured on five platforms and timed on one, with geometry static.
+> 2. **C3 must carry its observation window.** State "13 of 20 candidate studies read" and "an author-disjoint instance among the unread seven cannot be excluded" wherever the finding appears. Use **"one connected co-authorship network"**, not "all four share authors".
 > 3. **No source unread in full may support a claim about what it does not contain.**
 
 ---
@@ -178,7 +178,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 3. **Table 7**: five instances across **four papers**, plus the counterexamples.
 4. **Zero author-disjoint publication groups.** This is the load-bearing result and it is negative. *(N3 = Level A)*
 5. Counterexamples are recorded so the section cannot read as confirmation-biased. **[KUM-25] is fully author-disjoint; [HUA-25] shares an author with [LI-25]** and is recorded as such rather than counted as fully independent. Corrected 18 Aug 2026.
-6. Two structural observations: no citing paper derives the 10 ms value; two instances were inserted between an author team's own conference/preprint and journal versions.
+6. Two structural observations, both bounded to the full texts inspected: no citing paper read derives the 10 ms value; two instances were inserted between an author team's own conference/preprint and journal versions.
 7. §8.6 explains the **mechanism** — informal terms permit rescoping when object, start and end are omitted — and disclaims bad faith explicitly.
 
 ⚠ **C3 is frozen at Level A.** Permitted: "the system papers audited here", "the cases traced here", "in the four papers located by this search". Forbidden: "the field routinely", "widespread", "systematic literature-wide misuse", "the FIM literature generally", any proportion, any prevalence. Only an **author-disjoint instance** would move this.
