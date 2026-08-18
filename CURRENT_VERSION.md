@@ -4,13 +4,13 @@ Manuscript: v0.21
 Documentation: v1.8
 
 Private source repository commit:
-`e87f0d6836dd3f865282c7ffbfa330963010713d` (private working tree was NOT clean at sync time -- see below)
+`deaf88e585bdeefeee3e5e200fab5a83399e7c29`
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-08-18 19:00 UTC`
+`2026-08-18 19:01 UTC`
 
 Scientific freeze status:
 `Evidence base frozen at documentation v1.6; not revised in the v0.20 authoring pass except two factual corrections (CH-96, CH-97). See CHANGELOG.md.`
