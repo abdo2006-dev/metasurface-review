@@ -32,6 +32,11 @@ NOTE ON DRIFT
     reports the delta explicitly. The recorded CSV is a snapshot of the screened
     set as of the stated date.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _paths import ROOT, DOC, MANUSCRIPT, DECISIONS, WORKS, RECORDS, REGISTER, MATRIX
 import argparse
 import csv
 import json
@@ -43,7 +48,7 @@ import urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-CSV_PATH = REPO / "Documentation" / "forward_citation_search_results.csv"
+CSV_PATH = DECISIONS
 
 SEARCH_DATE = "2026-08-18"
 OPENALEX = "https://api.openalex.org/works"

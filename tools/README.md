@@ -13,7 +13,7 @@ two retrieval scripts; the rest work offline against the committed CSVs.
 | Stage | Script | Status |
 |---|---|---|
 | Seed-wise citing-record retrieval (306 records) | `retrieve_306_records.py` | **automatic and exact** |
-| Deduplication to works (262) and stage-1 screening (65) | `reproduce_forward_citation_search.py` | **automatic and exact** — the 47-alternative expression is written out in full, with no ellipsis |
+| Deduplication to works (262) and stage-1 screening (65) | `reproduce_forward_citation_search.py` | **automatic and exact** — the expression is written out in full, with no ellipsis; its alternative count is reported from `len(WIRELESS_TERMS)` rather than hardcoded |
 | Stage-2 system-study screening (24 records) | — | **manual**, recorded per work in the CSV with a reason; auditable, not re-derivable |
 | Version-family collapse (20 studies) | `repair_study_families.py` | **recorded judgement with its evidence** — every merge and every examined-but-rejected pair is listed with authors, venue and dates |
 | Full-text timing extraction | — | **manual**, bounded by access: 13 of 20 studies were readable |

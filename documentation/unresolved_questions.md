@@ -102,7 +102,15 @@ It is deleted from the manuscript all the same, and the decision is a presentati
 The cylindrical conformal RIS paper, one conformal metasurface array paper and the wide-angle conformal active metasurface paper are rasterised Wiley downloads. Metadata and abstracts were read from rendered images; no deeper claim is drawn. If any of these needs to carry weight, page-by-page image reading is required.
 
 ### U8 — Author-overlap structure of the FIM system literature
-The external search returned many FIM papers with recurring author sets. If the system-modelling side of this field is less independent than its paper count suggests, that is directly relevant to how much confidence the shared assumptions should carry. **No co-authorship analysis was performed.** Flagged rather than claimed.
+The external search returned many FIM papers with recurring author sets. If the system-modelling side of this field is less independent than its paper count suggests, that is directly relevant to how much confidence the shared assumptions should carry.
+
+**✅ DONE — a co-authorship analysis was performed, and C3 now rests on it.** *(Superseded 18–19 Aug 2026; the previous text of this item said "No co-authorship analysis was performed" and was left standing after the analysis was done.)*
+
+**Method.** Author lists for all 24 stage-2 records were taken from OpenAlex published-record metadata and intersected with (i) the FIM system-paper lineage audited in this review and (ii) the author sets of the three primary hardware sources. Authorship is metadata-verifiable even where the full text is paywalled, so every study resolves; what remains unknowable for an unread paper is its *contents*, not its authorship. Implemented in `tools/resolve_author_network.py`; per-study result in `s11_study_register.md`.
+
+**What it established.** Of the 20 distinct studies: **14 share an author with the FIM lineage, 4 are disjoint from that lineage, and 2 are disjoint from both the lineage and all three primary hardware sources.** The four studies carrying the five propagation instances form **one connected co-authorship network** — connectivity is what was verified, not pairwise sharing. **No author-disjoint publication group reproduces the practice**, which is why C3 is held at Level A. Two fully author-disjoint studies cite the same hardware and attach no timing value, i.e. the counterexamples are independent while the propagation cases are not.
+
+**What remains limited.** The analysis is of *authorship*, not of intellectual independence — shared senior authors are evidence against independence, but their absence does not establish it. Seven studies remain unread, so no statement is made about what they contain; of those seven, exactly one is author-disjoint from both the lineage and all three seeds, and that single study is the entire residual risk to the independence finding. No prevalence, proportion or rate is estimated from any of this.
 
 ---
 

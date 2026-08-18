@@ -4,14 +4,14 @@ generated review-repository files must come from here, not from hand-maintained 
 
 Run directly to print the counts; import `counts()` to consume them.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _paths import ROOT, DOC, MANUSCRIPT, DECISIONS, WORKS, RECORDS, REGISTER, MATRIX
 import csv, json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DOC = ROOT / "Documentation"
-DECISIONS = DOC / "forward_citation_search_results.csv"
-WORKS = DOC / "forward_citation_works_deduplicated.csv"
-RECORDS = DOC / "forward_citation_records_raw.csv"
 
 
 def counts():
@@ -34,7 +34,18 @@ def counts():
     read_fams = sorted(f for f in fams if any(x["full_text_inspected"] == "yes" for x in fams[f]))
     unread_fams = sorted(f for f in fams if f not in read_fams)
 
+    # Derived from the expression itself, never hand-maintained: the v0.22 artifacts
+    # claimed 47 alternatives against an actual 46, because the number was prose.
+    import importlib.util as _il
+    _sp = _il.spec_from_file_location("_fcs", Path(__file__).resolve().parent /
+                                      "reproduce_forward_citation_search.py")
+    _m = _il.module_from_spec(_sp)
+    _sp.loader.exec_module(_m)
+    n_wireless = len(_m.WIRELESS_TERMS)
+    n_timing = len(_m.TIMING_TERMS)
+
     c = {
+        "regex": {"wireless_alternatives": n_wireless, "timing_alternatives": n_timing},
         "retrieval": {
             "records_pre_dedup": sum(1 for _ in csv.DictReader(open(RECORDS, encoding="utf-8"))),
             "unique_works": len(rows),

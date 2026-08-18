@@ -78,24 +78,58 @@ The timed mode is **not** an S10 timing following deformation, and this matrix d
 
 ## 3. What the matrix shows
 
-### 3.1 The maximum is five timed stages, and two platforms reach it — disjointly
+### 3.1 Three counts, which differ — and only one platform reaches five under the strict one
 
-**No source in the corpus fully delimits (`·T`) more than five of the ten stages, and only BAI-22 reaches five.** Counting partially delimited stages (`·(T)`) as well, the maximum is six and two platforms reach it. The pair is the review's central structural finding stated in stage terms:
+The three counts below are produced by `tools/c1_stage_counts.py`, which parses §2 of this
+file. They are **not** interchangeable, and an earlier version of this section presented a
+figure that follows from none of them: it credited LI-25 with "five stages it times" by
+counting its two `·(T)` cells as timed while dropping its `·T` at S10, and credited BAI-22
+with five by counting only its `·T` cells while dropping its `·(T)` at S8 — opposite rules
+on the two sides, producing a false symmetry.
 
-| Platform | Arch. | The five stages it times | What it cannot do |
-|---|---|---|---|
-| **LI-25** | A3 | S1, S2, S4, S5, S6 — all inside one reported 16.76 ms interval | **does not command its geometry** (S7 is an external fixture) |
-| **BAI-22** | A4 | S1, S2, S4, S5, S7 — inside a 0.35 ± 0.15 s function-evaluation cycle | **has no radio-frequency layer** (S6, S9, S10 do not exist on it) |
+| Count | Maximum | Reached by |
+|---|---|---|
+| **Q** — quantitatively evidenced stages (axis A) | **6** | BAI-22 **and** LI-25 |
+| **·T** — fully delimited stages (axis B) | **5** | **BAI-22 alone** |
+| **·T + ·(T)** — stages carrying any timing information | **6** | BAI-22 **and** LI-25 |
 
-The two sets of five differ by exactly one stage — S6 against S7 — and that one stage is the difference between compensating a shape and commanding one. Neither platform can be extended into the other by measurement alone.
+Per platform, exactly:
 
-**LI-25's set is linked rather than contiguous**, and the wording matters. S3 lies between S2 and S4 in the chain and is absent from the platform entirely: it has no channel estimator, because it is not trying to track a channel. A run that skips a stage the architecture never implements spans the part of the chain the architecture possesses, not the chain.
+| Platform | Arch. | `·T` fully delimited | `·(T)` partially delimited | `·T`+`·(T)` | What it cannot do |
+|---|---|---|---|---|---|
+| **BAI-22** | A4 | **5** — S1, S2, S4, S5, S7, inside a 0.35 ± 0.15 s function-evaluation cycle | 1 — S8, a **chosen** settling pause, not an observed settling time | **6** | **has no radio-frequency layer** (S6, S9, S10 do not exist on it) |
+| **LI-25** | A3 | **4** — S1, S4, S6, and S10 in a separate static-geometry experiment | 2 — S2 (an RMSD is an *accuracy*, and its share of the 16.76 ms total is not resolved from S1) and S5 (a **residual** of that total, not independently timed) | **6** | **does not command its geometry** (S7 is an external fixture) |
 
-⚠ **Wording constraint (unchanged from v1.0, still binding).** No section may claim "five contiguous stages" or a "longest contiguous chain". Acceptable: *"the largest set of linked stages timed on one platform"*; *"five of the ten stages"*; *"no source times S3 together with S7"*.
+**Only BAI-22 fully delimits five stages, and it does not radiate.** Under the strict reading
+LI-25 reaches four, not five. The 16.76 ms interval it reports is real and is reported; what
+it does not do is delimit each stage inside it.
 
-### 3.2 Under the quantitative reading the number is six, not five — which is why the axes were split
+**The disjointness survives the correction and is sharper than before.** Under the
+like-for-like reading — any timing information — the two tie at six. Their sets share S1, S2,
+S4 and S5, and differ exactly at **S6 and S10 against S7 and S8**: LI-25 carries the
+radio-frequency stages and cannot command a shape; BAI-22 carries the mechanical stages and
+has no radio. Neither can be extended into the other by measurement alone.
 
-Counting axis-A `Q` cells rather than axis-B `T` cells gives LI-25 six (S1, S2, S4, S5, S6, S10) and BAI-22 six (S1, S2, S4, S5, S7, S8). **The manuscript's count is a timing count and must always say so.** Any sentence of the form "no source measures more than five stages" is now forbidden; the licensed form is *"no source **times** more than five of the ten stages"*.
+**Both sets are linked rather than contiguous**, and the wording matters. S3 lies between S2
+and S4 in the chain and is absent from both platforms entirely: neither has a channel
+estimator, because neither is trying to track a channel. A run that skips a stage the
+architecture never implements spans the part of the chain the architecture possesses, not
+the chain.
+
+⚠ **Wording constraints (binding).** No section may claim "five contiguous stages" or a
+"longest contiguous chain". No section may say "five, reached by two platforms" — that
+figure follows from no consistent rule. No section may write "measures" for a timing count.
+Acceptable: *"no source **fully delimits** more than five of the ten stages, and only one
+reaches five"*; *"no source associates timing with more than six"*; *"no source times S3
+together with S7"*.
+
+### 3.2 The quantitative count is six for both platforms — which is why the axes were split
+
+Counting axis-A `Q` cells rather than axis-B markers gives LI-25 six (S1, S2, S4, S5, S6, S10)
+and BAI-22 six (S1, S2, S4, S5, S7, S8). **Every count in the manuscript must name the axis it
+is counting.** Any sentence of the form "no source measures more than five stages" is
+forbidden, and so is any sentence that reports a single stage count without saying which of
+the three it is.
 
 ### 3.3 Stabilised RF is quantitatively measured on five platforms and timed on one
 

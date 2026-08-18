@@ -1,7 +1,11 @@
 # Flexible Intelligent Metasurfaces for High-Mobility ISAC: Hardware Evidence, Adaptation Timescales, and Validation Gaps
 
-**Draft v0.22 — structured critical review — 19 August 2026.**
-*C1/C3 integrity pass. Supersedes v0.21.*
+**Draft v0.23 — structured critical review — 19 August 2026.**
+*Public-artifact reproducibility freeze. Supersedes v0.22.*
+*No scientific result changed: C1 and C3 were independently recomputed from the published v0.22 files and survive unaltered. This release repairs the public artifact itself — ten reproducibility scripts hardcoded a capitalised documentation path and failed on a case-sensitive filesystem; the decision-table builder still contained pre-v0.22 study families and could have regenerated them; and the screening expression was described as having forty-seven alternatives against an actual forty-six. The only manuscript text altered is that count in §2.3. Change list in `CHANGELOG.md` v1.10.*
+
+*Prior revision (v0.22).*
+*C1/C3 integrity pass. Superseded v0.21.*
 *Three defects found by independent inspection of the published v0.21 artefact are repaired: the §2.4 method description still defined a one-axis stage coding contradicting §5; the C1 stage count of "five, reached by two platforms" followed from no consistent rule and is replaced by counts that name their axis; and the forward-citation dataset counted a conference paper and its journal extension as two studies, violating this manuscript's own independence rule. All C3 counts are recomputed from the repaired dataset and are now generated from it rather than maintained in prose. Change list in `CHANGELOG.md` v1.9.*
 
 *Prior revision (v0.21).*

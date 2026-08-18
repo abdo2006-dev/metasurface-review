@@ -1,0 +1,35 @@
+# Runs on the PUBLIC review mirror. Its purpose is to catch exactly the class of defect
+# that shipped in v0.22: tooling that works on the author's case-insensitive macOS
+# filesystem and fails on a case-sensitive Linux checkout, so that the reproducibility
+# claims the manuscript makes for this artifact are false for everyone else.
+name: validate public snapshot
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest        # case-sensitive filesystem, which is the point
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # No dependencies: the reproducibility package is standard library only.
+      - name: Show tree casing
+        run: ls -la && ls -la documentation | head -5
+      - name: Public snapshot validation
+        run: python3 tools/validate_public_snapshot.py
+      - name: C1 stage counts
+        run: python3 tools/c1_stage_counts.py
+      - name: S11 counts
+        run: python3 tools/s11_counts.py
+      - name: Stale-count guard
+        run: python3 tools/check_s11_consistency.py
+      - name: Decision-table rebuild is field-identical
+        run: python3 tools/build_forward_citation_csv.py --check
+      - name: Relative link check
+        run: python3 tools/check_mirror_links.py .

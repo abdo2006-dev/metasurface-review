@@ -1,14 +1,18 @@
 <!-- AUTO-GENERATED REVIEW COPY -->
 <!-- DO NOT EDIT DIRECTLY -- edit the section files in manuscript/ and re-run tools/sync_review_repo.py -->
 
-> Manuscript v0.22 · generated 2026-08-18 22:34 UTC · private working-repository commit `87114766f9d1d0f72445a3817068d01b3fbc0ff7`
+> Manuscript v0.23 · generated 2026-08-18 22:53 UTC · private working-repository commit `9ba42f9c32055e042217740de88eb57d9b860eec`
 
 ---
 
 # Flexible Intelligent Metasurfaces for High-Mobility ISAC: Hardware Evidence, Adaptation Timescales, and Validation Gaps
 
-**Draft v0.22 — structured critical review — 19 August 2026.**
-*C1/C3 integrity pass. Supersedes v0.21.*
+**Draft v0.23 — structured critical review — 19 August 2026.**
+*Public-artifact reproducibility freeze. Supersedes v0.22.*
+*No scientific result changed: C1 and C3 were independently recomputed from the published v0.22 files and survive unaltered. This release repairs the public artifact itself — ten reproducibility scripts hardcoded a capitalised documentation path and failed on a case-sensitive filesystem; the decision-table builder still contained pre-v0.22 study families and could have regenerated them; and the screening expression was described as having forty-seven alternatives against an actual forty-six. The only manuscript text altered is that count in §2.3. Change list in `CHANGELOG.md` v1.10.*
+
+*Prior revision (v0.22).*
+*C1/C3 integrity pass. Superseded v0.21.*
 *Three defects found by independent inspection of the published v0.21 artefact are repaired: the §2.4 method description still defined a one-axis stage coding contradicting §5; the C1 stage count of "five, reached by two platforms" followed from no consistent rule and is replaced by counts that name their axis; and the forward-citation dataset counted a conference paper and its journal extension as two studies, violating this manuscript's own independence rule. All C3 counts are recomputed from the repaired dataset and are now generated from it rather than maintained in prose. Change list in `CHANGELOG.md` v1.9.*
 
 *Prior revision (v0.21).*
@@ -110,7 +114,7 @@ Two kinds of search supplement the corpus, and their evidential weight differs.
 
 **A forward citation search** (18 August 2026) is reproducible, and its two stages are reproducible in different senses, which we distinguish rather than blur.
 
-*Stage one is automatic and exact.* Every work citing the three primary hardware sources was retrieved through the OpenAlex citation graph — 160, 102 and 44 citing records for the filamentary mechanical platform, the soft shape-programmable surface and the flexible microwave metasurface respectively — giving 306 records and **262 unique works** after deduplication by identifier. Title and abstract were screened against an explicit forty-seven-alternative wireless and communications expression, reducing these to **65**. The seed identifiers, the query, the deduplication rule and the expression in full are published as a runnable script alongside this manuscript, and re-executing it reproduces the retrieval and this screen exactly.
+*Stage one is automatic and exact.* Every work citing the three primary hardware sources was retrieved through the OpenAlex citation graph — 160, 102 and 44 citing records for the filamentary mechanical platform, the soft shape-programmable surface and the flexible microwave metasurface respectively — giving 306 records and **262 unique works** after deduplication by identifier. Title and abstract were screened against an explicit forty-six-alternative wireless and communications expression, reducing these to **65**. The seed identifiers, the query, the deduplication rule and the expression in full are published as a runnable script alongside this manuscript, and re-executing it reproduces the retrieval and this screen exactly.
 
 *Stage two is manual and is recorded rather than re-derived.* Excluding optics, photonics, materials, mechanics and imaging work leaves 24 records, which collapse under the independence rule below — a preprint and its version of record are two versions of one study, and a conference paper and its journal extension are one lineage — into **20 distinct flexible-metasurface or reconfigurable-surface system studies**. Identifier-level deduplication does not perform that collapse by itself; four version groups occur here, of which only one is a duplicate index of a single work, the other three being genuine conference-to-journal or preprint-to-record pairs. Every one of the 262 works carries a row in the published screening table giving its stage-one result, its stage-two decision and the reason for it, its full-text status and its final role, so that a reader can audit each judgement individually.
 

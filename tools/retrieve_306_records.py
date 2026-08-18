@@ -12,10 +12,14 @@ Output: Documentation/forward_citation_records_raw.csv, one row per record,
 in retrieval order, with no screening columns. This is the artifact the
 manuscript's "306 records" refers to.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _paths import ROOT, DOC, MANUSCRIPT, DECISIONS, WORKS, RECORDS, REGISTER, MATRIX
 import csv, json, sys, time, urllib.parse, urllib.request
 from pathlib import Path
 
-DOC = Path(__file__).resolve().parent.parent / "Documentation"
 OPENALEX = "https://api.openalex.org/works"
 MAILTO = "abdo.studyy@gmail.com"
 

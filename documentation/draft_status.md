@@ -1,8 +1,10 @@
 # Draft Status
 
-**Version:** 1.9 · 19 August 2026 · manuscript draft **v0.22** — C1/C3 integrity pass (see `CHANGELOG.md` v1.9)
+**Version:** 1.10 · 19 August 2026 · manuscript draft **v0.23** — public-artifact reproducibility freeze (see `CHANGELOG.md` v1.10)
 
-> **What v0.21 is.** A targeted repair of the methodological and evidentiary problems raised in an independent review of v0.20 — **not** a rewrite, and not a broadening of any claim. Four things changed materially: the adaptation-chain coding was rebuilt on two axes so that a quantitative RF measurement can no longer be counted as a measured latency; the forward citation search was re-executed against an explicit published query, correcting three counts and surfacing one new author-disjoint counterexample; all unbounded absence and priority language was bounded; and four over-reaches were corrected, one of which was a claim resting on a source we had not read. **C3 remains at Level A.** Full change list in `CHANGELOG.md` v1.8. A section-number crosswalk from the v0.14 numbering used throughout the older documentation is at the end of `manuscript_argument_map.md`.
+> **What v0.23 is.** A **reproducibility and integrity release, not an authoring pass.** No scientific result changed: C1 and C3 were independently recomputed from the published v0.22 files and survive unaltered. What changed is that the public artifact now actually supports the claims the manuscript makes for it. Ten public scripts hardcoded `Documentation/` and failed on a case-sensitive Linux checkout, so the mirror was runnable only on macOS; the CSV builder still contained pre-v0.22 science and could have regenerated the retired F-ANJ-C/F-ANJ-J split; the adaptation-chain matrix still credited two platforms with timing five stages; the screening expression was described as 47 alternatives against an actual 46; and several supporting records still described v0.21 as current. Full change list in `CHANGELOG.md` v1.10.
+>
+> *Prior passes:* **v0.22** repaired the C1 stage count, collapsed a conference/journal pair the dataset counted as two studies, and published the reproducibility scripts. **v0.21** rebuilt the adaptation-chain coding on two axes, re-executed the forward citation search against an explicit query, bounded all absence language and corrected four over-reaches. **C3 remains at Level A throughout.** A section-number crosswalk from the v0.14 numbering used throughout the older documentation is at the end of `manuscript_argument_map.md`.
 
 > ⚠ **Two things are load-bearing and must not drift.** (1) **C1 must name its axis.** Three counts exist and differ: quantitatively evidenced stages (max **6**, two platforms), fully delimited `·T` stages (max **5**, **one** platform, which does not radiate), and any timing information `·T`+`·(T)` (max **6**, two platforms). The phrase *"five, reached by two platforms"* follows from no consistent rule and was withdrawn in v0.22. (2) **C3 is stated within its observation window**: 13 of 20 candidate studies read; of the seven unread, exactly one is author-disjoint from both the lineage and all three seeds, and that one study is the whole residual risk to the independence finding.
 
@@ -27,7 +29,7 @@
 | 12 | `12_conclusion.md` | **complete** | — | good — answers six questions, ends on priorities |
 | — | `99_references.md` | **complete** | 34 entries | every field verified against Crossref or the arXiv metadata endpoint |
 
-**Word count.** **29 049 words** across the twelve sections, front matter and references, of which **23 472 is prose** and 5 577 is table content. Comparison: v0.20 was 25 495 / 19 984; v0.14 was 21 887 / 19 933. The v0.21 growth of ~3 500 words is almost entirely **bounding and conditioning language** — the two-axis coding explanation in §5.2–5.3, the four access limits in §8.5, the reproducibility description in §2.3, and the per-source status tables — which is the intended direction for a revision whose purpose was to make claims harder to overstate.
+**Word count.** **30 343 words** across the twelve sections, front matter and references, of which **24 738 is prose** and 5 605 is table content. Counted by the standing method: whitespace-delimited tokens per line, with lines beginning `|` attributed to tables. Comparison: v0.21 was 29 049 / 23 472; v0.20 was 25 495 / 19 984; v0.14 was 21 887 / 19 933. The v0.22 growth is almost entirely **bounding and conditioning language** — the three-valued timing axis in §2.4, the three distinct stage counts in §5.3, and the record-versus-study distinction in §8.5. v0.23 changed no manuscript prose except the corrected regex-alternative count in §2.3.
 
 ## 2. What is now done that was not
 
@@ -36,7 +38,7 @@
 | Tables | seven specified, none drawn | **nine produced** — see `manuscript_argument_map.md` §0 for why the count changed |
 | Figures | four specified, none drawn | **four produced** as PDF and PNG from `manuscript/figures/make_figures.py`, which is committed and re-runnable |
 | Citation system | internal keys (`[RAN-25]`) | **numbered IEEE-style**, ordered by first appearance; keys survive only in the documentation |
-| Bibliography | keyed, not formatted | **33 entries**, author lists read from the held PDFs, every DOI resolved against Crossref |
+| Bibliography | keyed, not formatted | **34 entries**, author lists read from the held PDFs, every DOI resolved against Crossref |
 | Method | inside §1.6 | **its own section (§2)**, with the evidence ladder numbered L1–L7 so Table 8's level column is defined |
 | Traceability audit | subsection §6.5 | **its own section (§8)** with its own table |
 
@@ -54,7 +56,7 @@
 
 ## 4. Claims limited by evidence, and how they are marked
 
-| Claim | Limitation | Marking in v0.21 |
+| Claim | Limitation | Marking in v0.23 |
 |---|---|---|
 | 16.76 ms interval | shape acquisition → bias-voltage supply; excludes deformation and settling | §6.2 states the definition, the per-component method, and that no repetitions are reported; Table 4 names the substitution it invites; Table 5 row 20 carries the events |
 | 16.7 ms trigger → stabilised RF | measured on **static geometry** | stated at every use — §6.2, Table 3 ‡ note, Table 5 row 32, Table 6 S10 row, §9.2 G4 |
@@ -95,12 +97,12 @@
 
 ## 7. Readiness statement
 
-The manuscript is **complete as a draft, materially stronger than v0.20, and not ready for submission.** Readiness is a judgement for an independent reviewer inspecting v0.21, not one this project can make about itself.
+The manuscript is **complete as a draft, materially stronger than v0.21, and not ready for submission.** Readiness is a judgement for an independent reviewer inspecting v0.23, not one this project can make about itself.
 
 What improved is real and can be stated precisely: the argument now proceeds in an order a reader can follow without the audit machinery showing; the method is locatable; the traceability result has the prominence its evidence supports; every table and figure the manuscript refers to exists; and the citations are verified rather than keyed. Two factual errors were caught in the process — a wrong DOI and an overstated independence claim about a counterexample — which is a reminder that a rewrite pass is also an inspection pass.
 
 What has not changed is what keeps it unready. Extraction remains a single-reader exercise. Seven of the 20 identified system studies were not readable, and that bound now appears wherever C3 appears rather than only in a limitations list. And the strongest contribution, the traceability finding, is deliberately held at its narrow framing: four studies in one connected co-authorship network, zero author-disjoint groups reproducing the practice, observed across 13 of 20 studies, no prevalence claim. That wording is load-bearing and was chosen against the evidence rather than by preference — if a later pass finds itself reaching for "the field" or "widespread", the classification is being violated, not the style.
 
-**What v0.21 demonstrated about the method.** Every one of the four corrections in this pass came from performing a check that had not been performed before: writing out a regex that had been elided, resolving a print date rather than trusting an online-first one, asking which source supported a sentence about a document's contents, and asking what a code letter actually meant in each cell. Three of the four had survived a full authoring pass and a prior self-review. That is the argument for the reporting framework in §10 stated as a fact about this project rather than as a recommendation to others.
+**What the v0.21 pass demonstrated about the method (retained as a historical record).** Every one of the four corrections in *that* pass came from performing a check that had not been performed before: writing out a regex that had been elided, resolving a print date rather than trusting an online-first one, asking which source supported a sentence about a document's contents, and asking what a code letter actually meant in each cell. Three of the four had survived a full authoring pass and a prior self-review. The v0.22 and v0.23 passes repeated the lesson: the C1 count, the conference/journal collapse, the case-sensitivity failure and the regex-alternative count were all found by executing a check rather than re-reading prose. That is the argument for the reporting framework in §10 stated as a fact about this project rather than as a recommendation to others.
 
 **Completeness is not readiness, a rewrite is not a review, and a correction found is not a correction absent.**

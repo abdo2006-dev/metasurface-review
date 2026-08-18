@@ -11,11 +11,14 @@ Axis B (timing status):          ·T   fully delimited (identifiable start AND e
 The matrix is the single authoritative source for C1. This script parses it so that
 no count in the manuscript is maintained by hand.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _paths import ROOT, DOC, MANUSCRIPT, DECISIONS, WORKS, RECORDS, REGISTER, MATRIX
 import re, json, sys
 from pathlib import Path
 
-DOC = Path(__file__).resolve().parent.parent / "Documentation"
-MATRIX = DOC / "adaptation_chain_matrix.md"
 STAGES = [f"S{i}" for i in range(1, 11)]
 
 

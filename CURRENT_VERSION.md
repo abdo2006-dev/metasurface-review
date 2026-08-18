@@ -1,19 +1,19 @@
 # Current Review Snapshot
 
-Manuscript: v0.22
-Documentation: v1.9
+Manuscript: v0.23
+Documentation: v1.10
 
 Private source repository commit:
-`87114766f9d1d0f72445a3817068d01b3fbc0ff7`
+`9ba42f9c32055e042217740de88eb57d9b860eec`
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-08-18 22:34 UTC`
+`2026-08-18 22:53 UTC`
 
 Scientific freeze status:
-`Evidence base frozen at documentation v1.6. Manuscript v0.22 / documentation v1.9. The v0.21 pass recoded the adaptation chain on two axes and re-executed the forward citation search against an explicit published query; the v0.22 pass repaired the C1 stage count, collapsed a conference/journal pair the dataset had counted as two studies, and published the reproducibility scripts. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.9.`
+`Evidence base frozen at documentation v1.6. Manuscript v0.23 / documentation v1.10. The v0.21 pass recoded the adaptation chain on two axes and re-executed the forward citation search against an explicit published query; the v0.22 pass repaired the C1 stage count, collapsed a conference/journal pair the dataset had counted as two studies, and published the reproducibility scripts; the v0.23 pass made the public toolchain portable to a case-sensitive filesystem and separated all scientific content from code. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.10.`
 
 Known unresolved blockers:
 - no domain-expert review has occurred; extraction and classification were performed by a single reviewer and were not independently duplicated or adjudicated
@@ -24,6 +24,7 @@ Known unresolved blockers:
 - one version-of-record check remains open (ALE-26) and is peripheral: cited once for class membership, with no quantitative claim drawn from it
 
 Files synchronized from private source:
+- `.github/workflows/validate.yml`
 - `CHANGELOG.md`
 - `documentation/absence_claims.md`
 - `documentation/adaptation_chain_matrix.md`
@@ -45,7 +46,8 @@ Files synchronized from private source:
 - `documentation/literature_search_log.md`
 - `documentation/manuscript_argument_map.md`
 - `documentation/novelty_boundary.md`
-- `documentation/s11_study_register.md`
+- `documentation/s11_manual_decisions.csv`
+- `documentation/s11_study_citations.csv`
 - `documentation/s11_study_register.md`
 - `documentation/source_inventory.md`
 - `documentation/timescale_matrix.md`
@@ -74,12 +76,14 @@ Files synchronized from private source:
 - `manuscript/figures/fig4_assumption_evidence_map.png`
 - `manuscript/figures/make_figures.py`
 - `tools/README.md`
+- `tools/_paths.py`
 - `tools/build_forward_citation_csv.py`
 - `tools/build_s11_study_register.py`
 - `tools/c1_stage_counts.py`
+- `tools/check_mirror_links.py`
 - `tools/check_s11_consistency.py`
-- `tools/repair_study_families.py`
+- `tools/export_manual_decisions.py`
 - `tools/reproduce_forward_citation_search.py`
-- `tools/resolve_author_network.py`
 - `tools/retrieve_306_records.py`
 - `tools/s11_counts.py`
+- `tools/validate_public_snapshot.py`

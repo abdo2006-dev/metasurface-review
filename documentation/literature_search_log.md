@@ -133,7 +133,7 @@ Recorded as `E-ASM-03`. `[EXTERNAL — HTML INSPECTED]`
 
 > ‼ **Re-executed and corrected 18 August 2026 (second pass).** The screening regular expression recorded in the first pass of this log was written with an **ellipsis** (`…`), which is not a reproducible query. It has been written out in full, the search has been re-executed against the live OpenAlex API, and **three counts changed**. Retrieval and deduplication reproduced exactly (306 → 262); the screening counts did not. The corrected flow is below; the executable form is `tools/reproduce_forward_citation_search.py`, and every one of the 262 works now carries a row in `forward_citation_search_results.csv`. See `CHANGELOG.md` CH-101.
 
-**Screening, stage 1 — automatic and exactly reproducible.** 306 citing records → **262 unique works** (deduplicated by OpenAlex ID). Title and reconstructed abstract screened against an explicit 47-alternative wireless/communications regular expression, given in full in `tools/reproduce_forward_citation_search.py` (constant `WIRELESS_TERMS`) → **65 wireless-relevant works**.
+**Screening, stage 1 — automatic and exactly reproducible.** 306 citing records → **262 unique works** (deduplicated by OpenAlex ID). Title and reconstructed abstract screened against an explicit **46**-alternative wireless/communications regular expression, given in full in `tools/reproduce_forward_citation_search.py` (constant `WIRELESS_TERMS`) → **65 wireless-relevant works**.
 
 **Screening, stage 2 — manual, and recorded per work rather than re-derivable.** Manual exclusion of optics, photonics, materials, mechanics and imaging papers → **24 records**, which collapse under this project's independence rule (a preprint and its version of record are two versions of one study) into **21 distinct flexible-metasurface or reconfigurable-surface *system* studies**. The collapse is visible in the CSV's `version_family` column; note that **OpenAlex-ID deduplication does not by itself collapse version pairs**, and three such pairs occur here.
 
@@ -163,7 +163,22 @@ It is therefore a **second fully author-disjoint counterexample**, alongside Kum
 
 **What this search did not find, bounded by the 13 of 20 studies read in full.** No traceable derivation of the tabulated 10 ms value in any full text inspected. No paper reproducing LI-25's 16.76 ms figure in any full text inspected. No author-disjoint group reproducing any substitution within the observation window. The seven unread studies are not spoken for; of them, exactly one is author-disjoint from both the FIM lineage and all three seeds.
 
-**Reproducibility artefacts.** `tools/reproduce_forward_citation_search.py` (exact seeds, exact API calls, exact regular expressions, deduplication rule, drift report against the recorded snapshot); `Documentation/forward_citation_stage1_raw.csv` (the unmodified stage-1 retrieval); `Documentation/forward_citation_search_results.csv` (one row per unique work, carrying every manual decision); `tools/build_forward_citation_csv.py` (the decision table that joins them). A second researcher can reproduce retrieval and stage-1 screening exactly, and can audit — though not re-derive — stages 2 and 3.
+**Reproducibility artefacts.** All paths below are the **public-mirror** paths (lowercase `documentation/`, `tools/`); the private working repository uses `Documentation/` and the scripts resolve either.
+
+| Artefact | Contents |
+|---|---|
+| `documentation/forward_citation_records_raw.csv` | **306 rows** — the pre-deduplication retrieval, one row per (seed, citing work) pair, no screening columns |
+| `documentation/forward_citation_works_deduplicated.csv` | **262 rows** — one row per unique OpenAlex work after identifier deduplication, carrying the stage-1 result |
+| `documentation/forward_citation_search_results.csv` | **262 rows** — the full decision table: stage-1, stage-2, exclusion reason, full-text status and source, timing hit, Table 7 row, author-network status, record role, version family, study role |
+| `documentation/s11_manual_decisions.csv` | **65 rows** — the human-coded layer alone, one row per stage-1 survivor. Separated from code in v0.23 so that no script contains scientific state |
+| `documentation/s11_study_register.md` | generated study-level view: the 20 families, their roles, and the version lineages |
+| `tools/retrieve_306_records.py` | seed-wise retrieval producing the 306-record artefact; reports drift rather than overwriting the snapshot |
+| `tools/reproduce_forward_citation_search.py` | exact seeds, exact API calls, the screening expression in full with no ellipsis, the deduplication rule, and a drift report |
+| `tools/build_forward_citation_csv.py` | joins the deduplicated works to the manual-decision table to rebuild the decision table; `--check` verifies it field-identically |
+| `tools/c1_stage_counts.py`, `tools/s11_counts.py`, `tools/build_s11_study_register.py` | derive every C1 and S11 count from the matrix and the CSVs |
+| `tools/check_s11_consistency.py`, `tools/validate_public_snapshot.py` | fail if any active document disagrees with the authoritative counts, or if the mirror is not portable |
+
+A second researcher can reproduce retrieval and stage-1 screening exactly, and can audit — though not re-derive — stages 2 and 3. ⚠ **Correction (v0.23):** this list previously named `Documentation/forward_citation_stage1_raw.csv` and described it as "the unmodified stage-1 retrieval". That file held 262 *deduplicated* rows carrying decision columns, not the 306-record raw retrieval; it was renamed to `forward_citation_works_deduplicated.csv` in v0.22 and the genuine 306-record artefact was published alongside it.
 
 ## 4. Sources identified externally — status table
 

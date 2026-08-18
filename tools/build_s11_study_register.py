@@ -4,38 +4,31 @@
 This file is GENERATED. It exists so that every study-level count in the manuscript
 is reconstructable from named rows rather than asserted in prose.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _paths import ROOT, DOC, MANUSCRIPT, DECISIONS, WORKS, RECORDS, REGISTER, MATRIX
 import csv, subprocess, sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DOC = ROOT / "Documentation"
 sys.path.insert(0, str(ROOT / "tools"))
 from s11_counts import counts
 
-CITATION = {
- "F-ANJ-DL": "An, Yuen, Di Renzo, Debbah, Poor & Hanzo — GLOBECOM 2024 (conf.) / IEEE TWC 2025 (journal ext.), doi:10.1109/twc.2025.3526843",
- "F-ANJ-MIMO": "An, Han, Niyato, Debbah, Yuen & Hanzo, IEEE Trans. Commun., 2025, doi:10.1109/tcomm.2025.3550318",
- "F-APS": "Zuo, Cheng, Qian, Liao & Ding, Acta Physica Sinica 75(1), 2026, doi:10.7498/aps.75.20260154",
- "F-BAN": "Bansal, Hewson, Santer & Whittow, EuCAP 2024, doi:10.23919/EuCAP60739.2024.10501383",
- "F-DRL": "Wang, Zhang, An, Cheng, Dong & Wang, IEEE Wireless Commun. Lett., 2026, doi:10.1109/lwc.2026.3709756",
- "F-FAA": "Yang, An, Xiu, Lyu, Ning, Zhang, Debbah & Yuen — ICCT 2024 (conf.) / IEEE TWC 2025 (journal ext.), doi:10.1109/twc.2025.3545305",
- "F-FCA": "Guo, Yang, Dong, Yang, Deng, Zhang & Yuen, IEEE Internet Things J., 2025, doi:10.1109/jiot.2025.3580372",
- "F-HU": "Hu, An, Gan, Li, Al-Dhahir, Karagiannidis & Nallanathan — GLOBECOM 2025 (conf.) / IEEE TWC 2026 (journal ext.), doi:10.1109/twc.2026.3701359",
- "F-HUA": "Huang, Chen, Xu, Zhu, Pan, Tafazolli & Huang, IEEE J. Sel. Areas Commun., 2025, doi:10.1109/jsac.2025.3639197",
- "F-KUM": "Kumar, Papazafeiropoulos, Kourtessis, Senior, Chafii, Kaklamani & Venieris, IEEE Wireless Commun. Lett., 2025, doi:10.1109/lwc.2025.3649732",
- "F-MIMO-ISAC": "Teng, An, Gan, Karagiannidis, Nallanathan & Al-Dhahir, ICC 2026, doi:10.1109/icc59461.2026.11588131",
- "F-MING": "Ming, An, Gan, Nallanathan & Al-Dhahir, IEEE Trans. Veh. Technol., 2025, doi:10.1109/tvt.2025.3614693",
- "F-RAN": "Ranasinghe, An, Morales Sandoval, Rou, de Abreu, Yuen & Debbah, IEEE TWC, 2026, doi:10.1109/twc.2026.3668992",
- "F-SENS": "Teng, An, Gan, Al-Dhahir & Han, IEEE Trans. Veh. Technol., 2025, doi:10.1109/tvt.2025.3584865",
- "F-SRM": "Jiang, An, Gan, Al-Dhahir & Karagiannidis, ICC 2026, doi:10.1109/icc59461.2026.11587389",
- "F-T3D": "Mursia, Devoti, Rossanese, Sciancalepore, Gradoni, Di Renzo & Costa-Pérez, IEEE Trans. Commun., 2024, doi:10.1109/tcomm.2024.3443738",
- "F-TAP": "An, Debbah, Cui, Chen & Yuen, IEEE Trans. Antennas Propag., 2025, doi:10.1109/tap.2025.3571069",
- "F-XIA": "Xiao, Wang, Cui, Yang, Li, Niyato & Yuen, IEEE TWC, 2026, doi:10.1109/twc.2026.3654581",
- "F-YAN": "Yang, Wan, Ning, Mei, An, Eldar & Yuen, IEEE TWC, 2025, doi:10.1109/twc.2025.3627095",
- "F-ZAR": "Zarini, Kazemi, Sookhak, Ghrayeb & Di Renzo, PIMRC 2025, doi:10.1109/pimrc62392.2025.11274788",
-}
-REF = {"F-KUM": "[12]", "F-ANJ-MIMO": "[29]", "F-BAN": "[34]", "F-RAN": "[1]",
-       "F-ANJ-DL": "[2] / [32]", "F-HU": "[30]", "F-XIA": "[31]", "F-HUA": "[33]"}
+# Bibliographic data lives in documentation/s11_study_citations.csv, not here. No tool in
+# this package holds scientific content: that is what let a retired family split survive
+# inside build_forward_citation_csv.py until v0.23.
+def _citations():
+    import csv as _csv
+    cit, ref = {}, {}
+    with (DOC / "s11_study_citations.csv").open(encoding="utf-8") as fh:
+        for r in _csv.DictReader(fh):
+            cit[r["version_family"]] = r["canonical_citation"]
+            ref[r["version_family"]] = r["manuscript_ref"]
+    return cit, ref
+
+
+CITATION, REF = _citations()
 
 
 def main():
@@ -56,7 +49,7 @@ def main():
     L.append("| Step | Records | Works / studies |\n|---|---|---|")
     L.append(f"| Seed-wise citing records retrieved | **{r_['records_pre_dedup']}** | — |")
     L.append(f"| Deduplicated by OpenAlex identifier | — | **{r_['unique_works']}** works |")
-    L.append(f"| Stage-1 screen (explicit 47-alternative expression) | — | **{r_['stage1_pass']}** works |")
+    L.append(f"| Stage-1 screen (explicit {c['regex']['wireless_alternatives']}-alternative expression) | — | **{r_['stage1_pass']}** works |")
     L.append(f"| Stage-2 screen (system studies) | **{r_['stage2_records']}** records | — |")
     L.append(f"| Version-family collapse (§2.4 independence rule) | — | **{r_['distinct_studies']}** distinct studies |")
     L.append(f"| Read in full | {a_['records_read']} records | **{a_['studies_read']}** studies |")
@@ -110,6 +103,33 @@ def main():
              "identifier-level deduplication does not collapse. F-ANJ-DL is the lineage in which a timing "
              "assertion appears in the journal version and is absent from the conference version — the "
              "pattern recorded as Table 7 row P4.\n")
+    L.append("## 5. Pairs examined and deliberately NOT merged\n")
+    L.append("Shared authorship alone never collapses two studies; only a bibliographic or version "
+             "relationship does. These candidate pairs were checked against OpenAlex author lists, venues, "
+             "types and dates, and kept distinct. Recorded so the lineage audit is falsifiable rather than "
+             "merely asserted.\n")
+    L.append("| Pair | Why they are not one study |\n|---|---|")
+    for pair, why in [
+        ("F-MIMO-ISAC vs F-RAN",
+         "Both FIM + MIMO ISAC, both 2026. Different first authors (Teng vs Ranasinghe) and different "
+         "groups (Gan/Al-Dhahir vs de Abreu/Bremen); only An in common. No version relationship."),
+        ("F-MIMO-ISAC vs F-ANJ-MIMO",
+         "Similar titles (MIMO ISAC vs MIMO communications) but different first authors, different author "
+         "sets, different problems; the ICC 2026 paper post-dates the TCOMM 2025 article."),
+        ("F-SRM vs F-ANJ-DL",
+         "Both multiuser MISO FIM sum-rate. Different first author (Jiang) and author set; no shared venue "
+         "lineage. Distinct study by an overlapping group."),
+        ("F-SENS vs F-MIMO-ISAC",
+         "Same first author (Teng) and overlapping group, but different problems (multi-target sensing vs "
+         "MIMO ISAC) and no version relationship."),
+        ("F-YAN vs F-FAA",
+         "Same first author (Songjie Yang) and both IEEE TWC, but different objects (FIM architecture vs "
+         "flexible antenna arrays) and different DOIs."),
+    ]:
+        L.append(f"| **{pair}** | {why} |")
+    L.append("")
+    L.append("> This reasoning was recorded in a one-shot migration script during v0.22. It is scientific "
+             "content, so v0.23 moved it here, where it is reviewable without reading code.\n")
     (DOC / "s11_study_register.md").write_text("\n".join(L), encoding="utf-8")
     print(f"wrote s11_study_register.md ({len(L)} lines)")
     print(f"propagation {ro['propagation_studies']} + no-timing {ro['no_timing_studies']} = {a_['studies_read']} read")
