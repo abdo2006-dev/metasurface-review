@@ -1,16 +1,16 @@
 # Current Review Snapshot
 
-Manuscript: v0.20
-Documentation: v1.7
+Manuscript: v0.21
+Documentation: v1.8
 
 Private source repository commit:
-`6bf56ecb1600d6d5f9a1e1290d296290ee720e82`
+`e87f0d6836dd3f865282c7ffbfa330963010713d` (private working tree was NOT clean at sync time -- see below)
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-08-18 17:52 UTC`
+`2026-08-18 19:00 UTC`
 
 Scientific freeze status:
 `Evidence base frozen at documentation v1.6; not revised in the v0.20 authoring pass except two factual corrections (CH-96, CH-97). See CHANGELOG.md.`
@@ -37,6 +37,8 @@ Files synchronized from private source:
 - `documentation/draft_status.md`
 - `documentation/evidence_matrix.md`
 - `documentation/evidence_strength_matrix.md`
+- `documentation/forward_citation_search_results.csv`
+- `documentation/forward_citation_stage1_raw.csv`
 - `documentation/literature_search_log.md`
 - `documentation/manuscript_argument_map.md`
 - `documentation/novelty_boundary.md`

@@ -131,15 +131,39 @@ Recorded as `E-ASM-03`. `[EXTERNAL — HTML INSPECTED]`
 
 **Query.** `GET /works?filter=cites:{ID}&per-page=200&cursor=*`, paginated to exhaustion, for each seed.
 
-**Screening.** 306 citing records → **262 unique works** (deduplicated by OpenAlex ID). Title+abstract screened with a wireless/communications regular expression (`reconfigurable intelligent surface|metasurface|MIMO|beamforming|ISAC|channel estimation|movable antenna|…`) → **64 wireless-relevant works** → manual exclusion of optics/photonics/materials-only papers → **20 distinct flexible-metasurface or reconfigurable-surface *system* papers**.
+> ‼ **Re-executed and corrected 18 August 2026 (second pass).** The screening regular expression recorded in the first pass of this log was written with an **ellipsis** (`…`), which is not a reproducible query. It has been written out in full, the search has been re-executed against the live OpenAlex API, and **three counts changed**. Retrieval and deduplication reproduced exactly (306 → 262); the screening counts did not. The corrected flow is below; the executable form is `tools/reproduce_forward_citation_search.py`, and every one of the 262 works now carries a row in `forward_citation_search_results.csv`. See `CHANGELOG.md` CH-101.
 
-**Full-text retrieval.** 13 of 20 obtained (arXiv author versions, plus one institutional-repository copy of an IEEE journal article). **7 could not be retrieved** — IEEE Xplore paywall, no open-access deposit found via Semantic Scholar: the *TAP* review "Emerging Technologies in Intelligent Metasurfaces", Ming *et al.* (beam squint, *TVT* 2025), Zarini *et al.* (PIMRC 2025), Teng *et al.* (ICC 2026), Jiang *et al.* (ICC 2026), Hu *et al.* (GLOBECOM 2025, an earlier version of a paper we did obtain), and Acta Physica Sinica (conformal RIS near-field modelling).
+**Screening, stage 1 — automatic and exactly reproducible.** 306 citing records → **262 unique works** (deduplicated by OpenAlex ID). Title and reconstructed abstract screened against an explicit 47-alternative wireless/communications regular expression, given in full in `tools/reproduce_forward_citation_search.py` (constant `WIRELESS_TERMS`) → **65 wireless-relevant works**.
 
-**Extraction.** Each retrieved full text was scanned for `morphing period|morphing time|switching speed|response time|millisecond|<digits> ms|0.0x s`, with ligature normalisation and hyphenated-linebreak repair. Every hit was read in context. **An abstract-level scan of all 64 wireless-relevant works returned zero timing mentions** — propagation occurs only in body text, which is why full-text access bounds this search.
+**Screening, stage 2 — manual, and recorded per work rather than re-derivable.** Manual exclusion of optics, photonics, materials, mechanics and imaging papers → **24 records**, which collapse under this project's independence rule (a preprint and its version of record are two versions of one study) into **21 distinct flexible-metasurface or reconfigurable-surface *system* studies**. The collapse is visible in the CSV's `version_family` column; note that **OpenAlex-ID deduplication does not by itself collapse version pairs**, and three such pairs occur here.
 
-**Result: four instances, zero author-disjoint groups.** See `evidence_matrix.md` **E-FP-01 … E-FP-04** for the cases and **E-FP-C1** for the counterexamples. Independence was tested by author-set intersection against the corpus FIM lineage (An, Yuen, Yang, Di Renzo): **17 of the 20 candidate system papers share at least one author with it**, and all four propagation instances contain An and/or Yuen.
+**Full-text retrieval.** **14 of the 21 studies obtained** (arXiv author versions, one open institutional-repository copy of an IEEE journal article, one figshare open-access conference deposit, plus corpus copies). **7 could not be retrieved** — publisher paywall, no open-access deposit located: the *TAP* review "Emerging Technologies in Intelligent Metasurfaces" (`F-TAP`), Ming *et al.* on beam squint (`F-MING`), `F-ZAR` (PIMRC 2025), `F-SRM` (ICC), `F-DRL` (ICC), Huang *et al.* covert UAV communications in *IEEE JSAC* (`F-HUA`), and the Acta Physica Sinica conformal-RIS near-field paper (`F-APS`). **No paywall was circumvented at any point.**
+
+**Extraction.** Each retrieved full text was scanned with the explicit expression `TIMING_TERMS` in the same script, after mandatory ligature normalisation (`ﬁ`→`fi`, `ﬂ`→`fl`) and hyphenated-linebreak repair (`-\n`→``). Every hit was read in context. **An abstract-level scan of all 65 stage-1 works returned zero timing mentions** — propagation occurs only in body text, which is why full-text access bounds this search and why every count here is a **lower bound**.
+
+**Result: five instances in four papers; zero author-disjoint groups reproducing the practice.** See `evidence_matrix.md` **E-FP-01 … E-FP-04** for the cases and **E-FP-C1** for the counterexamples. Independence was tested by author-set intersection against the corpus FIM lineage (An, Yuen, Yang, Di Renzo): all propagation instances contain An and/or Yuen, and the four papers form **one connected co-authorship network**.
+
+### ★ What the corrected second pass changed
+
+| | First pass (ellipsis regex) | Second pass (explicit regex) |
+|---|---|---|
+| Citing records | 306 | **306** — reproduced exactly |
+| Unique works | 262 | **262** — reproduced exactly |
+| Stage-1 wireless-relevant | 64 | **65** |
+| Stage-2 system studies | 20 | **21** |
+| Full texts read | 13 | **14** |
+| Not retrievable | 7 | **7** — unchanged |
+| Propagation instances / papers | 5 / 4 | **5 / 4** — unchanged |
+| Author-disjoint groups reproducing the practice | 0 | **0** — unchanged |
+| Fully author-disjoint counterexamples | 1 | **2** |
+
+**The one work the first pass missed is a substantive gain, not a bookkeeping tidy-up.** Writing out the regex added the term `beam-?steering`, which captured **Bansal, Hewson, Santer & Whittow, "Optimal Morphing Metasurface Lens for Next Generation RF Sensing and Communications", EuCAP 2024, pp. 1–3, DOI 10.23919/EuCAP60739.2024.10501383** — retrieved in full from an open figshare deposit and read on 18 August 2026. It proposes a *mechanically morphing* metasurface lens for RF beam-steering, cites BAI-22 directly as its reference [15], and **attaches no timing value of any kind**: a scan of the full text for the complete `TIMING_TERMS` expression returns zero hits. Its authors (Loughborough and Imperial College London) share no author with the FIM system-paper lineage or with any of the three seed papers.
+
+It is therefore a **second fully author-disjoint counterexample**, alongside Kumar *et al.* It does not move C3 off Level A — that would require an author-disjoint group *reproducing* the substitution, and this is the opposite — but it materially strengthens the counterexample base and answers the reviewer-facing objection that only one such paper was found. It also supplies an independent, author-disjoint instance of the review's own architectural point: the paper is a CST simulation of a morphing RF lens with no prototype, no actuation timing and no measured settling.
 
 **What this search did not find.** No traceable derivation of the tabulated 10 ms value anywhere in the citing literature. No paper reproducing LI-25's 16.76 ms figure at all. No author-disjoint group reproducing any substitution.
+
+**Reproducibility artefacts.** `tools/reproduce_forward_citation_search.py` (exact seeds, exact API calls, exact regular expressions, deduplication rule, drift report against the recorded snapshot); `Documentation/forward_citation_stage1_raw.csv` (the unmodified stage-1 retrieval); `Documentation/forward_citation_search_results.csv` (one row per unique work, carrying every manual decision); `tools/build_forward_citation_csv.py` (the decision table that joins them). A second researcher can reproduce retrieval and stage-1 screening exactly, and can audit — though not re-derive — stages 2 and 3.
 
 ## 4. Sources identified externally — status table
 

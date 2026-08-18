@@ -10,7 +10,7 @@ Each field is motivated by a **recurring reporting deficiency or a specific unre
 
 ### 10.2 The minimum reporting set for hardware papers
 
-**Table 9 — Minimum reporting set, with the deficiency motivating each field.** Groups A, B and C are mandatory for any paper reporting a deformable or reconfigurable aperture; D and E become mandatory if a control loop is claimed; F is mandatory for any mobility or ISAC claim.
+**Table 9 — Recommended minimum reporting set, with the deficiency motivating each field.** Groups A, B and C are the **core fields** we suggest for any paper reporting a deformable or reconfigurable aperture; D and E apply where a control loop is claimed; F applies to any mobility or ISAC claim. Every field should be reported **when applicable to the platform in question**. This is a recommendation, not a standard — see §10.4.
 
 | Group | Field | Motivating deficiency in the reviewed set |
 |---|---|---|
@@ -18,7 +18,7 @@ Each field is motivated by a **recurring reporting deficiency or a specific unre
 | | **Deformation source: externally imposed or self-actuated** | The distinction between compensating a shape and commanding one is this review's central taxonomic finding, and it is rarely stated explicitly |
 | | Whether a radio-frequency layer is present, and what it consists of | Every measured mechanical timescale in the reviewed set was obtained on a platform with no RF layer |
 | | Control granularity: independently addressable channels versus total elements | One reviewed aperture has 512 meta-atoms and 32 control channels; the difference is not usually foregrounded |
-| **B — timing** *(all five required for every reported interval)* | **Object timed** — one element, one tile, or the whole aperture | The same panel reports element- and tile-level bounds up to two orders of magnitude apart, because the object differs |
+| **B — timing** *(the five fields we suggest accompany every reported interval)* | **Object timed** — one element, one tile, or the whole aperture | The same panel reports element- and tile-level bounds up to two orders of magnitude apart, because the object differs |
 | | **Start event**, named physically | "Response time" denotes at least five different intervals in the reviewed set |
 | | **End event**, named physically, with its threshold | Threshold definitions are inconsistent where present and absent for most reported intervals. The two sources that state one state incommensurable ones: 10 %/90 % amplitude thresholds on a liquid-crystal device, and "the first video frame after which no displacement deviation is visible" on a 60 fps camera — an instrument-limited criterion with a ≈16.7 ms floor |
 | | **Measured, simulated, projected or derived** | A projected sub-2 ms figure appears in the same discussion as measured 15 ms and 72 ms values |
@@ -27,7 +27,7 @@ Each field is motivated by a **recurring reporting deficiency or a specific unre
 | | Displacement range, in millimetres **and in wavelengths** | The system literature works in wavelengths and the hardware literature in millimetres; almost no source gives both |
 | | **A stated and justified electromagnetic settling criterion** — an allowable phase or RF-performance error, or the corresponding displacement tolerance relative to wavelength, with the basis for the value chosen | No reviewed source defines settling electromagnetically; settling is reported, where reported at all, as the cessation of visible motion. This review prescribes no numerical fraction of a wavelength, and none should be inferred from the illustrative arithmetic in §9.2 |
 | | Rise time and settling time, separately | Bundled into a single "response time" wherever they are reported |
-| | Achieved shape accuracy against the *commanded* shape | Reported for shape *sensing* (RMSD 2.36 mm at 45 mm displacement) but never for shape *achievement* on a radiating aperture |
+| | Achieved shape accuracy against the *commanded* shape | Reported for shape *sensing* (RMSD 2.36 mm at 45 mm displacement); not reported for shape *achievement* on a radiating aperture anywhere in the reviewed set |
 | | Repeatability, hysteresis, and cycles to a stated **electromagnetic** degradation | Mechanical cycling data exist — 1 000 reversible actuation cycles on one mechanical platform, 3 000 bending cycles for the shape-sensing array on the flexible radiating platform — but no source pairs a cycle count with any measurement of RF performance drift |
 | | Repetition count and dispersion for every reported interval | Neither supplementary package reports repetitions or uncertainty for its headline timing value; the intervals quoted in this review are single stated figures |
 | | Actuation energy per shape change | Not reported for any radiating aperture; the only measured power figures are electronic panel power for a rigid RIS |
@@ -42,7 +42,7 @@ Each field is motivated by a **recurring reporting deficiency or a specific unre
 
 ### 10.3 The minimum assumption declaration for system papers
 
-The system literature cannot be expected to measure hardware. It can be expected to declare what it assumes, and the reviewed papers largely do not.
+The system literature cannot be expected to measure hardware. It can reasonably be expected to declare what it assumes, and the reviewed papers largely do not. The five items below are what we suggest such a declaration contain.
 
 1. **Which adaptation stages are assumed instantaneous.** In all four reviewed FIM system papers, control transport, actuation, settling and calibration are assumed away; none says so.
 2. **The assumed update rate for each control variable, with its basis.** Where a two-rate schedule is used, the paper should state whether the rates are chosen for tractability or justified by hardware.

@@ -206,8 +206,8 @@ Because the categories are not commensurable, the manuscript presents them as **
  [MECH LOOP — replay]                     ◄ 10 fps open-loop, voltages known (A4, T-BA-06)
  [MECH LOOP — search]                                                              ├── ≈2.5 min closed-loop convergence (A4, T-BA-05) ──┤
  [RF STABILISATION, static geometry]     ├─ 16.7 ms trigger → stable RF (A3, T-LI-06) ─┤
- [RF APERTURE MECHANICS]                          ▓▓▓▓▓ NOT MEASURED ANYWHERE ▓▓▓▓▓
- [RF SETTLING AFTER COMMANDED MORPH]              ▓▓▓▓▓ NOT MEASURED ANYWHERE ▓▓▓▓▓
+ [COMMANDED ACTUATION, RADIATING APERTURE]                          ▓▓ NO MEASUREMENT FOUND IN REVIEWED SET ▓▓
+ [RF SETTLING AFTER COMMANDED MORPH]              ▓▓ NO MEASUREMENT FOUND IN REVIEWED SET ▓▓
 ```
 
 *Figure note: the two `MECH LOOP` rows belong to one platform and differ by more than three orders of magnitude because they time different operations — replaying a known shape versus searching for an unknown one. Any rendering of this figure must keep them on separate rows and label them, or it will reproduce the substitution the manuscript documents.*

@@ -1,9 +1,32 @@
 # Adaptation-Chain Matrix
 
-> ⚠ **Section numbers in this file are v0.14 numbering.** The manuscript was restructured into twelve sections on 18 August 2026 (draft v0.20). Use the crosswalk at the end of `manuscript_argument_map.md`; most often, **§6.5 → §8** (traceability) and **§9.4 → §11.4** (limitations). The scientific content of this file is unchanged and still governs.
+> ⚠ **Section numbers in this file are v0.14 numbering except where a v0.20/v0.21 section is named explicitly.** The manuscript was restructured into twelve sections on 18 August 2026 (draft v0.20). Use the crosswalk at the end of `manuscript_argument_map.md`; most often, **§6.5 → §8** (traceability) and **§9.4 → §11.4** (limitations).
 
-**Version:** 1.0 · 17 August 2026
-**Purpose:** to decompose "FIM adaptation" into ten distinct stages and record, per source, whether each stage is demonstrated, measured, simulated, assumed, absent, or unclear. This is the instrument that prevents any one stage from being reported as the latency of the whole system.
+**Version:** 2.0 · 18 August 2026 (**two-axis recoding** — see `CHANGELOG.md` v1.8, CH-100)
+**Purpose:** to decompose "FIM adaptation" into ten distinct stages and record, per source, (A) what the source establishes about each stage and (B) whether the *duration* of that stage was measured. This is the instrument that prevents any one stage from being reported as the latency of the whole system.
+
+---
+
+## 0. Why this file was recoded — read first
+
+**Version 1.0 used a single code set in which `M` meant "measured (a number with defined start/end events)".** In practice `M` was also applied to cells recording quantitative radio-frequency measurements that contain no duration at all — LU-26's radiation patterns at fixed curvature, NEU-24's patterns, AKR-26's patterns and power, GAL-22's ≈80 mW delivered at 1 m. Those are genuine measurements; none of them is a timing.
+
+The consequence was a real ambiguity in a load-bearing count. The claim *"no source measures more than five of the ten stages"* is **true under a timing reading and false under a quantitative reading** — under the latter the maximum is six. A reader could not tell which was meant, and the legend said one thing while several cells did the other.
+
+**The fix is structural, not cosmetic: the two concepts are now separate axes.**
+
+| Axis | Question it answers | Codes |
+|---|---|---|
+| **A — stage evidence status** | *What did this source establish about this stage?* | **Q** quantitatively measured (a physical or RF quantity reported) · **D** demonstrated (shown working, no quantity) · **S** simulated · **A** assumed · **✗** absent · **n/a** not applicable to the architecture · **?** unclear · **RS** review statement |
+| **B — timing status** | *Was the duration of this stage measured?* | **T** timed — a duration with identifiable start and end events · **(T)** partially timed — a duration is reported but its start event, end event, or its separation from an adjacent stage is not fully resolved · *no marker* — untimed |
+
+A cell carries an axis-A code, optionally followed by an axis-B marker: `Q·T`, `Q·(T)`, `Q`, `D`, `S·T`, `A`, `✗`.
+
+The two axes are genuinely orthogonal, and one cell proves it: **YAN-25's S3 is `S·T`** — the channel-estimation stage is *simulated*, and the *wall-clock runtime of the simulation* is measured on a named desktop CPU. A simulated stage can have a timed implementation; a measured RF output can have no timing at all.
+
+⚠ **One placement was corrected during the recoding.** v1.0 recorded YAN-25's measured running time under **S4** (optimisation). The timed algorithm is **CMFV-SBL**, which estimates the channel, so the runtime belongs to **S3**. Corrected here and in manuscript Table 3. It does not change any count, because YAN-25 times exactly one stage either way.
+
+**A cell may carry more than one experiment.** Where it does, the experiments ran under *different conditions* and must not be merged. The marker **‡** flags such a cell and points to the condition note below the matrix; the only one at present is LI-25's S10.
 
 ---
 
@@ -22,85 +45,102 @@
 | S9 | **Calibration** | re-establishment of the geometry→RF-response mapping after the shape changed |
 | S10 | **Stabilised RF operation** | the interval over which the configured surface actually delivers its intended RF behaviour |
 
-Codes: **D** demonstrated (shown working, no number) · **M** measured (a number with defined start/end) · **S** simulated · **A** assumed · **✗** absent · **?** unclear.
-
-**A cell may carry more than one code.** Where it does, the codes describe *different experiments under different conditions* and must not be merged. The marker **‡** flags such a cell and points to the condition note below the matrix; the only one at present is LI-25's S10, added 17 August 2026 after the supplementary retrieval.
-
 ---
 
 ## 2. The matrix
 
-| Source | Arch. | S1 sensing | S2 geometry est. | S3 channel est. | S4 optimisation | S5 control tx | S6 electronic | S7 morphing | S8 settling | S9 calibration | S10 stable RF |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| **RAN-25** | A1 | ✗ | ✗ (shape is a free variable) | **A** (parameters available) | **S** E-01/E-05 | ✗ | ✗ | **A** (instant) | ✗ | ✗ | **A** — E-03 asserts unbounded reuse |
-| **ANJ-25** | A1 | ✗ | ✗ | **A** perfect CSI, E-09 | **S** E-10 | ✗ | ✗ | **A** (instant) | ✗ | ✗ | **A** quasi-static |
-| **YAN-25** | A1 | ✗ | ✗ | **S** protocol + CMFV-SBL, E-12 | **S + M(runtime)** T-YA-01 | ✗ | **A** per time slot, T-CH-05 | **A** per subframe, T-CH-05 | ✗ | ✗ | **A** |
-| **MOR-26** | A1 | ✗ | ✗ | **A** | **S** | ✗ | ✗ | **A** | ✗ | ✗ | **A** |
-| **XU-22** | A5 | **S** pilots | n/a (rigid) | **S** MMSE interpolation, E-15/E-16 | **S** | ✗ | **A** | n/a | n/a | ✗ | **S** |
-| **LI-25** | A3 | **M** 32 strain sensors, T-LI-01 | **M** RMSD 2.36 mm, E-24 | ✗ **absent** | **M** ANN, T-LI-02 | **M** RS-232, inside T-LI-04 | **M** supply 5.25 ms, T-LI-03; varactor qualitative, T-LI-05 | ✗ **external, not commanded** | ✗ | **D** (ANN is the learned geometry→bias map; no separate timed recalibration) | **D + M‡** — **D:** EVM ≈ −20 dB under *dynamic bending*, untimed, E-25. **M‡:** 16.7 ms trigger → stabilised RF, **static geometry**, T-LI-06 |
-| **LU-26** | A3 | ✗ | ✗ (bending known a priori) | ✗ | **S** compensation phase | ? | **D** PIN states | ✗ static bending | ✗ | **D** per-curvature compensation | **M** patterns at each fixed curvature, E-53 |
-| **NEU-24** | A5 | ✗ | n/a | ✗ | ✗ | ✗ | **M** τ_on/τ_off, T-NE-01/02 | n/a | n/a | ✗ | **M** patterns |
-| **AKR-26** | A5 | ✗ | n/a | ✗ | ✗ | **M** interfaces + ×¼ multiplexing, T-AK-03 | **M** T-AK-01, T-AK-02 | n/a | n/a | ✗ | **M** patterns, power |
-| **BAI-22** | A4 | **M** stereo imaging, T-BA-03 | **M** (shape extracted from images) | ✗ n/a | **M** 5–15 iterations, T-BA-03 | **D** digital actuation scheme | ✗ n/a | **M** T-BA-01/02 | ? (bundled into "response time") | ✗ | ✗ **no RF layer** |
-| **NI-22** | A4 | ✗ (imaging used for characterisation only) | ✗ | ✗ n/a | ✗ (scripted) | **M** ≈50 ms script processing, inside T-NI-03 | ✗ n/a | **M** T-NI-01/02 | **M** — the ≈250 ms viscoelastic term *is* settling, T-NI-02 | ✗ | ✗ **no RF layer** |
-| **GAL-22** | A7 | **D** self-sensing receivers | **D** shape estimation mentioned | ✗ | **D** search algorithm | **D** | **D** per-element phase | ✗ external | ✗ | **D** closed-loop focusing, E-38 — **but T-GAP-01: no time reported** | **M** ≈80 mW at 1 m, E-39 |
-| **MA-26** | A6 review | RS | RS | RS | RS | RS | RS | RS — identifies movement time as a required model input, E-43 | RS — identifies settling as a required model input | RS | RS |
+| Source | Arch. | S1 sensing | S2 geometry est. | S3 channel est. | S4 optimisation | S5 control tx | S6 electronic | S7 morphing | S8 settling | S9 calibration | S10 stable RF | Stages **timed** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **RAN-25** | A1 | ✗ | ✗ (shape is a free variable) | **A** (parameters available) | **S** E-01/E-05 | ✗ | ✗ | **A** (instant) | ✗ | ✗ | **A** — E-03 asserts unbounded reuse | **0** |
+| **ANJ-25** | A1 | ✗ | ✗ | **A** perfect CSI, E-09 | **S** E-10 | ✗ | ✗ | **A** (instant) | ✗ | ✗ | **A** quasi-static | **0** |
+| **YAN-25** | A1 | ✗ | ✗ | **S·T** CMFV-SBL runtime, T-YA-01 | **S** protocol + iteration counts, E-12 | ✗ | **A** per time slot, T-CH-05 | **A** per subframe, T-CH-05 | ✗ | ✗ | **A** | **1** |
+| **MOR-26** | A1 | ✗ | ✗ | **A** | **S** | ✗ | ✗ | **A** | ✗ | ✗ | **A** | **0** |
+| **XU-22** | A5 | **S** pilots | n/a (rigid) | **S** MMSE interpolation, E-15/E-16 | **S** | ✗ | **A** | n/a | n/a | ✗ | **S** | **0** |
+| **LI-25** | A3 | **Q·T** ≈2 ms reception, T-LI-01 | **Q·(T)** RMSD 2.36 mm is an *accuracy*; its ≈2 ms share of T1 is not resolved from S1, E-24 | ✗ **absent** | **Q·T** ANN ≈2 ms, T-LI-02 | **Q·(T)** ≈5.5 ms RS-232, a **residual** of T-LI-04, not independently timed | **Q·T** supply 5.25 ms (oscilloscope), T-LI-03; varactor qualitative, T-LI-05 | ✗ **external, not commanded** | ✗ | **D** ANN is the learned geometry→bias map; no separate timed recalibration | **Q·T‡** — see note | **5** |
+| **LU-26** | A3 | ✗ | ✗ (bending known a priori) | ✗ | **S** compensation phase | ? | **D** PIN states | ✗ static bending | ✗ | **D** per-curvature compensation | **Q** patterns, 16.13 dBi, ±45° at each fixed curvature — **untimed**, E-53 | **0** |
+| **NEU-24** | A5 | ✗ | n/a | ✗ | ✗ | ✗ | **Q·T** τ_on ≈15 ms / τ_off 72 ms, 10 %/90 % thresholds, T-NE-01/02 | n/a | n/a | ✗ | **Q** patterns, −50°…+50°, IL — **untimed** | **1** |
+| **AKR-26** | A5 | ✗ | n/a | ✗ | ✗ | **Q·(T)** ×¼ multiplexing is a **rate factor**, no absolute interval, T-AK-03 | **Q·T** <0.1 ms/element, <10 ms/tile — **upper bounds**, T-AK-01/02 | n/a | n/a | ✗ | **Q** patterns, 20.2 dBi, 8.25–13 W — **untimed** | **1** |
+| **BAI-22** | A4 | **Q·T** stereo imaging 0.08 s, T-BA-03 | **Q·T** template matching 0.11 s + reprojection ≈0 | ✗ n/a | **Q·T** optimisation ≈0 per evaluation; ≈2.5 min convergence, T-BA-05 | **Q·T** voltage update 0.06 s | ✗ n/a | **Q·T** element <0.07 s, system within 0.1 s, T-BA-01/02 | **Q·(T)** the 0.1 s in the cycle budget is a **deliberate settling pause**, a chosen wait, not a measured settling time | ✗ | ✗ **no RF layer** | **5** |
+| **NI-22** | A4 | ✗ (imaging for characterisation only) | ✗ | ✗ n/a | ✗ (scripted) | **Q·T** ≈50 ms script processing, T-NI-03 | ✗ n/a | **Q·T** 30 ms ribbon / 300 ms surface, T-NI-01/02 | **Q·T** ≈250 ms viscoelastic term *is* settling, T-NI-02 | ✗ | ✗ **no RF layer** | **3** |
+| **GAL-22** | A7 | **D** self-sensing receivers | **D** shape estimation mentioned | ✗ | **D** search algorithm | **D** | **D** per-element phase | ✗ external | ✗ | **D** closed-loop focusing, E-38 — **T-GAP-01: no time reported** | **Q** ≈80 mW DC at 1 m — **untimed**, E-39 | **0** |
+| **MA-26** | A6 review | RS | RS | RS | RS | RS | RS | RS — identifies movement time as a required model input, E-43 | RS — identifies settling as a required model input | RS | RS | **0** |
 
-**‡ Condition note — LI-25, S10 (added 17 August 2026).** This one cell records two experiments that must never be collapsed into a single claim:
+**‡ Condition note — LI-25, S10.** This one cell records two experiments that must never be collapsed into a single claim:
 
-| Mode | Condition | What it establishes | ID |
-|---|---|---|---|
-| **Demonstrated** | *dynamic bending*, geometry changing, no timing | that electronic compensation holds a link while the surface is deformed | E-25 |
-| **Measured timing** | *static geometry*, sensor-press trigger, no morphing inside the interval | that stabilised RF is a well-defined, instrumentable end event, reached 16.7 ms after the trigger | T-LI-06 |
+| Mode | Axis A | Axis B | Condition | What it establishes | ID |
+|---|---|---|---|---|---|
+| Dynamic-bending link | **Q** — EVM ≈ −20 dB | untimed | *geometry changing* | that electronic compensation holds a link while the surface is deformed | E-25 |
+| Trigger → stabilised RF | **Q** — 16.7 ms | **T** | *geometry static*, sensor-press trigger, no morphing inside the interval | that stabilised RF is a well-defined, instrumentable end event | T-LI-06 |
 
-The measured mode is **not** an S10 timing following deformation, and this matrix does not record one. The only experiment on this platform that contains a shape change is the demonstrated mode, and it is untimed; the only one that carries a number holds the shape fixed. Writing "LI-25 measures S10" without the static-geometry condition would assert an S10-after-morph measurement that does not exist.
+The timed mode is **not** an S10 timing following deformation, and this matrix does not record one. The only experiment on this platform containing a shape change is untimed; the only one carrying a duration holds the shape fixed.
 
 ---
 
 ## 3. What the matrix shows
 
-### 3.1 No row is complete
-Not one source in the corpus records all ten stages, and only **LI-25** records more than four with numbers attached.
+### 3.1 The maximum is five timed stages, and two platforms reach it — disjointly
 
-**Corrected 17 August 2026 — the word "contiguous" was used incorrectly here.** This section previously described LI-25's **S1 → S2 → S4 → S5 → S6** as "the longest measured contiguous run". Under this project's own S1–S10 taxonomy that sequence is **not contiguous**: S3, channel estimation, lies inside its span and is absent from LI-25 altogether. The correct statement is one of extent, not of contiguity:
+**No source in the corpus times more than five of the ten stages.** Two reach five, and the pair is the review's central structural finding stated in stage terms:
 
-> **LI-25 measures the largest set of linked stages on one flexible RF platform, covering S1–S2 and S4–S6, while S3 channel estimation is absent.** Those five stages are linked in the sense that one measured interval, T-LI-04 (16.76 ms), runs from the start of S1 to the end of S6; they are not contiguous in the stage taxonomy, because the platform never estimates a channel.
+| Platform | Arch. | The five stages it times | What it cannot do |
+|---|---|---|---|
+| **LI-25** | A3 | S1, S2, S4, S5, S6 — all inside one reported 16.76 ms interval | **does not command its geometry** (S7 is an external fixture) |
+| **BAI-22** | A4 | S1, S2, S4, S5, S7 — inside a 0.35 ± 0.15 s function-evaluation cycle | **has no radio-frequency layer** (S6, S9, S10 do not exist on it) |
 
-The gap at S3 is not a bookkeeping detail. It is the same architectural fact recorded in `manuscript/07_validation_gap.md` §7.3: LI-25's loop closes on **geometry**, not on a channel, and a stage the platform does not implement cannot be counted as spanned.
+The two sets of five differ by exactly one stage — S6 against S7 — and that one stage is the difference between compensating a shape and commanding one. Neither platform can be extended into the other by measurement alone.
 
-LI-25's chain then **stops** at S6 for the morphing chain: S7 is external and not commanded, S8 and S9 are not timed. S10 is treated separately in §3.4 below, because the supplementary retrieval changed its status.
+**LI-25's set is linked rather than contiguous**, and the wording matters. S3 lies between S2 and S4 in the chain and is absent from the platform entirely: it has no channel estimator, because it is not trying to track a channel. A run that skips a stage the architecture never implements spans the part of the chain the architecture possesses, not the chain.
 
-**Consequence for the manuscript.** No section may claim "five contiguous stages" or a "longest contiguous chain". The defensible forms are *"the largest linked set of stages measured on one platform"* and *"no source measures more than five of the ten stages, and none of them measures S3 together with S7."*
+⚠ **Wording constraint (unchanged from v1.0, still binding).** No section may claim "five contiguous stages" or a "longest contiguous chain". Acceptable: *"the largest set of linked stages timed on one platform"*; *"five of the ten stages"*; *"no source times S3 together with S7"*.
 
-### 3.2 The stages are split across incompatible architectures
-- The only **measured S7/S8** (mechanical morphing and settling) come from **A4** platforms with no RF layer.
-- The only **measured S6** (electronic state) come from **A5** rigid panels.
-- The only **measured S1/S2/S4/S5** on a flexible RF surface come from **A3** with geometry as a *disturbance*.
-- The only **demonstrated S9** on a deformable RF aperture (GAL-22) reports no duration.
+### 3.2 Under the quantitative reading the number is six, not five — which is why the axes were split
+
+Counting axis-A `Q` cells rather than axis-B `T` cells gives LI-25 six (S1, S2, S4, S5, S6, S10) and BAI-22 six (S1, S2, S4, S5, S7, S8). **The manuscript's count is a timing count and must always say so.** Any sentence of the form "no source measures more than five stages" is now forbidden; the licensed form is *"no source **times** more than five of the ten stages"*.
+
+### 3.3 Stabilised RF is quantitatively measured on five platforms and timed on one
+
+This is the correction that the recoding surfaces, and it is a stronger statement than v1.0 could make.
+
+| Platform | S10 axis A | S10 axis B |
+|---|---|---|
+| LI-25 | **Q** EVM ≈ −20 dB under bending; 16.7 ms interval | **T** — but *geometry static* ‡ |
+| LU-26 | **Q** patterns, gain, scan range at fixed curvatures | untimed |
+| NEU-24 | **Q** patterns, insertion loss, scan range | untimed |
+| AKR-26 | **Q** patterns, gain, control power | untimed |
+| GAL-22 | **Q** ≈80 mW delivered at 1 m | untimed |
+
+Five reviewed platforms establish quantitatively that a configured surface delivers its intended RF behaviour. **One of them attaches a duration, and that one holds its geometry still.** The gap is not that stabilised RF operation is unevidenced — it is well evidenced — but that its *onset after a commanded shape change* is untimed in the reviewed set.
+
+### 3.4 The stages are split across incompatible architectures
+
+- The only **timed S7/S8** (mechanical morphing and settling) come from **A4** platforms with no RF layer.
+- The only **timed S6** (electronic state) come from **A5** rigid panels and one **A3** flexible aperture.
+- The only **timed S1/S2/S4/S5 on a flexible RF surface** come from **A3**, where geometry is a *disturbance*.
+- **S9 is timed by no source at all.** GAL-22 demonstrates it on a deformable radiating aperture and reports no duration; LI-25 folds it into a pre-trained static map.
 
 Concatenating these to produce a total is not a synthesis; it is a category error across four architectures. The manuscript states this explicitly and does not perform the concatenation.
 
-### 3.3 The A1 literature does not model stages S5–S9 at all
-Across RAN-25, ANJ-25, YAN-25 and MOR-26, stages S5 (control transmission), S6 (electronic update, except as a protocol slot), S7 (morphing), S8 (settling) and S9 (calibration) are either **absent** or **assumed instantaneous**. The single strongest defence offered for this omission is E-03/T-ASM-01: the claim that a computed shape remains usable indefinitely. That claim is asserted in a footnote with no supporting analysis.
+### 3.5 The A1 literature does not model stages S5–S9 at all
+Across RAN-25, ANJ-25, YAN-25 and MOR-26, stages S5, S6 (except as a protocol slot), S7, S8 and S9 are either **absent** or **assumed instantaneous**. The single strongest defence offered for this omission is E-03/T-ASM-01: the claim that a computed shape remains usable indefinitely, asserted in a footnote with no supporting analysis.
 
-### 3.4 Two stages are unreported by *every* source in the corpus
-- **S8 for an RF aperture** — mechanical settling of a surface carrying meta-atoms, bias lines and a ground plane. NI-22 measures settling for a bare elastomer membrane; nothing measures it for an RF stack.
-- **S9 timing** — how long the geometry→RF mapping takes to re-establish after a shape change. GAL-22 demonstrates the operation without timing it; LI-25 folds it into a learned static map; nothing measures it.
+### 3.6 Two quantities unreported by every source in the reviewed set
+- **S8 for an RF aperture** — mechanical settling of a surface carrying meta-atom metallisation, a bias network and a ground plane. NI-22 times settling for a bare elastomer membrane; no source in the reviewed set times it for a radiating stack.
+- **S9 timing** — how long the geometry→RF mapping takes to re-establish after a shape change. Timed by no reviewed source.
 
-**S10 onset requires a distinction that this section previously failed to make.** It was formerly listed here as unreported by every source. **That is now false**, and the two cases must be kept apart:
+**S10 onset requires the distinction §3.3 makes.** Two cases, kept apart:
 
-1. **RF stabilisation under electronic compensation with static geometry — MEASURED.** LI-25's supplementary information reports 16.7 ms from a finger-triggered sensor to stabilised RF output, on a dual-channel oscilloscope through an AD8317 logarithmic detector at 3.1 GHz (`T-LI-06`). The end event is well defined and instrumentable with ordinary laboratory equipment.
-2. **RF stabilisation following a commanded mechanical morph — NOT FOUND in the reviewed set.** No interval anywhere in the corpus begins with a commanded deformation and ends at trustworthy radiation. The 16.7 ms measurement cannot stand in for it: the surface is held static throughout and no shape change occurs inside the interval.
+1. **RF stabilisation under electronic compensation with static geometry — TIMED.** LI-25's supplementary information reports 16.7 ms from a finger-triggered sensor to stabilised RF output, on a dual-channel oscilloscope through an AD8317 logarithmic detector at 3.1 GHz (`T-LI-06`).
+2. **RF stabilisation following a commanded mechanical morph — NOT FOUND in the reviewed set.** No interval in the reviewed set begins with a commanded deformation and ends at trustworthy radiation. The 16.7 ms measurement cannot stand in for it: the surface is held static and no shape change occurs inside the interval.
 
-Only case 2 remains a gap. `T-GAP-03` was narrowed accordingly and must never be stated as "RF stabilisation is unreported".
+Only case 2 is a gap. `T-GAP-03` was narrowed accordingly and must never be stated as "RF stabilisation is unreported".
 
-These are recorded as `T-GAP-01`, `T-GAP-02` and the narrowed `T-GAP-03`, and drive the reporting framework in `manuscript/08_reporting_framework.md`.
+These are recorded as `T-GAP-01`, `T-GAP-02` and the narrowed `T-GAP-03`, and drive the reporting framework in manuscript §10.
 
-### 3.5 Where a closed loop does exist, it is slow for a structural reason
-BAI-22 is the only closed geometry loop in the corpus (S1 → S2 → S4 → S7 → back to S1). Its cycle time is ≈0.25 s in the main text and 0.35 ± 0.15 s in the supplementary budget, and it is dominated **not** by mechanics (< 0.1 s) but by **S1/S2 — stereo image capture and processing** (T-BA-03).
+### 3.7 Where a closed loop does exist, it is slow for a structural reason
+BAI-22 is the only closed geometry loop in the reviewed set (S1 → S2 → S4 → S7 → back to S1). Its cycle time is ≈0.25 s in the main text and 0.35 ± 0.15 s in the supplementary budget, and it is dominated **not** by mechanics (< 0.1 s) but by **S1/S2 — stereo image capture and processing** (T-BA-03).
 
-**Narrowed 17 August 2026 — this paragraph previously over-transferred.** It formerly read: *"This is a general and transferable observation … Any FIM architecture that needs closed-loop geometry verification inherits this problem."* One platform cannot establish that. The supportable statement is:
+**Narrowed 17 August 2026 — this paragraph previously over-transferred.** One platform cannot establish a general law. The supportable statement is:
 
 > **In BAI-22's demonstrated closed geometry loop, sensing, image processing and the optimiser's search contribute substantially to total loop time and exceed the bare actuator response.** Whether the same holds in an RF FIM — where the sensing modality, the verification criterion and the compute load would all differ — must be **measured rather than assumed**.
 
-Read as a **design warning**, not a transferred result: a closed-loop FIM's rate may well be set by perception rather than by actuation, which is a reason to instrument the sensing path early. It is not evidence that any particular FIM architecture will be perception-limited, and this matrix asserts no such thing. What does hold generally is the weaker and purely negative point: **no A1 paper models this stage at all**, so none of them would detect the problem if it did occur.
+Read as a **design warning**, not a transferred result. What does hold generally within the reviewed set is the weaker, purely negative point: **no A1 paper models this stage at all**, so none of them would detect the problem if it did occur.

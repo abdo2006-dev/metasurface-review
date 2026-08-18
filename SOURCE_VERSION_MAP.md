@@ -1,6 +1,6 @@
 # Source Version Map
 
-**Snapshot: manuscript v0.20, documentation v1.7, generated 2026-08-18 17:52 UTC.**
+**Snapshot: manuscript v0.21, documentation v1.8, generated 2026-08-18 19:00 UTC.**
 
 Bibliographic identity and version-inspection status for every source cited in the manuscript's numbered reference list (`manuscript/99_references.md`), plus every external source verified for the bibliography but cited only in passing. **This is metadata only — no source PDF is distributed in this repository.** Every DOI and arXiv identifier here was resolved against the publisher-deposited Crossref record or the arXiv metadata endpoint on 18 August 2026 (`documentation/source_inventory.md` §3b). Full extraction detail, per-quantity locators, and independence-group definitions are in `documentation/source_inventory.md` and `documentation/audits/independence_audit.md`; this table is a navigation aid, not a replacement for them.
 
@@ -33,15 +33,15 @@ Bibliographic identity and version-inspection status for every source cited in t
 | [6] | LI-25 | Flexible intelligent microwave metasurface with shape-guided adaptive programming | F. Li, Pan, W. Li, Peng, Guo, Jia, Hu, L. Wang, W. Wang, Gao, Yao, Zuo, Bi, Weng, Tang, Lin | 2025 | *Nature Commun.* 16:3161 · 10.1038/s41467-025-58249-9 | Y — main text + Supplementary Information + Peer Review File | **IG-5**; SI and peer-review file belong to this study, not independent evidence | 1,3,4,5,6,7,8,9 |
 | [7] | BAI-22 | A dynamically reprogrammable surface with self-evolving shape morphing | Bai, H. Wang, Xue, Y. Pan, Kim, X. Ni, Liu, Yang, Han, Y. Huang, Rogers, X. Ni | 2022 | *Nature* 609(7928):701–708 · 10.1038/s41586-022-05061-w | Y — main text + Extended Data + Supplementary Information + Peer Review File | **IG-8**; SI and peer-review file belong to this study, not independent evidence | 1,3,5,6,7,8,9 |
 | [8] | NI-22 | Soft shape-programmable surfaces by fast electromagnetic actuation of liquid metal networks | X. Ni, Luan, Kim, Rogge, Bai, Kwak, S. Liu, Yang, S. Li, S. Li, Z. Li, Y. Zhang, Wu, X. Ni, Y. Huang, H. Wang, Rogers | 2022 | *Nature Commun.* 13:5576 · 10.1038/s41467-022-31092-y | Y | **IG-9** | 1,3,5,6,7,8,9 |
-| [4] | AKR-26 | A scalable and integrated reconfigurable intelligent surface | Akram, Elsayed, Hameed, M. Ali, Kazim, Imran, Abbasi | 2025 | *Adv. Electron. Mater.* 12(1) · 10.1002/aelm.202500674 | Y | **IG-7** | 1,3,5,6,7,9 |
-| [5] | NEU-24 | Sub-100 ms liquid crystal RIS based on defected delay lines | Neuder, Späth, Schüßler, Jiménez-Sáez | 2024 | *Commun. Eng.* 3(1) · 10.1038/s44172-024-00214-3 | Y | **IG-6** | 1,3,5,6,7 |
+| [4] | AKR-26 | A scalable and integrated reconfigurable intelligent surface | Akram, Elsayed, Hameed, M. Ali, Kazim, Imran, Abbasi | **2026** | *Adv. Electron. Mater.* 12(1), art. e00674 · 10.1002/aelm.202500674 (online 12 Dec 2025; issue dated Jan 2026) | Y | **IG-7** | 1,3,5,6,7,9 |
+| [5] | NEU-24 | Sub-100 ms liquid crystal RIS based on defected delay lines | Neuder, Späth, Schüßler, Jiménez-Sáez | 2024 | *Commun. Eng.* 3(1), art. 70 · 10.1038/s44172-024-00214-3 | Y | **IG-6** | 1,3,5,6,7 |
 | [20] | GAL-22 | Flexible active antenna arrays | Gal-Katziri, Fikes, Hajimiri | 2022 | *npj Flexible Electron.* 6:85 · 10.1038/s41528-022-00218-z | Y | **IG-10** | 3,4,5,6,7,9 |
 
 ## Reviews
 
 | # | Key | Title | Authors | Year | Venue / identifier | Held | Family / independence group | § |
 |---|---|---|---|---|---|---|---|---|
-| [9] | SAI-22 | Recent progress in reconfigurable and intelligent metasurfaces | Saifullah, Y. He, Boag, Yang, F. Xu | 2022 | *Adv. Sci.* 9(33) · 10.1002/advs.202203747 | Y | **IG-12** | 1,6 |
+| [9] | SAI-22 | Recent progress in reconfigurable and intelligent metasurfaces | Saifullah, Y. He, Boag, Yang, F. Xu | 2022 | *Adv. Sci.* 9(33), art. 2203747 · 10.1002/advs.202203747 | Y | **IG-12** | 1,6 |
 | [10] | TIS-25 | Multi-functional and hybrid RIS for ISAC — a survey | Tishchenko, Khalily, Shojaeifard, Burton, Björnson, Di Renzo, Tafazolli | 2025 | *IEEE Commun. Surv. Tuts.* 27(5):2895–2936 · 10.1109/COMST.2024.3519785 | Y — published + accepted-manuscript duplicate | **IG-13**; the accepted-manuscript copy is a duplicate of the published version, not independent evidence | 1 |
 
 ## Conformal / prior-art / antenna sources
@@ -56,7 +56,7 @@ Bibliographic identity and version-inspection status for every source cited in t
 | [23] | YOO-21 | Conformal array of rectangular waveguide-fed metasurfaces | Yoo, Smith | 2021 | arXiv:2109.09450 | Y | **IG-19** | 3 |
 | [24] | LIH-19 | Wide-angle beam steering based on an active conformal metasurface lens | H. Li, Ma, Shen, K. Xu, Ye, Huangfu, C. Li, Ran, Denidni | 2019 | *IEEE Access* 7:185264–185272 · 10.1109/ACCESS.2019.2960639 | Y | **IG-15** | 3 |
 | [25] | PEP-26 | Conformal RIS: a cylindrical geometry perspective | Pepe, Iudice, Castaldi, Di Renzo, Galdi | 2026 | *Adv. Electron. Mater.* e00550 · 10.1002/aelm.202500550 | Y (rasterised; read from rendered page images) | **IG-21** | 3 |
-| [26] | CHE-26 | Wide-angle conformal active metasurface for dynamic beam steering and OAM generation | H. Chen, T. Liu, M. Chen, D. Wang, W. Li, Wu, L. Wang, Liu, L. Wang | 2025 | *Laser Photon. Rev.* 20(3):e01500 · 10.1002/lpor.202501500 | Y (rasterised; read from rendered page images) | **IG-23** | 3 |
+| [26] | CHE-26 | Wide-angle conformal active metasurface for dynamic beam steering and OAM generation | H. Chen, T. Liu, M. Chen, D. Wang, W. Li, Wu, L. Wang, Liu, L. Wang | **2026** | *Laser Photon. Rev.* 20(3), art. e01500 · 10.1002/lpor.202501500 (online 28 Sep 2025; issue dated Feb 2026) | Y (rasterised; read from rendered page images) | **IG-23** | 3 |
 | [27] | HAR-20 | Continuously tunable reflectarray element for 5G metrology in the K-band | Harz, Kleine-Ostmann, Schrader | 2020 | *Adv. Radio Sci.* 18:1–5 · 10.5194/ars-18-1-2020 | Y | **IG-20** with [28] — same group, same design lineage | 3 |
 | [28] | HAR-22 | Measurement and optimisation of a continuously tunable 10×10 reflectarray for 5G metrology | Harz, Kleine-Ostmann | 2022 | *Adv. Radio Sci.* 19:215–220 · 10.5194/ars-19-215-2022 | Y | **IG-20** with [27] — not independent | 3 |
 | [33] | HUA-25 | Flexible RIS-aided covert communications in UAV networks | C. Huang, G. Chen, Z. Xu, J. Zhu, **T. Pan**, Tafazolli, W. Huang | 2026 | *IEEE JSAC* 44:1577–1588 · 10.1109/JSAC.2025.3639197 | N | Crossref author-list metadata inspected; full text not confirmed read. **Shares author Taisong Pan with [6] (LI-25)** — this is the corrected independence finding behind manuscript Table 7 row N1 (`CHANGELOG.md` CH-97): disjoint from the FIM system-paper lineage that §8's forward search measured, but not disjoint from the cited hardware source | 8 |

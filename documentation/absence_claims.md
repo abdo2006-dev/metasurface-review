@@ -2,6 +2,10 @@
 
 > ⚠ **Section numbers in this file are v0.14 numbering.** The manuscript was restructured into twelve sections on 18 August 2026 (draft v0.20). Use the crosswalk at the end of `manuscript_argument_map.md`; most often, **§6.5 → §8** (traceability) and **§9.4 → §11.4** (limitations). The scientific content of this file is unchanged and still governs.
 
+> ✅ **v1.8 sweep, 18 August 2026.** Every unbounded absence and priority construction in the *active manuscript*, the figure-generation script, all captions and tables was located by literal sweep and bounded (`CHANGELOG.md` CH-108). Figure 3's two `NOT MEASURED ANYWHERE` boxes now read **`NO MEASUREMENT FOUND IN REVIEWED SET`**. Two further rules were adopted in this pass:
+> - **The stage-count verb is `times`, never `measures`** — the count is a timing count; under a quantitative reading the maximum is six, not five (CH-100).
+> - **No source that has not been read in full may support a statement about what that source does not contain.** One such claim was found and withdrawn (CH-105).
+
 **Version:** 1.0 · 17 August 2026
 **Rule:** an absence claim is only as strong as the search that supports it. This project has a corpus and a documented but non-systematic search (`literature_search_log.md` §1). Therefore **no unqualified absence claim is licensed**, with two narrow exceptions noted in §3.
 

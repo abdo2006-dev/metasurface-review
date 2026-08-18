@@ -1,12 +1,17 @@
 # Manuscript Argument Map
 
-**Version:** 2.0 · 18 August 2026 — **remapped to the v0.20 twelve-section structure** produced by the publication-oriented authoring pass (see `CHANGELOG.md` v1.7). Supersedes v1.1, which mapped the ten-section v0.14 outline.
+**Version:** 2.1 · 18 August 2026 — **remapped to the v0.20 twelve-section structure** produced by the publication-oriented authoring pass (see `CHANGELOG.md` v1.7). Supersedes v1.1, which mapped the ten-section v0.14 outline.
 
 **Central research question the whole manuscript answers:**
 
 > Which operations in a FIM-assisted high-mobility ISAC system must track fast channel variation, which may follow slower geometric or statistical change, and how well are the resulting timescales supported by existing hardware and control demonstrations?
 
 > **Scientific-freeze status.** The evidence base is frozen at documentation v1.6. The authoring pass moved claims between sections, tightened prose, produced the tables and figures, and converted the citation system to numbered references. It did **not** revise the science. Two corrections were made because they were factual errors found while completing the bibliography, and both are recorded in `CHANGELOG.md` v1.7: the DOI held for **BUD-22** was wrong, and one counterexample's author-overlap status (**E-FP-C1**, the JSAC paper) was stated too strongly.
+
+> ✅ **v2.1 — 18 August 2026, reviewer-blocker revision (`CHANGELOG.md` v1.8).** Three wording constraints below changed and are now binding:
+> 1. **C1's verb is `times`, never `measures`.** The stage count is a timing count; under a quantitative reading the maximum is six, not five. Two platforms reach five and are disjoint (LI-25 radiates without commanding its shape; BAI-22 commands its shape without an RF layer). S9 is timed by no source; S10 is quantitatively measured on five platforms and timed on one, with geometry static.
+> 2. **C3 must carry its observation window.** State "14 of 21 candidate studies read" and "an author-disjoint instance among the unread seven cannot be excluded" wherever the finding appears. Use **"one connected co-authorship network"**, not "all four share authors".
+> 3. **No source unread in full may support a claim about what it does not contain.**
 
 ---
 
@@ -24,7 +29,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 |---|---|---|
 | 1 | Introduction | — |
 | 2 | Scope, corpus and method | — |
-| 3 | Seven architectures under one name, and what transfers between them | **Table 1**, **Figure 1** |
+| 3 | Seven architecture classes relevant to FIM evidence transfer | **Table 1**, **Figure 1** |
 | 4 | What the surface is being asked to track | **Table 2** |
 | 5 | The adaptation chain | **Table 3**, **Figure 2** |
 | 6 | Hardware evidence, organised by physical process | **Table 4**, **Table 5** |
@@ -34,7 +39,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 | 10 | A reporting framework for FIM adaptation | **Table 9** |
 | 11 | Discussion | — |
 | 12 | Conclusion | — |
-| — | References | 33 entries, numbered by first appearance |
+| — | References | **34** entries, numbered by first appearance |
 
 **Table and figure inventory.** Nine tables and four figures. The count rose from the seven placeholder tables of v0.14 because two objects that were previously prose needed tabulating: the **timing-quantity taxonomy** (Table 4), which the register is unreadable without, and the **propagation cases** (Table 7), which are the evidence for C3 and were previously buried in a paragraph. The v0.14 placeholders "system assumptions vs evidence" and "validation gaps" were **merged into one table** (Table 8), because separately they repeated each other's rows.
 
@@ -70,7 +75,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 2. Corpus: 24 distinct contributions across 31 files; four supplementary/peer-review files belong to their parents.
 3. Two searches with different weight: the non-systematic external search (S1–S10) and the **reproducible forward citation search** (S11), the latter bounded by seven paywalled full texts.
 4. Extraction protocol: taxonomy, ten-stage template, timing register with comparability classes, **numbered evidence ladder L1–L7**, independence rule, absence-claim rule.
-5. Two inherited constraints: absence is bounded to the reviewed set; **no interval in the manuscript carries an uncertainty**, because no source reports one.
+5. Two inherited constraints: absence is bounded to the reviewed set; **no headline interval in the manuscript carries an uncertainty**, because no source reports one for its headline response/morphing/adaptation interval. ⚠ Not universal — Table 5 row 28 carries 0.35 ± 0.15 s; say *headline*.
 
 ⚠ The ladder is numbered explicitly here because Table 8 uses L2/L4/L5/L6/L7 as labels. If the ladder wording changes, Table 8's level column must change with it.
 
@@ -81,7 +86,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 **Question:** what physically distinct systems are conflated, and what transfer between them is legitimate?
 
 **Essential claims**
-1. Seven classes A1–A7. **Table 1 carries them; the prose must not re-enumerate the taxonomy.**
+1. Seven classes A1–A7, split into **direct** (A1–A4) and **comparator / evidence-donor** (A5–A7). **Table 1 carries them; the prose must not re-enumerate the taxonomy.** ⚠ Do not imply all seven are called "flexible metasurfaces" by their own authors — A5/A6/A7 generally are not.
 2. A1 is a **model** class with no hardware instance in the reviewed set. *(E-01, E-AA-01)*
 3. The realised A3 apertures treat geometry as a **disturbance**; A1 treats it as a **control variable**. This inversion is the taxonomy's key output. *(E-19, E-20, E-53)*
 4. The A4 commanded-shape platforms have **no RF layer**. *(E-32, E-34, E-35)*
@@ -114,7 +119,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 
 **Essential claims**
 1. The chain crosses three physical domains with different governing physics and different scaling laws; that is *why* it is decomposed, and §5.1 must say so before listing the stages.
-2. No reviewed source measures more than **five of the ten stages**, and none measures S3 with S7. The largest linked set is S1–S2 and S4–S6, spanned by one interval. **Do not write "contiguous".**
+2. No reviewed source **times** more than **five of the ten stages**, and none times S3 with S7. **Two** platforms reach five and are disjoint: LI-25 times S1–S2 and S4–S6 (radiates, does not command its shape); BAI-22 times S1–S2, S4–S5 and S7 (commands its shape, no RF layer). S9 is timed by no source. S10 is quantitatively measured on five platforms and timed on one, with geometry static. **Do not write "contiguous". Do not write "measures" — the count is a timing count; under the quantitative reading the maximum is six** (`CHANGELOG.md` CH-100).
 3. The measured stages sit on **four physically non-equivalent architectures**. ⚠ Do not write "mutually incompatible" — it can be misread as claiming these technologies cannot be physically integrated.
 4. Concatenating stages across those four platforms is a category error, and the manuscript performs it nowhere.
 5. The A1 literature does not model S5–S9, defending the omission with one unquantified footnote. *(E-03, T-ASM-01)*

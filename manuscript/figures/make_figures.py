@@ -2,7 +2,7 @@
 """
 Publication figures for:
   "Flexible Intelligent Metasurfaces for High-Mobility ISAC:
-   Hardware Evidence, Adaptation Timescales, and Validation Gaps"  (draft v0.20)
+   Hardware Evidence, Adaptation Timescales, and Validation Gaps"  (draft v0.21)
 
 Every value drawn here is transcribed from `Documentation/evidence_matrix.md`
 Part B and `Documentation/timescale_matrix.md`.  No value is invented, derived
@@ -35,7 +35,7 @@ LGREY = "#e8e8e8"
 MEAS  = "#2b5d8a"   # measured
 DEMO  = "#7ba7c7"   # demonstrated, untimed
 ASSUM = "#c8c8c8"   # assumed / simulated
-GAP   = "#b03a2e"   # not measured anywhere
+GAP   = "#b03a2e"   # no measurement found in the reviewed set
 
 
 def save(fig, name):
@@ -99,62 +99,75 @@ def figure1():
 
 # ---------------------------------------------------------------- Figure 2
 def figure2():
-    """Ten-stage adaptation chain, with what each platform class covers."""
+    """Ten-stage adaptation chain on TWO axes.
+
+    Fill colour  = stage evidence status (Q quantitative / D demonstrated / A assumed).
+    Appended "T" = timing status: the DURATION of that stage was measured.
+    "(T)"        = duration reported but incompletely defined or not resolved
+                   from an adjacent stage.
+    The point of the figure is the cells that are Q with no T: a radiation
+    pattern, a gain or a delivered power is a measurement but not a timing.
+    """
     stages = ["S1\nsense", "S2\ngeom.\nest.", "S3\nchannel\nest.", "S4\noptimise",
               "S5\ncontrol\ntx", "S6\nelectronic\nupdate", "S7\nmechanical\nmorphing",
               "S8\nsettling", "S9\ncalibration", "S10\nstabilised\nRF"]
     rows = [
         ("A1  theoretical FIM\n[1], [2], [3], [15]",
-         ["", "", "A", "A", "", "", "A", "", "", "A"]),
+         ["", "", "S·T", "S", "", "A", "A", "", "", "A"]),
         ("A3  flexible programmable aperture\n[6]   (geometry imposed)",
-         ["M", "M", "", "M", "M", "M", "", "", "D", "M*"]),
+         ["Q·T", "Q·(T)", "", "Q·T", "Q·(T)", "Q·T", "", "", "D", "Q·T*"]),
         ("A5  rigid reconfigurable RIS\n[4], [5]",
-         ["", "", "", "", "M", "M", "", "", "", "M"]),
+         ["", "", "", "", "Q·(T)", "Q·T", "", "", "", "Q"]),
         ("A4  self-morphing mechanical\n[7], [8]   (no RF layer)",
-         ["M", "M", "", "M", "M", "", "M", "M", "", ""]),
+         ["Q·T", "Q·T", "", "Q·T", "Q·T", "", "Q·T", "Q·T", "", ""]),
         ("A7  flexible active array\n[20]",
-         ["D", "D", "", "D", "D", "D", "", "", "D", "M"]),
+         ["D", "D", "", "D", "D", "D", "", "", "D", "Q"]),
     ]
-    fig, ax = plt.subplots(figsize=(7.4, 3.6))
+    fig, ax = plt.subplots(figsize=(7.6, 3.8))
     nS, nR = len(stages), len(rows)
     for j, (label, codes) in enumerate(rows):
         y = nR - 1 - j
         ax.text(-0.25, y + .5, label, ha="right", va="center", fontsize=7.2,
                 linespacing=1.5, color=INK)
         for i, c in enumerate(codes):
-            fc = {"M": MEAS, "D": DEMO, "A": ASSUM, "": "white"}[c.rstrip("*")]
+            base = c.split("·")[0].rstrip("*")
+            fc = {"Q": MEAS, "D": DEMO, "A": ASSUM, "S": ASSUM, "": "white"}[base]
             ax.add_patch(Rectangle((i, y), 1, 1, facecolor=fc,
                                    edgecolor="white" if c else LGREY, lw=1.0))
             if c:
-                ax.text(i + .5, y + .5, c, ha="center", va="center", fontsize=7.5,
-                        color="white" if c.rstrip("*") in ("M", "D") else "#555555",
+                ax.text(i + .5, y + .5, c, ha="center", va="center", fontsize=6.6,
+                        color="white" if base in ("Q", "D") else "#555555",
                         fontweight="bold")
 
     ax.plot([6.05, 6.05, 9.95, 9.95], [-0.10, -0.28, -0.28, -0.10],
             lw=1.0, color=GAP, clip_on=False)
     ax.text(8.0, -0.42,
-            "no reviewed source measures these four stages\non an aperture that radiates",
-            ha="center", va="top", fontsize=7.4, color=GAP, fontweight="bold",
+            "across the reviewed set, these four stages are timed only on platforms\n"
+            "with no RF layer (S7, S8), not timed at all (S9), or timed only with\n"
+            "the geometry held static (S10)",
+            ha="center", va="top", fontsize=7.1, color=GAP, fontweight="bold",
             linespacing=1.45)
 
     for i, s_ in enumerate(stages):
         ax.text(i + .5, nR + .10, s_, ha="center", va="bottom", fontsize=6.9,
                 linespacing=1.35, color=INK)
-    ax.set_xlim(-0.02, nS); ax.set_ylim(-1.35, nR + 0.85); ax.axis("off")
+    ax.set_xlim(-0.02, nS); ax.set_ylim(-1.75, nR + 0.85); ax.axis("off")
 
     handles = [Rectangle((0, 0), 1, 1, facecolor=MEAS),
                Rectangle((0, 0), 1, 1, facecolor=DEMO),
                Rectangle((0, 0), 1, 1, facecolor=ASSUM),
                Rectangle((0, 0), 1, 1, facecolor="white", edgecolor=LGREY)]
     ax.legend(handles,
-              ["M  measured (start and end events stated)",
-               "D  demonstrated, no duration reported",
-               "A  assumed or simulated",
-               "     absent / not applicable"],
-              loc="upper left", bbox_to_anchor=(-0.30, -0.03), frameon=False,
+              ["Q  quantitatively measured", "D  demonstrated, no quantity",
+               "A / S  assumed or simulated", "     absent / not applicable"],
+              loc="upper left", bbox_to_anchor=(-0.30, -0.01), frameon=False,
               fontsize=7, handlelength=1.1, ncol=2, columnspacing=1.4)
-    ax.text(-3.05, -1.30, "* geometry held static throughout the measured interval",
-            ha="left", va="bottom", fontsize=6.8, style="italic", color="#555555")
+    ax.text(-3.05, -1.42,
+            "·T  the duration of the stage was measured, with identifiable start and end events\n"
+            "·(T)  a duration is reported but incompletely defined, or not resolved from an adjacent stage\n"
+            "*  geometry held static throughout the timed interval",
+            ha="left", va="bottom", fontsize=6.6, style="italic", color="#555555",
+            linespacing=1.6)
     save(fig, "fig2_adaptation_chain")
 
 
@@ -194,16 +207,18 @@ def figure3():
         ("stabilised RF, static geometry", [
             dict(kind="point", x=1.67e-2,
                  text="16.7 ms  trigger \u2192 stabilised RF \u00b7 A3", ha="left")]),
-        ("RF aperture mechanics", [dict(kind="gap", text="NOT MEASURED ANYWHERE")]),
-        ("RF settling after commanded morph", [dict(kind="gap", text="NOT MEASURED ANYWHERE")]),
+        ("commanded mechanical actuation\nof a radiating aperture",
+         [dict(kind="gap", text="NO MEASUREMENT FOUND IN REVIEWED SET")]),
+        ("stabilised RF after a\ncommanded morph",
+         [dict(kind="gap", text="NO MEASUREMENT FOUND IN REVIEWED SET")]),
     ]
-    fig, ax = plt.subplots(figsize=(7.4, 4.3))
+    fig, ax = plt.subplots(figsize=(7.4, 4.5))
     n = len(lanes)
     for k, (lane, items) in enumerate(lanes):
         y = n - 1 - k
         ax.axhspan(y - .45, y + .45, color="#fafafa" if k % 2 == 0 else "white", zorder=0)
         ax.text(-0.015, y, lane, transform=ax.get_yaxis_transform(),
-                ha="right", va="center", fontsize=7.4, color=INK)
+                ha="right", va="center", fontsize=7.4, color=INK, linespacing=1.4)
         for it in items:
             kind = it["kind"]
             if kind == "note":
@@ -213,7 +228,7 @@ def figure3():
                 ax.add_patch(Rectangle((6e-5, y - .32), 2.5e3, .64,
                                        facecolor="#f7e9e7", edgecolor=GAP,
                                        lw=0.9, ls=(0, (4, 3)), zorder=1))
-                ax.text(4e-1, y, it["text"], ha="center", va="center", fontsize=7.4,
+                ax.text(4e-1, y, it["text"], ha="center", va="center", fontsize=7.2,
                         color=GAP, fontweight="bold", zorder=3)
             elif kind == "point":
                 ax.plot([it["x"]], [y], marker="o", ms=4.4, color=MEAS, zorder=3)
@@ -265,7 +280,7 @@ def figure4():
     evidence = [
         ("commanded shape control\n[7], [8] \u2014 no RF layer", "mismatch"),
         ("≈300 ms surface morph\n[8] — bare elastomer", "mismatch"),
-        ("nothing — no bound, no\ncondition, no experiment", "none"),
+        ("no bound, condition or\nexperiment in reviewed set", "none"),
         ("closed-loop refocusing\n[20] \u2014 not timed", "untimed"),
         ("16.7 ms to stabilised RF\n[6] \u2014 geometry static", "wrongevent"),
         ("≈5.5 ms of 16.76 ms; ×¼\nmultiplexing — measured", "measured"),

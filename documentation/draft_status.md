@@ -1,8 +1,10 @@
 # Draft Status
 
-**Version:** 1.7 · 18 August 2026 · manuscript draft **v0.20** — publication-oriented authoring pass (see `CHANGELOG.md` v1.7)
+**Version:** 1.8 · 18 August 2026 · manuscript draft **v0.21** — reviewer-blocker revision (see `CHANGELOG.md` v1.8)
 
-> **What v0.20 is.** A full rewrite and restructuring of the manuscript into twelve sections, with all nine tables and all four figures produced, a numbered IEEE-style reference list built from verified metadata, and the internal evidence keys removed from the reader-facing text. **The scientific evidence base was frozen at documentation v1.6 and was not revised**, apart from two factual corrections found while completing the bibliography (`CHANGELOG.md` CH-96, CH-97). A section-number crosswalk from the v0.14 numbering used throughout the older documentation is at the end of `manuscript_argument_map.md`.
+> **What v0.21 is.** A targeted repair of the methodological and evidentiary problems raised in an independent review of v0.20 — **not** a rewrite, and not a broadening of any claim. Four things changed materially: the adaptation-chain coding was rebuilt on two axes so that a quantitative RF measurement can no longer be counted as a measured latency; the forward citation search was re-executed against an explicit published query, correcting three counts and surfacing one new author-disjoint counterexample; all unbounded absence and priority language was bounded; and four over-reaches were corrected, one of which was a claim resting on a source we had not read. **C3 remains at Level A.** Full change list in `CHANGELOG.md` v1.8. A section-number crosswalk from the v0.14 numbering used throughout the older documentation is at the end of `manuscript_argument_map.md`.
+
+> ⚠ **Two verbs are now load-bearing and must not drift.** The stage count is a **timing** count: *"no source **times** more than five of the ten stages"* — under the quantitative reading the maximum is six. And the C3 finding is stated **within its observation window**: 14 of 21 candidate studies read, an author-disjoint instance among the unread seven not excludable.
 
 ---
 
@@ -25,7 +27,7 @@
 | 12 | `12_conclusion.md` | **complete** | — | good — answers six questions, ends on priorities |
 | — | `99_references.md` | **complete** | 33 entries | every field verified against Crossref or the arXiv metadata endpoint |
 
-**Word count.** 25 495 words across the twelve sections and front matter, of which **19 984 is prose** and the remainder is table content. The comparable v0.14 figures are 21 887 and 19 933: **prose length is unchanged while nine tables, four figures, a methods section and a bibliography were added**, so the rewrite tightened the text by roughly the amount the new material added.
+**Word count.** **29 049 words** across the twelve sections, front matter and references, of which **23 472 is prose** and 5 577 is table content. Comparison: v0.20 was 25 495 / 19 984; v0.14 was 21 887 / 19 933. The v0.21 growth of ~3 500 words is almost entirely **bounding and conditioning language** — the two-axis coding explanation in §5.2–5.3, the four access limits in §8.5, the reproducibility description in §2.3, and the per-source status tables — which is the intended direction for a revision whose purpose was to make claims harder to overstate.
 
 ## 2. What is now done that was not
 
@@ -40,25 +42,27 @@
 
 ## 3. What is still not done
 
-**No domain-expert review has occurred.** This remains the largest single gap and it is not one this project can close by itself.
+**No domain-expert review has occurred.** ⚠ *This is an internal project gate and is deliberately **not** stated in the manuscript* — it describes our workflow, not a scientific limitation, and saying it in the paper implied that peer review must precede submission (`CHANGELOG.md` v1.8). The manuscript instead states the scientific version: extraction and classification were performed by a single reviewer and were not independently duplicated or adjudicated.
 
-**No interval in the manuscript carries an uncertainty.** No reviewed source reports a repetition count or a dispersion figure for its headline timing value. This is a deficiency in the sources; no further searching would repair it, and the reporting framework asks for it explicitly (Group C).
+**No headline interval in the manuscript carries an uncertainty.** No reviewed source reports a repetition count or dispersion for its headline response, morphing or adaptation interval. ⚠ *Not universal across the register* — Table 5 row 28 carries 0.35 ± 0.15 s. Additional literature cannot retroactively supply uncertainty for values already published without it; only raw data, reanalysis, repeated measurement or new experiments could. Group C of the reporting framework asks for it explicitly.
 
-**Seven identified system papers are behind publisher paywalls and were not read.** Every count arising from the forward citation search is therefore a lower bound, and an author-disjoint instance among them would move C3 from Level A to Level B. This is the only open item that could change a contribution's wording.
+**Seven of the 21 identified system studies are behind publisher paywalls and were not read.** Every count arising from the forward citation search is a lower bound, and an author-disjoint instance reproducing the substitution among them would move C3 from Level A to Level B. **This remains the only open item that could change a contribution's wording.** Note that the v1.8 re-execution added one previously-missed study and read it: it proved to be an author-disjoint *counterexample*, which strengthens the counterexample base without touching the classification.
 
-**Some sources are identified bibliographically only.** Quantitative claims keyed to them should be re-verified against published versions before submission. The reference list marks each such entry in bold.
+**Some sources are identified bibliographically only.** ✅ **Audited 18 Aug 2026** — `source_inventory.md` §5b classifies every claim resting on an unread source as load-bearing or peripheral. One over-reach was found and corrected (HUA-25); the remaining bibliographic-only sources are all peripheral, cited for existence or class membership. **Standing rule: no source that has not been read in full may support a statement about what that source does not contain.**
+
+**Stage-2 screening and full-text extraction remain single-reader judgements.** Retrieval and stage-1 screening are now exactly reproducible from a published script; stages 2 and 3 are recorded per work in `forward_citation_search_results.csv` and are auditable, but not re-derivable. A second screener is the improvement most likely to change a cell.
 
 ## 4. Claims limited by evidence, and how they are marked
 
-| Claim | Limitation | Marking in v0.20 |
+| Claim | Limitation | Marking in v0.21 |
 |---|---|---|
 | 16.76 ms interval | shape acquisition → bias-voltage supply; excludes deformation and settling | §6.2 states the definition, the per-component method, and that no repetitions are reported; Table 4 names the substitution it invites; Table 5 row 20 carries the events |
 | 16.7 ms trigger → stabilised RF | measured on **static geometry** | stated at every use — §6.2, Table 3 ‡ note, Table 5 row 32, Table 6 S10 row, §9.2 G4 |
-| All quoted intervals | no source reports repetitions or dispersion | §11.4; absence claim A15; Table 9 Group C |
+| All **headline** intervals | no source reports repetitions or dispersion for them; one subordinate quantity does (0.35 ± 0.15 s) | §2.5 and §11.4 state the scope and name the exception; absence claim A15; Table 9 Group C |
 | The tabulated 10 ms | complete package held; the tabulating authors' derivation unobservable | §8.4 says "discrepancy requiring verification" and says why the complete package does not upgrade it |
 | Our retracted ≈1.25–3.75 s derivation | invalid; superseded by the source's ≈2.5 min | **disclosed in the body** at §7.2 and §11.4 (U12b decision: RETAIN) |
-| The propagation practice | four papers, **zero author-disjoint groups**; 7 papers unread | §8.5 reports the count, the negative independence result and the counterexamples, and declines to generalise |
-| Counterexample independence | one counterexample shares an author with a cited hardware paper | §8.5 and Table 7 row N1 state which is fully disjoint and which is not — **corrected 18 Aug 2026** |
+| The propagation practice | four papers forming **one connected co-authorship network**, **zero author-disjoint groups reproducing it**; observed across **14 of 21** studies, 7 unread | §8.5 states all four limits explicitly, including that an author-disjoint instance among the unread seven cannot be excluded; C3 in §1.6 and the abstract carry the 14/21 bound |
+| Counterexample independence | **two** counterexamples are now fully author-disjoint; one earlier entry was withdrawn because its full text was never read | Table 7 rows N1 and N3; the withdrawn case (HUA-25) is cited only for verified authorship — **corrected twice, 18 Aug 2026**, see CH-105 |
 | Coherence-block update assumption | external source, author version | cited as a numbered reference with its status marked |
 | Three image-only sources | abstracts and metadata only | §11.4; no load-bearing claim drawn |
 | λ/20 arithmetic in §9.2 | **illustrative of the form of a criterion, not a recommended value** | marked in §9.2 and disclaimed again in Table 9 Group C |
@@ -91,10 +95,12 @@
 
 ## 7. Readiness statement
 
-The manuscript is **complete as a draft, materially stronger than v0.14, and not ready for submission.**
+The manuscript is **complete as a draft, materially stronger than v0.20, and not ready for submission.** Readiness is a judgement for an independent reviewer inspecting v0.21, not one this project can make about itself.
 
 What improved is real and can be stated precisely: the argument now proceeds in an order a reader can follow without the audit machinery showing; the method is locatable; the traceability result has the prominence its evidence supports; every table and figure the manuscript refers to exists; and the citations are verified rather than keyed. Two factual errors were caught in the process — a wrong DOI and an overstated independence claim about a counterexample — which is a reminder that a rewrite pass is also an inspection pass.
 
-What has not changed is what keeps it unready. **It has not been reviewed by a domain expert.** No interval in it carries an uncertainty, because no source reports one. Seven relevant papers were not readable. And the strongest contribution, the traceability finding, is deliberately held at its narrow framing: four papers, zero author-disjoint groups, no prevalence claim. That wording is load-bearing and was chosen against the evidence rather than by preference — if a later pass finds itself reaching for "the field" or "widespread", the classification is being violated, not the style.
+What has not changed is what keeps it unready. Extraction remains a single-reader exercise. Seven of the 21 identified system studies were not readable, and that bound now appears wherever C3 appears rather than only in a limitations list. And the strongest contribution, the traceability finding, is deliberately held at its narrow framing: four papers in one connected co-authorship network, zero author-disjoint groups reproducing the practice, observed across 14 of 21 studies, no prevalence claim. That wording is load-bearing and was chosen against the evidence rather than by preference — if a later pass finds itself reaching for "the field" or "widespread", the classification is being violated, not the style.
 
-**Completeness is not readiness, and a rewrite is not a review.**
+**What v0.21 demonstrated about the method.** Every one of the four corrections in this pass came from performing a check that had not been performed before: writing out a regex that had been elided, resolving a print date rather than trusting an online-first one, asking which source supported a sentence about a document's contents, and asking what a code letter actually meant in each cell. Three of the four had survived a full authoring pass and a prior self-review. That is the argument for the reporting framework in §10 stated as a fact about this project rather than as a recommendation to others.
+
+**Completeness is not readiness, a rewrite is not a review, and a correction found is not a correction absent.**

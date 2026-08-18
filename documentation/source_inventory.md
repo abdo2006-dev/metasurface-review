@@ -211,8 +211,11 @@ Performed during the publication-oriented authoring pass, to produce a numbered 
 | Key | What changed | Basis |
 |---|---|---|
 | **BUD-22** | ‼ **DOI was wrong** — see the corrected row above. This is the only outright bibliographic error found. | Crossref resolution of the recorded DOI returned an unrelated paper; a title query returned the correct record |
-| **AKR-26** | *Adv. Electron. Mater.* **12**(1), issued **12 Dec 2025** (the internal key's "26" is a draft artefact) | Crossref |
-| **CHE-26** | *Laser Photon. Rev.* **20**(3), art. e01500, issued **28 Sep 2025** | Crossref |
+| **AKR-26** | ‼ **corrected again 18 Aug 2026.** The v1.7 entry combined "vol. 12, no. 1" with "Dec. 2025" — internally inconsistent. Crossref gives `published-online` **12 Dec 2025** and `published-print` **January 2026**; volume 12, issue 1 **is** the 2026 issue. Cite as *Adv. Electron. Mater.* **12**(1), art. **e00674**, **Jan 2026**, noting the online-first date separately. The internal key's "26" turns out to match the issue year after all | Crossref `published-print` vs `published-online` |
+| **CHE-26** | ‼ **same defect, same correction.** Crossref gives `published-online` **28 Sep 2025**, `published-print` **February 2026**. Cite as *Laser Photon. Rev.* **20**(3), art. e01500, **Feb 2026** | Crossref |
+| **SAI-22** | art. 2203747 added; issue date is **Nov 2022** (online 18 Sep 2022) | Crossref |
+| **LU-25** | issue date is **Mar 2025** (online 24 Feb 2025) | Crossref |
+| **NEU-24** | art. 70 added; no print issue, so the May 2024 online date is the correct one | Crossref |
 | **TIS-25** | **27**(5):2895–2936, Oct 2025 — no longer "Early Access" | Crossref |
 | **LU-26** | pp. **2265–2269** (the entry gave only the first page) | Crossref |
 | **LIH-19** | pp. **185264–185272** added | Crossref |
@@ -262,7 +265,7 @@ Performed during the publication-oriented authoring pass, to produce a numbered 
 | `19S_Bai_Shape_Morphing_Supplementary_Information.pdf` | — | **BAI-22-SI** | ✅ retrieved 17 Aug 2026; belongs to BAI-22 |
 | `19SB_Bai_Shape_Morphing_Peer_Review_File.pdf` | — | **BAI-22-PR** | ✅ retrieved 17 Aug 2026; belongs to BAI-22 |
 
-**Corpus totals (revised 17 August 2026):** **31 PDF files** → **26 unique documents** → **24 independent research contributions**.
+**Corpus totals (revised 17 August 2026):** **31 PDF files** → **26 unique documents** → **24 distinct research contributions** (distinct, not independent: several share authors — see §4 and `audits/independence_audit.md`).
 
 The file count rose by four and **the contribution count did not change.** Supplementary information and peer-review files belong to their parent papers and are not independent studies; this is the project brief's independence rule and it applies to material this review retrieved just as it applies to material it found. The four new files are evidence *about* LI-25 and BAI-22, not evidence alongside them, and they are assigned to independence groups IG-5 and IG-8 accordingly.
 
@@ -278,8 +281,35 @@ Previously recorded as absent from the corpus despite being listed as item #23 i
 ### ✅ M-B. BAI-22 Extended Data / Supplementary Information — **RESOLVED 17 August 2026**
 **Retrieved** and archived as `19S_Bai_Shape_Morphing_Supplementary_Information.pdf` (71 pp.) and `19SB_Bai_Shape_Morphing_Peer_Review_File.pdf` (28 pp.). The Extended Data figures were already present in the main-text PDF held in the corpus. The package was searched for any sub-element or faster response figure: **none exists.** See `audits/citation_audit.md` CA-02 for the full search result, and §2 under BAI-22 for the timing contents — including the ≈2.5 min closed-loop convergence figure that **retracted a derived value of our own**.
 
-### M-C. Journal versions not inspected (medium impact, bibliography only)
-RAN-25 (IEEE TWC extended version), ANJ-25 (IEEE TWC 24(4):2940–2955), YAN-25, MA-26, XU-22, ALE-26.
+### M-C. Version-of-record status — **rebuilt 18 August 2026 from the actual present state**
+
+‼ **The previous text of this item was stale and self-contradictory.** It listed RAN-25, ANJ-25, YAN-25, MA-26, XU-22 and ALE-26 under the heading "Journal versions not inspected", while §1 of this same file recorded that the versions of record for RAN-25, YAN-25 and XU-22 had been **obtained, archived and inspected**, and that the An journal article had been read in full from an open repository. The heading is withdrawn and replaced by a per-source status table. No blocker language survives that the evidence does not support.
+
+| Key | VoR exists? | VoR obtained? | Full text inspected? | Quantitative claims verified against it? | Bibliography cites | Unresolved |
+|---|---|---|---|---|---|---|
+| **RAN-25** | ✅ *IEEE TWC* **25**:13319–13335, 2026, DOI 10.1109/TWC.2026.3668992 | ✅ archived `01V_…` | ✅ **yes**, 17 Aug 2026 | ✅ **all load-bearing timing and parameter quantities survive**, at VoR locators; one **material addition** found (the Remark, pp. 13321–13322, E-03b/E-03c) | version of record | **none** |
+| **YAN-25** | ✅ *IEEE TWC* **25**:6823–6836, 2026, DOI 10.1109/TWC.2025.3627095 | ✅ archived `04V_…` | ✅ **yes**, 17 Aug 2026 | ✅ E-12 and T-YA-01 verified at VoR locators. ‼ **One non-timing claim did NOT survive** — the preprint abstract's 125 % figure is absent from the VoR and has been withdrawn (E-13) | version of record | **none** |
+| **XU-22** | ✅ *IEEE TVT* **72**(1):718–734, **Jan 2023**, DOI 10.1109/TVT.2022.3203818 | ✅ archived `07V_…` | ✅ **yes**, 17 Aug 2026 | ✅ all load-bearing items survive at VoR locators; the f_s = 100 kHz correction was found here | version of record, **year 2023** | **none** — the internal key's "22" is an artefact and is never a citation |
+| **ANJ-25** | ✅ two separate publications: GLOBECOM 2024 (the held copy) and the *IEEE TWC* **24**(4) journal article | conference: ✅ held; journal: ✅ read, not archived locally | ✅ **both**, 18 Aug 2026 | ✅ all five load-bearing claims verified present in **both** versions. ‼ **One addition in the journal version** — Remark 4's "a few milliseconds", absent from the conference copy (E-FP-04, propagation case P4) | the conference paper as [2]; the journal article separately as [32] | **none** |
+| **MA-26** | ✗ **no journal version of record located** (checked 17 Aug 2026); only a TechRxiv preprint deposit, DOI 10.36227/techrxiv.176857884.40392967/v1 | n/a | ✅ held preprint read in full | ✅ E-40…E-43 verified in the held copy | **as a preprint**, explicitly | the zero-occurrence "FIM" search is a property of **the copy held**; U11's caveat stands |
+| **ALE-26** | ✅ *IEEE AP-S/CNC-USNC-URSI* 2025, pp. 1–4, DOI 10.1109/AP-S/CNC-USNC-URSI55537.2025.11265965 | ✗ **metadata only; full text not retrieved** (paywalled) | ✗ — the held copy is arXiv:2409.09590 | ⚠ **not re-verified against the VoR** | the VoR, **year 2025**, marked in bold in `manuscript/99_references.md` as carrying an access caveat | ⚠ **the one genuinely open item in this table.** No load-bearing quantitative claim rests on it — it is cited once, in §3.5, as a curvature-aware array-modelling precedent (identity-level, class A7). Classified **peripheral** in the 18 Aug bibliographic-only audit; see §5b |
+
+## 5b. Load-bearing audit of bibliographic-only and unread sources — 18 August 2026
+
+Every manuscript claim resting on a source **not read in full** was located and classified. **A = load-bearing** (a quantitative value, a verdict, an absence claim or a contribution depends on it). **B = contextual/peripheral** (identity-level citation: the source is cited for existing, for being an example of a class, or for a position stated in its abstract).
+
+| Ref | Key | Access status | Claims it supports | Class | Action taken |
+|---|---|---|---|---|---|
+| [11] | MA-26 | preprint held and **read in full**; no version of record exists to compare against | the instantaneous-vs-statistical-CSI position, hierarchical control, the "mechanical is slower" dichotomy, the movement-time modelling recommendation | **A** | **No action needed.** The full text *is* held and read; the caveat is only that no VoR exists. Cited explicitly as a preprint |
+| [13] | LFIM-26 | **identified bibliographically only** | cited twice, jointly with [12], solely for the *existence* of published statistical-CSI FIM optimisation | **B** | **Retained, with the evidence level made explicit.** [12] was read in full and independently supports the same existence claim, so no claim rests on [13] alone. Note that [12] and [13] share three authors and are one line of work — recorded, and never presented as two confirmations |
+| [14] | FAS-26 | **identified bibliographically only** | cited once, for the existence of delay-aware modelling in the adjacent fluid-antenna field | **B** | **Retained.** Used to *limit* this manuscript's novelty claim, not to support a finding. A citation that only ever weakens our own claim cannot inflate it |
+| [21] | ALE-26 | VoR paywalled; **arXiv preprint held**, metadata verified | one row of Table 1 (A7 class membership) and one clause in §3.5 | **B** | **Retained.** Identity-level and class-level only; no quantity is drawn from it |
+| [29] | ANJ-MIMO | author version **read in full** | Premise 2 (the coherence-block assumption), Table 5 row 35, Table 8 row 2, counterexample N2 | **A** | **No action needed** — the author version was read; only the *IEEE Trans. Commun.* record was not retrieved. Marked accordingly |
+| [33] | HUA-25 | **paywalled; full text never read.** Crossref author metadata verified | ‼ **previously supported a claim it could not support** | **A → downgraded** | ‼ **Corrected.** v0.20 §8.5 and Table 7 row N1 listed it among papers that "attach no timing value at all" — a statement requiring full text we do not have. **Removed from the counterexample count**, which falls from a set including it to two fully author-disjoint cases. It is now cited only for its verified authorship, and §8.5 states explicitly that whether it attaches a timing value is unknown to us. See `CHANGELOG.md` CH-103 |
+
+**Result.** One genuine over-reach was found and corrected ([33]). Two sources classified **A** turned out to have been read in full, their caveats being about version status rather than access ([11], [29]) — the bold marks in the reference list were doing double duty and are now worded precisely. The three remaining bibliographic-only sources are all **B**, each cited for existence or class membership, and one of them exists only to bound our own novelty claim.
+
+**Standing rule.** No source that has not been read in full may support a statement about what that source does *not* contain. Absence claims require presence of the text.
 
 ### M-D. External FIM sources located but full text not archived (see `literature_search_log.md`)
 Notably arXiv:2606.06845 (Hu et al., multicell FIM — source of the Table I feasibility claim audited in this review), arXiv:2512.23045 (Kumar et al., statistical-CSI FIM), arXiv:2502.16478 (An et al., FIM MIMO, IEEE TCOM), arXiv:2510.07466, arXiv:2601.15471, arXiv:2508.00268, arXiv:2605.29227, arXiv:2506.23052, arXiv:2511.00878, arXiv:2510.24190. **These were inspected online only.** Any claim resting on them is marked `[EXTERNAL — ABSTRACT/HTML INSPECTED, PDF NOT ARCHIVED]`.

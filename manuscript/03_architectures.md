@@ -1,12 +1,17 @@
-## 3. Seven architectures under one name, and what transfers between them
+## 3. Seven architecture classes relevant to FIM evidence transfer
 
-### 3.1 Why the taxonomy comes first
+### 3.1 Why the taxonomy comes first, and what it is a taxonomy of
 
-"Flexible metasurface" is used in this literature for at least seven physically distinct systems, and a statement true of one is routinely false of another. A response time measured on a filamentary mechanical mesh, an update rate measured on a rigid PIN-diode panel and a compensation loop measured on a bending varactor-loaded sheet are not three data points describing one technology; they describe three technologies that share a word. Everything in Sections 5 to 9 depends on keeping them apart, so the separation is made first.
+Evidence about FIM feasibility is drawn from seven physically distinct kinds of system, and a statement true of one is routinely false of another. A response time measured on a filamentary mechanical mesh, an update rate measured on a rigid PIN-diode panel and a compensation loop measured on a bending varactor-loaded sheet are not three data points describing one technology; they describe three technologies whose measurements are nonetheless quoted in support of one architecture. Everything in Sections 5 to 9 depends on keeping them apart, so the separation is made first.
+
+**These seven classes are not seven things called "flexible metasurfaces".** Only A1 through A4 are named as flexible or morphing metasurfaces by the literature that uses them, and even there the naming is inconsistent. The remaining classes are included because the FIM literature draws evidence from them, not because their authors claim the label:
+
+- **Direct classes — the object under review.** A1 the theoretical FIM, A2 flexible passive reflective metasurfaces, A3 externally deformed shape-aware programmable surfaces, A4 actively self-morphing mechanical surfaces. These share a physical premise — a surface whose geometry is not fixed — and are the classes over which the review's central claim is made.
+- **Comparator and evidence-donor classes.** A5 rigid electronically reconfigurable RIS, A6 movable and reconfigurable antenna systems, A7 flexible active antenna arrays. Their authors do not generally call them flexible intelligent metasurfaces, and this review does not either. They appear because they supply the timing comparators, the control-architecture vocabulary and the strongest deformation-aware radio-frequency demonstration in the reviewed set, and because values measured on them are quoted in FIM feasibility arguments. Naming them precisely is what makes the transfer rules of §3.6 statable at all.
 
 Three questions distinguish the classes: **what physically changes**; **whether the change is imposed from outside or commanded by the system**; and **whether the radio-frequency state is independently programmable**. Table 1 answers them, together with the questions that decide what a measurement is worth — whether the shape is sensed, whether radio-frequency performance was measured at all, and whether any mobility was involved. The prose below does not restate the table; it draws the four conclusions the table makes visible.
 
-**Table 1 — Architecture taxonomy of the reviewed platforms.**
+**Table 1 — Architecture classes drawn on by the FIM evidence base.** A1–A4 are the direct classes; A5–A7 are comparator or evidence-donor classes whose authors do not generally use the FIM label.
 
 | Class | What it is | What changes | Deformation source | RF state programmable | Shape sensed | RF measured | Mobility evidence | Representative sources |
 |---|---|---|---|---|---|---|---|---|
