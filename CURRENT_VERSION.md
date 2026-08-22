@@ -4,7 +4,7 @@ Manuscript: v0.28a
 Documentation: v1.12
 
 Private source repository commit:
-`39c3139c629ff83d71704589d087bdf42a908772`
+`39c3139c629ff83d71704589d087bdf42a908772` (private working tree was NOT clean at sync time -- see below)
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
