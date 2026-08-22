@@ -31,6 +31,9 @@ EXEMPT_FILES = {"CHANGELOG.md", "s11_study_register.md"}
 EXEMPT_LINE = re.compile(r"historical|superseded|v0\.2[01] said|was recorded as|earlier draft|"
                          r"corrected second pass|What the corrected|v1\.[0-9]+ |was wrong|recount|→|earlier version|credited|Comparison:|Correction \(v0|previously named|previously said|Prior passes|prior revision", re.I)
 
+# Markdown emphasis characters, removed before matching (see main()).
+DEEMPH = re.compile(r"[*_`]")
+
 STALE = [
     (r"\b21 (?:distinct|candidate|identified|system)", "21 studies -> 20"),
     (r"\b(?:of|the) 21 studies\b", "21 studies -> 20"),
@@ -45,6 +48,10 @@ STALE = [
     (r"(?:→|->) ?20 ?(?:→|->) ?13\b", None),  # current flow, allowed
     (r"(?:→|->) ?21 ?(?:→|->) ?14\b", "flow 21->14 is stale"),
     (r"\btimes more than five of the ten stages\b", "C1: superseded by the T/(T) split"),
+    (r"(?:delimits|times|measures) more than five of the ten stages",
+     "C1: the maximum is 4 measured stage durations since the v0.24 taxonomy rebuild"),
+    (r"only one reaches five", "C1: the ·T maximum is 4, reached by BAI-22 alone"),
+    (r"no source measures more than five stages", "C1: superseded; and the verb must name its axis"),
     (r"\bEight retrieved papers\b", "eight -> nine studies"),
     (r"\beight (?:further |retrieved )?papers cite\b", "eight -> nine studies"),
     (r"\bTwo platforms reach five\b", "C1: only one platform reaches five under ·T"),
@@ -103,6 +110,10 @@ def main():
         for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
             if EXEMPT_LINE.search(line):
                 continue
+            # Match against the de-emphasised line as well. novelty_boundary.md carried
+            # `no source **times** more than five of the ten stages` for four revisions:
+            # the bold markers split the phrase and every literal pattern missed it.
+            line = line + "\n" + DEEMPH.sub("", line)
             for pat, msg in STALE:
                 if msg is None:
                     continue
@@ -128,6 +139,7 @@ def main():
         for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
             if EXEMPT_LINE.search(line):
                 continue
+            line = line + "\n" + DEEMPH.sub("", line)
             for m in re.finditer(r"\b(\d+)[- ]alternative\b", line):
                 if int(m.group(1)) != n_alt:
                     hits.append((f.relative_to(ROOT), i,

@@ -127,9 +127,9 @@ for more than six"*; *"no source times S3 together with S7"*.
 
 Counting axis-A `Q` cells rather than axis-B markers gives LI-25 six (S1, S2, S4, S5, S6, S10)
 and BAI-22 six (S1, S2, S4, S5, S7, S8). **Every count in the manuscript must name the axis it
-is counting.** Any sentence of the form "no source measures more than five stages" is
-forbidden, and so is any sentence that reports a single stage count without saying which of
-the three it is.
+is counting.** Any sentence reporting a bare stage-count maximum of five is forbidden — that
+number followed from the pre-v0.24 taxonomy — and so is any sentence that reports a single
+stage count without saying which of the three it is.
 
 ### 3.3 Stabilised RF is quantitatively measured on five platforms and timed on one
 
