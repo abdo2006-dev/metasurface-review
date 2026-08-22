@@ -80,3 +80,56 @@ Adversarial sweep: *cheap*, *cheapest* — absent. *infeasible* — one occurren
 7. **Extraction remains single-reviewer.** Unchanged from v0.28 and stated in §6.4; a duplicated extraction is still the single methodological improvement most likely to change a cell.
 
 The manuscript is a working draft for academic review. It is not submission-ready, and no venue has been selected.
+
+---
+
+# Addendum — final release pass, 22 August 2026
+
+## A1. Akram [4] source-level verdict
+
+The primary source was re-opened as instructed, not resolved by inference. **The §4.2 / Table 3 tension was real, and both were wrong in the same place: the object.**
+
+| Question | Answer | Locator |
+|---|---|---|
+| Where does "0.1 ms" occur? | **Once**, in the abstract: *"…with each element controlled through an FPGA achieving an update time below 0.1 ms."* | p. 1 |
+| What supports it in the body? | *"For the 16 × 16 RIS tile, once a configuration is stored in the FPGA, the internal update is completed in approximately 40 ns. Including the external control link, the end-to-end reconfiguration time is about 40 μs when using the LAN or Wi-Fi (Ethernet-based) interfaces, and up to 100 μs when using the USB/UART serial interface."* **100 μs = 0.1 ms.** | p. 6 |
+| What starts the interval? | A configuration command issued by the host over the external control link | p. 6 |
+| What ends it? | End-to-end reconfiguration complete — the FPGA → latch → diode-bias write path. **No electromagnetic criterion is stated.** | p. 6 |
+| What object is timed? | **One 16 × 16 tile.** Not one element: the strings "per-element" and "per element" do not occur in the paper | p. 1, p. 6 |
+| Is the PIN-diode / meta-atom transition included? | **No.** Full-text search returns no "switching time", no "rise time" and no "settl-" of any form. PIN diodes are described only qualitatively as offering "fast electronic tuning capabilities" | p. 2 |
+| Is it controller/interface writing only? | Yes — the write path through to the diode bias, with no verified electromagnetic state | p. 6 |
+| The second bound | *"The tile ON-OFF configuration can be updated in less than 10 ms"*, repeated in the conclusion as *"update times below 10 ms via FPGA"* — **the same object** | p. 8, p. 9 |
+
+**Verdict.** Both reported bounds concern one 16 × 16 tile and are mutually consistent as bounds (100 μs < 10 ms). The element-versus-tile contrast was **this project's reading, not the source's**, and is withdrawn. §4.2 was right that these are control-path quantities; Table 3 was wrong to place a measured duration on S6, and both were wrong about the object. The element-versus-surface point the manuscript needs is carried instead by [8], where it is measured (≈30 ms ribbon against ≈300 ms surface).
+
+**Recoding.** AKR-26 S6 `Q·T` → `Q·(T)`: S6 is defined as the meta-atom electromagnetic state change, and the source times none, so what exists is a duration bounding an aggregate that *contains* that stage. AKR-26's measured-duration count falls **1 → 0**. S5 keeps `Q·[R]` alone — the p. 6 aggregate includes the external link, but the authors apportion no share to it and we derive none. **The three C1 maxima are unchanged**, because AKR-26 was never at any of them: quantitatively evidenced stages **6** (BAI-22, LI-25); measured stage durations **4** (BAI-22 alone); any duration information **6** (LI-25 alone). **No number from any source was changed, and no diode switching time is inferred anywhere.**
+
+**Files changed by this verdict:** `01_introduction.md`, `04_hardware_evidence.md` (§4.2, Table 2 rows 9–10, §4.6), `05_validation_gap.md` (Table 3 S6 row and the paragraph reading across it), `06_implications.md` (Table 5 fields 1–2), `professor_brief.md`, `figures/make_figures.py` (Figure 2 lane labels), `supplement_timing_register.md` (S1), `supplement_reporting_motivation.md` (S4), `source_inventory.md`, `evidence_matrix.md`, `adaptation_chain_matrix.md`, `timescale_matrix.md`, `SOURCE_VERSION_MAP.md.tmpl`.
+
+## A2. "Harmless" softened
+
+§1 and professor brief §2 now read that in quasi-static conditions the abstraction **may be less consequential for system-level performance**, and that under high mobility its timing assumptions **become potentially load-bearing**. The word *harmless* no longer appears. No discussion was added around it.
+
+## A3. What the pre-push validation caught
+
+Three defects that would otherwise have shipped:
+
+1. **The mirror's `.gitignore` silently dropped two of four vector figures.** It ignores `*.pdf` and re-allows the figures by name, but was written only at repository initialisation — so the v0.28a rename left both new filenames matched by the blanket rule. They were copied to disk, ignored by git, and nothing reported it: the safety gate checked for *unexpected* PDFs, never for *missing whitelisted* ones. Both now fixed, and the gate fails if any whitelisted figure PDF is absent or ignored.
+2. **The sync generator was frozen at v0.23 with the twelve-section `SECTION_ORDER`**, which drives `COMPLETE_MANUSCRIPT.md`. A sync would have published a public manuscript with every section missing. Rebuilt, with an assertion against `Documentation/manuscript/`.
+3. **The pre-v0.24 stage count was still live in two active records.** `novelty_boundary.md` said "no source fully delimits more than five of the ten stages and only one reaches five", and its wording constraint *required* future editors to write the superseded five; `manuscript_argument_map.md` asserted "Two platforms reach five" with pre-v0.24 stage lists, contradicting its own preceding sentence. The consistency checker had missed them because markdown emphasis split the phrase — `no source **times** more than five` never matched the literal pattern. The checker now also matches with emphasis stripped, verified by reintroducing both genuine pre-fix constructions. **The manuscript itself was never wrong.**
+
+## A4. Final counts
+
+| | v0.28a (readiness pass) | v0.28a (final) |
+|---|---|---|
+| Main-text prose / total | 13 130 / 15 399 | **13 277 / 15 674** |
+| Manuscript / brief / supplement pages | 27 / 2 / 15 | **27 / 2 / 15** |
+| Tables / figures | 5 / 4 | 5 / 4 |
+
+The prose grew by 147 words: §4.2 now states the Akram decomposition and its locators, which is the evidence for the correction. No length reduction was attempted.
+
+`verify_professor_export.py` 47 passed, 0 failed · `check_s11_consistency.py` clean across 49 documents and 19 tools · `validate_public_snapshot.py` 39 passed, 0 failed (run from the mirror) · `check_mirror_links.py` all 25 relative links resolve.
+
+## A5. ⚠ Open the DOCX in Microsoft Word before sending
+
+No Word or LibreOffice renderer exists in this environment, so **the `.docx` files have never been visually rendered** — they were verified through their XML (styles, section orientation, footers, table and image counts, citation resolution), and the PDFs were inspected page by page. Both are emitted from one parsed block stream, so their *content* cannot diverge, but DOCX page breaks, table pagination and figure placement have not been seen by anyone. **Open `FIM_High_Mobility_ISAC_Manuscript_v0.28a.docx` in Microsoft Word and page through it before sending it to Prof. Mojtaba.** If anything is mispaginated, the PDF is the reliable artefact.

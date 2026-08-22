@@ -1,6 +1,6 @@
 # Source Version Map
 
-**Snapshot: manuscript v0.28a, documentation v1.12, generated 2026-08-22 10:55 UTC.**
+**Snapshot: manuscript v0.28a, documentation v1.12, generated 2026-08-22 10:56 UTC.**
 
 Bibliographic identity and version-inspection status for every source cited in the manuscript's numbered reference list (`manuscript/99_references.md`), plus every external source verified for the bibliography but cited only in passing. **This is metadata only — no source PDF is distributed in this repository.** Every DOI and arXiv identifier here was resolved against the publisher-deposited Crossref record or the arXiv metadata endpoint on 18 August 2026 (`documentation/source_inventory.md` §3b). Full extraction detail, per-quantity locators, and independence-group definitions are in `documentation/source_inventory.md` and `documentation/audits/independence_audit.md`; this table is a navigation aid, not a replacement for them.
 
