@@ -35,7 +35,7 @@ A primary timing value is reused with its scope changed. Instances: P1, P2, P3, 
 
 | Study family | Records | Canonical citation | Ref. | Full text read | Primary hardware cited | Timing hit | Table 7 | Author-network relationship |
 |---|---|---|---|---|---|---|---|---|
-| **F-ANJ-MIMO** | 1 | An, Han, Niyato, Debbah, Yuen & Hanzo, IEEE Trans. Commun., 2025, doi:10.1109/tcomm.2025.3550318 | [29] | yes | BAI | no | N2 | FIM lineage (An, Yuen) |
+| **F-ANJ-MIMO** | 1 | An, Han, Niyato, Debbah, Yuen & Hanzo, IEEE Trans. Commun., 73(9):7349-7365, Sep. 2025, doi:10.1109/tcomm.2025.3550318 | [29] | yes | BAI | no | N2 | FIM lineage (An, Yuen) |
 | **F-BAN** | 1 | Bansal, Hewson, Santer & Whittow, EuCAP 2024, doi:10.23919/EuCAP60739.2024.10501383 | [34] | yes | BAI | no | N3 | AUTHOR-DISJOINT from FIM lineage and from all three seeds |
 | **F-FAA** | 2 | Yang, An, Xiu, Lyu, Ning, Zhang, Debbah & Yuen — ICCT 2024 (conf.) / IEEE TWC 2025 (journal ext.), doi:10.1109/twc.2025.3545305 |  | yes | BAI | no | — | disjoint from FIM lineage |
 | **F-FCA** | 1 | Guo, Yang, Dong, Yang, Deng, Zhang & Yuen, IEEE Internet Things J., 2025, doi:10.1109/jiot.2025.3580372 |  | yes | BAI | no | — | disjoint from FIM lineage |

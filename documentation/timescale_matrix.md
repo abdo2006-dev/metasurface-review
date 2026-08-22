@@ -60,13 +60,13 @@ A Doppler frequency does not convert into a time budget without the middle row, 
 
 | Quantity | Value | Object | Type | ID |
 |---|---|---|---|---|
-| Per-element FPGA update | **< 0.1 ms** | one element of a rigid PIN RIS | measured/design | T-AK-01 |
+| End-to-end reconfiguration | **< 0.1 ms** | **one 16 × 16 tile** of a rigid PIN RIS, control path | measured/design bound | T-AK-01 |
 | Tile configuration update | **< 10 ms** | a full 16 × 16 tile | measured/design | T-AK-02 |
 | Bias-voltage supply module response | 5.25 ms | 32-channel supply on a flexible RM | measured | T-LI-03 |
 | Multiplexing penalty | ×¼ of raw parallel rate | control-network architecture | design statement | T-AK-03 |
 | Serial-interface transport | ≈5.5 ms of a 16.76 ms loop (RS-232) | FISP | derived from authors' attribution | E-DR-04 |
 
-**What this category supports — and it is the most under-appreciated finding in the corpus.** T-AK-01 and T-AK-02 come from the same hardware and are **up to two orders of magnitude apart**, because they time **different objects at different scopes**: one element against a complete 16 × 16 tile.
+**What this category supports.** T-AK-01 and T-AK-02 come from the same hardware and are **up to two orders of magnitude apart** while bounding **the same object** — one 16 × 16 tile. ‼ The earlier reading here, that they timed one element against a tile, was **this project's error and is withdrawn** (source re-verified 22 Aug 2026; `source_inventory.md` AKR-26, `CHANGELOG.md` CH-151). The abstract's sub-0.1 ms figure traces to the end-to-end reconfiguration time of the tile over USB/UART (p. 6); "per-element" does not occur in the paper. Neither bound states an electromagnetic end criterion, and the element-versus-surface point is carried instead by T-NI-01/T-NI-02, where it is measured.
 
 ⚠ **Narrowed 17 August 2026 — do not present T-AK-03 as the explanation of that interval.** Both AKR-26 figures are **upper bounds**, not measured means, so the ratio between them is itself an upper bound; and T-AK-03 is a stated ×¼ penalty on the effective update rate, which is a factor of four, not a factor of one hundred. The paper does **not** decompose the tile-level bound into transfer, latching and switching components, so no account of the full interval can be given from the published record, and this matrix must not supply one. Earlier wording — *"a factor of one hundred … for the same nominal operation … T-AK-03 and E-DR-04 explain why"* — asserted both a same-operation comparison (false: configuring 256 elements is not the operation of switching one) and a causal explanation (unsupported).
 
@@ -185,7 +185,7 @@ The two figures in this category must not be collapsed. **≈2.5 min is the cost
 
 ---
 
-## Qualitative synthesis figure (manuscript Figure 3)
+## Qualitative synthesis figure (manuscript Figure 2 since v0.28a; Figure 3 in v0.20–v0.28)
 
 Because the categories are not commensurable, the manuscript presents them as **ordered bands on a logarithmic axis, each band labelled with the architecture and the start/end events**, and explicitly *not* as a single latency budget:
 
@@ -196,7 +196,7 @@ Because the categories are not commensurable, the manuscript presents them as **
                           ◄── 51-symbol >0.5-correlation window, 90 mph @ 2.6 GHz (T-CH-02)
  [COMPUTE]                     ├── ANN inference 2 ms (A3, T-LI-02) ──┤
                                ├──── FIM channel estimation 4–100 ms, desktop CPU (A1, T-YA-01) ────┤
- [CONTROL]      ├─ per-element FPGA <0.1 ms (A5, T-AK-01) ─┤
+ [CONTROL]      ├─ tile end-to-end <0.1 ms (A5, T-AK-01) ──┤
                                     ├── tile update <10 ms (A5, T-AK-02) ──┤
  [EM STATE]                              ├── LC on 15 ms / off 72 ms (A5, T-NE-01/02) ──┤
                                           ◄ varactor "negligible" (A3, T-LI-05) — no number

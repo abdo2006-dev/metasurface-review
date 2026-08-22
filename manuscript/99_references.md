@@ -1,6 +1,6 @@
 ## References
 
-*Numbered in order of first appearance. Every field below was verified on 18 August 2026 against the publisher-deposited Crossref record or the arXiv metadata endpoint. Where an internal draft key carried a year that differs from the version of record, the version-of-record year is used here. Entries marked in bold carry an access or version caveat.*
+*One bibliography serves both the manuscript and the supplementary material: bracketed numbers mean the same source in both documents, and the supplement carries no separate reference list. Numbering is the project's stable source numbering, carried unchanged across draft versions so that the timing register, the evidence matrix and the supplementary tables stay keyed to it; the v0.28 restructure moved several first citations, so the list is not in order of first appearance, and renumbering into that order is a submission-time step once a venue is chosen. One entry, [33], is cited in the supplementary material only. Every field below was verified on 18 August 2026 against the publisher-deposited Crossref record or the arXiv metadata endpoint. Where an internal draft key carried a year that differs from the version of record, the version-of-record year is used here. Entries marked in bold carry an access or version caveat.*
 
 [1] K. R. R. Ranasinghe, J. An, I. A. Morales Sandoval, H. S. Rou, G. T. F. de Abreu, C. Yuen, and M. Debbah, "Flexible intelligent metasurfaces in high-mobility MIMO integrated sensing and communications," *IEEE Trans. Wireless Commun.*, vol. 25, pp. 13319–13335, 2026, doi: 10.1109/TWC.2026.3668992.
 
@@ -58,7 +58,7 @@
 
 [28] T. Harz and T. Kleine-Ostmann, "Measurement and optimization of a continuously tunable 10 × 10 reflectarray antenna for 5G metrology in the K-band," *Adv. Radio Sci.*, vol. 19, pp. 215–220, Jan. 2022, doi: 10.5194/ars-19-215-2022.
 
-[29] J. An, Z. Han, D. Niyato, M. Debbah, C. Yuen, and L. Hanzo, "Flexible intelligent metasurfaces for enhancing MIMO communications," 2025, arXiv:2502.16478. **Author version, read in full; IEEE Trans. Commun. record not retrieved.**
+[29] J. An, Z. Han, D. Niyato, M. Debbah, C. Yuen, and L. Hanzo, "Flexible intelligent metasurfaces for enhancing MIMO communications," *IEEE Trans. Commun.*, vol. 73, no. 9, pp. 7349–7365, Sep. 2025, doi: 10.1109/TCOMM.2025.3550318. (Read in full as arXiv:2502.16478.)
 
 [30] H. Hu, J. An, L. Gan, H. Li, N. Al-Dhahir, G. K. Karagiannidis, and A. Nallanathan, "Weighted sum-rate enhancement for flexible intelligent metasurface-assisted multicell systems," *IEEE Trans. Wireless Commun.*, vol. 25, pp. 18579–18595, 2026, doi: 10.1109/TWC.2026.3701359. (Full text read as arXiv:2606.06845.)
 
@@ -69,3 +69,4 @@
 [33] C. Huang, G. Chen, Z. Xu, J. Zhu, T. Pan, R. Tafazolli, and W. Huang, "Flexible reconfigurable intelligent surface-aided covert communications in UAV networks," *IEEE J. Sel. Areas Commun.*, vol. 44, pp. 1577–1588, 2026, doi: 10.1109/JSAC.2025.3639197. **Full text not retrieved (paywalled); cited only for its published-record authorship, which is verified.**
 
 [34] A. Bansal, R. Hewson, M. Santer, and W. G. Whittow, "Optimal morphing metasurface lens for next generation RF sensing and communications," in *Proc. 18th Eur. Conf. Antennas Propag. (EuCAP)*, Mar. 2024, pp. 1–3, doi: 10.23919/EuCAP60739.2024.10501383. (Full text read from the authors' open figshare deposit, 18 August 2026.)
+

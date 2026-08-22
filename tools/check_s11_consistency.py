@@ -52,6 +52,8 @@ STALE = [
     (r"\b33 entries\b", "33 -> current bibliography count"),
     (r"two platforms reach five", "C1: only one platform reaches five under a strict ·T reading"),
     (r"five stages it times", "C1: LI-25 fully delimits four, not five"),
+    (r"`·T`[^.\n]{0,60}\(max \*\*5\*\*", "C1: max ·T is 4 since the v0.24 taxonomy rebuild"),
+    (r"fully delimited `·T` stages \(max", "C1: the ·T maximum is stated as a measured-duration count, not a delimitation count"),
     (r"forward_citation_stage1_raw\.csv", "obsolete filename -> forward_citation_works_deduplicated.csv"),
     (r"No co-authorship analysis was performed", "false since v0.22: the analysis is performed and C3 rests on it"),
     (r"\b29 ?049\b|\b23 ?472\b", "superseded word count"),

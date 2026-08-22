@@ -1,6 +1,6 @@
 # Absence-Claim Audit
 
-> ⚠ **Section numbers in this file are v0.14 numbering.** The manuscript was restructured into twelve sections on 18 August 2026 (draft v0.20). Use the crosswalk at the end of `manuscript_argument_map.md`; most often, **§6.5 → §8** (traceability) and **§9.4 → §11.4** (limitations). The scientific content of this file is unchanged and still governs.
+> ⚠ **Section and figure numbers in this file are historical.** Sections are v0.14 numbering: the manuscript was restructured into twelve sections on 18 August 2026 (draft v0.20) and into seven on 22 August 2026 (draft v0.28). Use the crosswalk at the end of `manuscript_argument_map.md`; most often, **§6.5 → §8** (traceability) and **§9.4 → §11.4** (limitations). Figure numbers are pre-v0.28a: the timing-landscape figure referred to below as Figure 3 is **Figure 2** from v0.28a onward, and the adaptation-chain figure is **Figure 3**. The scientific content of this file is unchanged and still governs.
 
 > ✅ **v1.8 sweep, 18 August 2026.** Every unbounded absence and priority construction in the *active manuscript*, the figure-generation script, all captions and tables was located by literal sweep and bounded (`CHANGELOG.md` CH-108). Figure 3's two `NOT MEASURED ANYWHERE` boxes now read **`NO MEASUREMENT FOUND IN REVIEWED SET`**. Two further rules were adopted in this pass:
 > - **The stage-count verb is `times`, never `measures`** — the count is a timing count; under a quantitative reading the maximum is six, not five (CH-100).

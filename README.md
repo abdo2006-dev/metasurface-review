@@ -21,7 +21,7 @@ For a single-file read of the whole manuscript, see **[`manuscript/COMPLETE_MANU
 ## Contents
 
 ```
-manuscript/       — front matter, twelve numbered sections, references, figures
+manuscript/       — front matter, seven numbered sections, references, figures
 documentation/     — evidence matrices, source inventory, search log, audits
 review/            — REVIEW_MANIFEST.md (file-by-file provenance) and SOURCE_VERSION_MAP.md
 CURRENT_VERSION.md — which snapshot this is, and what private commit it corresponds to

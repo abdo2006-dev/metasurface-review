@@ -9,7 +9,7 @@
 > **Scientific-freeze status.** The evidence base is frozen at documentation v1.6. The authoring pass moved claims between sections, tightened prose, produced the tables and figures, and converted the citation system to numbered references. It did **not** revise the science. Two corrections were made because they were factual errors found while completing the bibliography, and both are recorded in `CHANGELOG.md` v1.7: the DOI held for **BUD-22** was wrong, and one counterexample's author-overlap status (**E-FP-C1**, the JSAC paper) was stated too strongly.
 
 > ✅ **v2.1 — 18 August 2026, reviewer-blocker revision (`CHANGELOG.md` v1.8).** Three wording constraints below changed and are now binding:
-> 1. **C1 must name which axis it counts, and `times` means `·T` only.** Three counts exist and differ: quantitatively evidenced stages (max **6**, LI-25 and BAI-22), fully delimited `·T` stages (max **5**, **BAI-22 alone**), and any timing information `·T`+`·(T)` (max **6**, both). Never write "five, reached by two platforms" — that figure follows from no consistent rule. The two platforms are disjoint under the any-timing reading (LI-25 radiates without commanding its shape; BAI-22 commands its shape without an RF layer). S9 is timed by no source; S10 is quantitatively measured on five platforms and timed on one, with geometry static.
+> 1. **C1 must name which axis it counts, and `times` means `·T` only.** Three counts exist and differ: quantitatively evidenced stages (max **6**, LI-25 and BAI-22), measured stage durations `·T` (max **4**, **BAI-22 alone**), and any timing information `·T`+`·(T)` (max **6**, **LI-25 alone**). Never write "five, reached by two platforms" — that figure follows from no consistent rule; and since the v0.24 taxonomy rebuild the `·T` maximum is **four**, not five. The two platforms are disjoint under the any-timing reading (LI-25 radiates without commanding its shape; BAI-22 commands its shape without an RF layer). S9 is timed by no source; S10 is quantitatively measured on five platforms and timed on one, with geometry static.
 > 2. **C3 must carry its observation window.** State "13 of 20 candidate studies read" and "an author-disjoint instance among the unread seven cannot be excluded" wherever the finding appears. Use **"one connected co-authorship network"**, not "all four share authors".
 > 3. **No source unread in full may support a claim about what it does not contain.**
 
@@ -119,7 +119,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 
 **Essential claims**
 1. The chain crosses three physical domains with different governing physics and different scaling laws; that is *why* it is decomposed, and §5.1 must say so before listing the stages.
-2. No reviewed source **times** more than **five of the ten stages**, and none times S3 with S7. **Two** platforms reach five and are disjoint: LI-25 times S1–S2 and S4–S6 (radiates, does not command its shape); BAI-22 times S1–S2, S4–S5 and S7 (commands its shape, no RF layer). S9 is timed by no source. S10 is quantitatively measured on five platforms and timed on one, with geometry static. **Do not write "contiguous". Do not write "measures" — the count is a timing count; under the quantitative reading the maximum is six** (`CHANGELOG.md` CH-100).
+2. No reviewed source **measures the duration of** more than **four of the ten stages**, and none times S3 with S7. **Two** platforms reach five and are disjoint: LI-25 times S1–S2 and S4–S6 (radiates, does not command its shape); BAI-22 times S1–S2, S4–S5 and S7 (commands its shape, no RF layer). S9 is timed by no source. S10 is quantitatively measured on five platforms and timed on one, with geometry static. **Do not write "contiguous". Do not write "measures" — the count is a timing count; under the quantitative reading the maximum is six** (`CHANGELOG.md` CH-100).
 3. The measured stages sit on **four physically non-equivalent architectures**. ⚠ Do not write "mutually incompatible" — it can be misread as claiming these technologies cannot be physically integrated.
 4. Concatenating stages across those four platforms is a category error, and the manuscript performs it nowhere.
 5. The A1 literature does not model S5–S9, defending the omission with one unquantified footnote. *(E-03, T-ASM-01)*
@@ -161,10 +161,10 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 4. **Simplification 2 qualified:** a latency is a property of an *object*. Distribution can be a **major contributor**; it is not established as dominant.
 5. **Table 6** answers the research question stage by stage and **names the assumption behind every "no"** in its fast-fading column.
 6. **No deadline is defined anywhere.** Do not call any measured update time adequate or inadequate.
-7. **Absence ≠ infeasibility.** An unmeasured quantity has no value, not a bad one.
+7. **Absence ≠ infeasibility.** An interval that has not been measured is unquantified, not measured and found wanting.
 8. The **self-correction blockquote** stays at §7.2. Written elegantly and briefly; not an incident report. *(U12b, decided RETAIN 18 Aug 2026)*
 
-⚠ Figure 3 must keep closed-loop *search* and open-loop *replay* on separate labelled lanes, or it reproduces the substitution the manuscript documents.
+⚠ The timing-landscape figure (**Figure 2** since v0.28a; Figure 3 in v0.20–v0.28) must keep closed-loop *search* and open-loop *replay* on separate labelled lanes, or it reproduces the substitution the manuscript documents.
 
 ---
 
@@ -264,3 +264,28 @@ Documentation written before 18 August 2026 cites the **v0.14** ten-section numb
 | §10 Conclusion | **§12** | |
 
 **Practical rule when reading older documentation:** "§6.5" means the traceability audit, now **§8**; "§9.4" means the limitations, now **§11.4**; "§6.2" means either the mechanical-measurement synthesis (now **§7.2**) or the self-correction blockquote (also **§7.2**); "§5.1" means the flexible-aperture evidence, now **§6.2**.
+
+---
+
+## Section-number crosswalk: v0.20 → v0.28
+
+The twelve-section structure was journalized into **seven sections** on 22 August 2026 (draft v0.28; `CHANGELOG.md` v1.11). Nothing in the older documentation is wrong; the section numbers moved again, and a substantial amount of audit machinery moved out of the main text into the supplement. The full disposition, unit by unit, is `journalization_v0.28.md` §5.
+
+| v0.20 | v0.28 | Note |
+|---|---|---|
+| §1 Introduction (1.1–1.6) | **§1**, no subsections | absorbs v0.20 §4.1; the four-example response-time survey became one paragraph |
+| §2 Scope and method (2.1–2.5) | **§2**, no subsections | §2.4's symbolic scheme → **Supplementary S6** |
+| §3 Architectures (3.1–3.7) | **§3.1** | Table 1 kept; Figure 1 kept in place |
+| §4 Demand side (4.1–4.5) | **§1** (4.1) and **§3.3** (4.2–4.4) | Table 2 → **Supplementary S7**; §4.5 deleted as a redundant summary |
+| §5 Adaptation chain (5.1–5.7) | **§3.2** (5.1) and **§4.6** (5.3, 5.4) | Table 3 → **Supplementary S6.3**; 5.6 → §4.3; 5.7 → §5.3 |
+| §6 Hardware evidence (6.1–6.7) | **§4.1–§4.6** | Table 4 → **Table 2**, trimmed 20 → 15 rows |
+| §7 Synthesis (7.1–7.5) | **§4.5** (7.1, 7.3), **§4.2/§6.2** (7.4), **§5.1** (7.5) | §7.2 deleted as redundant; Table 5 → **Table 3** |
+| **§8 Traceability (8.1–8.6)** | **§5.2** — a subsection again | Table 6 and the study-by-study inventory → **Supplementary S8** |
+| §9 Validation gap (9.1–9.5) | **§5.3**; 9.4 → **§6.3** | Table 7 → **Table 4** |
+| §10 Reporting framework (10.1–10.4) | **§6.1** | Table 8 compressed 30 → 10 fields as **Table 5**; full list → **Supplementary S4** |
+| §11 Discussion (11.1–11.5) | **§5.1** (11.1), **§6.2** (11.2), **§6.3** (11.3), **§6.4** (11.4), **§7** (11.5) | |
+| §12 Conclusion | **§7** | rewritten; the old four-item list duplicated §9.4 and §11.3 |
+
+**Main table renumbering:** T1 → T1 · T4 → T2 · T5 → T3 · T7 → T4 · T8 → T5 (compressed). T2, T3 and T6 left the main text intact, as S7, S6.3 and S8.2. **Figures are unchanged and unrenumbered**, F1–F4 in sections 3, 4, 4 and 5.
+
+**Practical rule when reading documentation written before 22 August 2026:** "§8" means the traceability audit, now **§5.2** in the main text with its inventory in **S8**; "§9.2" means the validation gap and G1–G4, now **§5.3**; "§11.4" means the limitations, now **§6.4**; "§6.2" means the flexible-aperture evidence, now **§4.1**; "§5.3" means the stage counts, now **§4.6**; "§7.5" means the stage-by-stage table, now **§5.1** and Table 3.

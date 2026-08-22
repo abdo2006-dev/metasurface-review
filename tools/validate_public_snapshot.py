@@ -81,7 +81,10 @@ def main():
     r_, ac, ro, c1 = c["retrieval"], c["access"], c["roles"], c["c1"]
     for label, got, want in [
         ("C1 max Q", c1["max_quantitative"], 6),
-        ("C1 max fully delimited T", c1["max_fully_delimited_T"], 5),
+        # 4, not 5: the v0.24 taxonomy rebuild reclassified LI-25's S2 RMSD as an
+        # accuracy rather than timing evidence. This assertion still carried the
+        # pre-v0.24 value and would have failed CI on the first push after v0.24.
+        ("C1 max measured stage durations T", c1["max_fully_delimited_T"], 4),
         ("C1 max T+(T)", c1["max_any_timing"], 6),
         ("S11 records", r_["records_pre_dedup"], 306),
         ("S11 unique works", r_["unique_works"], 262),
@@ -96,8 +99,8 @@ def main():
         check(f"{label} = {want}", got == want, f"got {got}")
     check("T-max source is BAI-22 alone", c1["sources_at_max_fully_delimited_T"] == ["BAI-22"],
           str(c1["sources_at_max_fully_delimited_T"]))
-    check("T+(T)-max sources are BAI-22 and LI-25",
-          sorted(c1["sources_at_max_any_timing"]) == ["BAI-22", "LI-25"],
+    check("T+(T)-max source is LI-25 alone",
+          sorted(c1["sources_at_max_any_timing"]) == ["LI-25"],
           str(c1["sources_at_max_any_timing"]))
     check("read studies partition into propagation + no-timing",
           ro["propagation_studies"] + ro["no_timing_studies"] == ac["studies_read"],

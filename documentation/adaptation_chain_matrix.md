@@ -11,14 +11,14 @@
 
 **Version 1.0 used a single code set in which `M` meant "measured (a number with defined start/end events)".** In practice `M` was also applied to cells recording quantitative radio-frequency measurements that contain no duration at all — LU-26's radiation patterns at fixed curvature, NEU-24's patterns, AKR-26's patterns and power, GAL-22's ≈80 mW delivered at 1 m. Those are genuine measurements; none of them is a timing.
 
-The consequence was a real ambiguity in a load-bearing count. The claim *"no source measures more than five of the ten stages"* is **true under a timing reading and false under a quantitative reading** — under the latter the maximum is six. A reader could not tell which was meant, and the legend said one thing while several cells did the other.
+The consequence was a real ambiguity in a load-bearing count. The v1.8 claim *"no source measures more than five of the ten stages"* is **true under a timing reading and false under a quantitative reading** — under the latter the maximum is six. A reader could not tell which was meant, and the legend said one thing while several cells did the other.
 
 **The fix is structural, not cosmetic: the two concepts are now separate axes.**
 
 | Axis | Question it answers | Codes |
 |---|---|---|
 | **A — stage evidence status** | *What did this source establish about this stage?* | **Q** quantitatively measured (a physical or RF quantity reported) · **D** demonstrated (shown working, no quantity) · **S** simulated · **A** assumed · **✗** absent · **n/a** not applicable to the architecture · **?** unclear · **RS** review statement |
-| **B — timing status** | *Was the duration of this stage measured?* | **T** timed — a duration with identifiable start and end events · **(T)** partially timed — a duration is reported but its start event, end event, or its separation from an adjacent stage is not fully resolved · *no marker* — untimed |
+| **B — timing status** | *What does the source establish about how long this stage takes?* | **·T** a measured duration reported for this stage in its own right, with identifiable start and end events · **·(T)** a duration that exists for the stage but is a stated share or a residual of an aggregate interval, not independently measured · **·[R]** a rate or throughput, not a duration · **·[A]** an allocated or chosen interval — a design parameter, not an observation of the process · *no marker* — untimed. **An accuracy is not timing evidence** and never marks a cell, however quantitative it is. |
 
 A cell carries an axis-A code, optionally followed by an axis-B marker: `Q·T`, `Q·(T)`, `Q`, `D`, `S·T`, `A`, `✗`.
 
@@ -56,12 +56,12 @@ The two axes are genuinely orthogonal, and one cell proves it: **YAN-25's S3 is 
 | **YAN-25** | A1 | ✗ | ✗ | **S·T** CMFV-SBL runtime, T-YA-01 | **S** protocol + iteration counts, E-12 | ✗ | **A** per time slot, T-CH-05 | **A** per subframe, T-CH-05 | ✗ | ✗ | **A** | **1** |
 | **MOR-26** | A1 | ✗ | ✗ | **A** | **S** | ✗ | ✗ | **A** | ✗ | ✗ | **A** | **0** |
 | **XU-22** | A5 | **S** pilots | n/a (rigid) | **S** MMSE interpolation, E-15/E-16 | **S** | ✗ | **A** | n/a | n/a | ✗ | **S** | **0** |
-| **LI-25** | A3 | **Q·T** ≈2 ms reception, T-LI-01 | **Q·(T)** RMSD 2.36 mm is an *accuracy*; its ≈2 ms share of T1 is not resolved from S1, E-24 | ✗ **absent** | **Q·T** ANN ≈2 ms, T-LI-02 | **Q·(T)** ≈5.5 ms RS-232, a **residual** of T-LI-04, not independently timed | **Q·T** supply 5.25 ms (oscilloscope), T-LI-03; varactor qualitative, T-LI-05 | ✗ **external, not commanded** | ✗ | **D** ANN is the learned geometry→bias map; no separate timed recalibration | **Q·T‡** — see note | **5** |
+| **LI-25** | A3 | **Q·(T)** ≈2 ms reception — a stated share of the ≈4 ms data-preparation figure, derived from the ≈1200 Hz per-channel sampling rate, T-LI-01 | **Q·(T)** ≈2 ms processing — the other stated share of the same ≈4 ms figure. The RMSD of 2.36 mm is an **accuracy** (E-24) and is *not* timing evidence | ✗ **absent** | **Q·T** ANN inference ≈2 ms, prepared input → coding output, T-LI-02 | **Q·(T)** ≈5.5 ms RS-232 — a **residual** (16.76 − 11.25 ms) attributed by the authors, never measured, and carrying no dispersion | **Q·T** bias supply 5.25 ms, oscilloscope, T-LI-03; varactor qualitative only, T-LI-05 | ✗ **external, not commanded** | ✗ | **D** the ANN *is* the learned geometry→bias map; no separate timed recalibration | **Q·T‡** 16.7 ms trigger → stabilised RF, oscilloscope, T-LI-06 — see note | **3** |
 | **LU-26** | A3 | ✗ | ✗ (bending known a priori) | ✗ | **S** compensation phase | ? | **D** PIN states | ✗ static bending | ✗ | **D** per-curvature compensation | **Q** patterns, 16.13 dBi, ±45° at each fixed curvature — **untimed**, E-53 | **0** |
 | **NEU-24** | A5 | ✗ | n/a | ✗ | ✗ | ✗ | **Q·T** τ_on ≈15 ms / τ_off 72 ms, 10 %/90 % thresholds, T-NE-01/02 | n/a | n/a | ✗ | **Q** patterns, −50°…+50°, IL — **untimed** | **1** |
-| **AKR-26** | A5 | ✗ | n/a | ✗ | ✗ | **Q·(T)** ×¼ multiplexing is a **rate factor**, no absolute interval, T-AK-03 | **Q·T** <0.1 ms/element, <10 ms/tile — **upper bounds**, T-AK-01/02 | n/a | n/a | ✗ | **Q** patterns, 20.2 dBi, 8.25–13 W — **untimed** | **1** |
-| **BAI-22** | A4 | **Q·T** stereo imaging 0.08 s, T-BA-03 | **Q·T** template matching 0.11 s + reprojection ≈0 | ✗ n/a | **Q·T** optimisation ≈0 per evaluation; ≈2.5 min convergence, T-BA-05 | **Q·T** voltage update 0.06 s | ✗ n/a | **Q·T** element <0.07 s, system within 0.1 s, T-BA-01/02 | **Q·(T)** the 0.1 s in the cycle budget is a **deliberate settling pause**, a chosen wait, not a measured settling time | ✗ | ✗ **no RF layer** | **5** |
-| **NI-22** | A4 | ✗ (imaging for characterisation only) | ✗ | ✗ n/a | ✗ (scripted) | **Q·T** ≈50 ms script processing, T-NI-03 | ✗ n/a | **Q·T** 30 ms ribbon / 300 ms surface, T-NI-01/02 | **Q·T** ≈250 ms viscoelastic term *is* settling, T-NI-02 | ✗ | ✗ **no RF layer** | **3** |
+| **AKR-26** | A5 | ✗ | n/a | ✗ | ✗ | **Q·[R]** ×¼ multiplexing is a **rate factor** — no absolute interval, and not convertible to one from what the source reports, T-AK-03. The end-to-end figure in S6 includes this link, but the source apportions no share to it, and we do not derive one | **Q·(T)** <0.1 ms and <10 ms are **upper bounds on the same 16 × 16 tile**, both ending at the configuration write with **no electromagnetic end criterion**; the meta-atom transition itself is **untimed in this source**, T-AK-01/02 | n/a | n/a | ✗ | **Q** patterns, 20.2 dBi, 8.25–13 W — **untimed** | **0** |
+| **BAI-22** | A4 | **Q·T** stereo imaging **0.08 ± 0.04 s**, SI Table 1 | **Q·T** template matching **0.11 ± 0.05 s** (+ reprojection ≈0), SI Table 1 | ✗ n/a | **Q·(T)** optimisation stated as ≈0 per evaluation — a negligibility statement with no dispersion and no start/end events; closed-loop convergence ≈2.5 min is a *loop* quantity, T-BA-05 | **Q·T** voltage update **0.06 ± 0.01 s**, SI Table 1 | ✗ n/a | **Q·T** element < 0.07 s (T-BA-01) and system within 0.1 s (T-BA-02), each with its own start and end events | **Q·[A]** the 0.1 ± 0.05 s settle **pause** is an interval the experimenters allocated in the cycle budget, not a measured settling duration | ✗ | ✗ **no RF layer** | **4** |
+| **NI-22** | A4 | ✗ (imaging for characterisation only) | ✗ | ✗ n/a | ✗ (scripted) | **Q·(T)** ≈50 ms script processing — a stated component of the ≈650 ms shape-to-shape sum, T-NI-03 | ✗ n/a | **Q·T** ≈30 ms ribbon (T-NI-01) and ≈300 ms full surface (T-NI-02), each with its own start and end events | **Q·(T)** ≈250 ms membrane viscoelasticity — identified *within* the 300 ms surface figure, not measured separately, T-NI-02 | ✗ | ✗ **no RF layer** | **1** |
 | **GAL-22** | A7 | **D** self-sensing receivers | **D** shape estimation mentioned | ✗ | **D** search algorithm | **D** | **D** per-element phase | ✗ external | ✗ | **D** closed-loop focusing, E-38 — **T-GAP-01: no time reported** | **Q** ≈80 mW DC at 1 m — **untimed**, E-39 | **0** |
 | **MA-26** | A6 review | RS | RS | RS | RS | RS | RS | RS — identifies movement time as a required model input, E-43 | RS — identifies settling as a required model input | RS | RS | **0** |
 
@@ -78,50 +78,50 @@ The timed mode is **not** an S10 timing following deformation, and this matrix d
 
 ## 3. What the matrix shows
 
-### 3.1 Three counts, which differ — and only one platform reaches five under the strict one
+### 3.1 Three counts, which differ — and only one platform reaches four measured durations
 
-The three counts below are produced by `tools/c1_stage_counts.py`, which parses §2 of this
-file. They are **not** interchangeable, and an earlier version of this section presented a
-figure that follows from none of them: it credited LI-25 with "five stages it times" by
-counting its two `·(T)` cells as timed while dropping its `·T` at S10, and credited BAI-22
-with five by counting only its `·T` cells while dropping its `·(T)` at S8 — opposite rules
-on the two sides, producing a false symmetry.
+Produced by `tools/c1_stage_counts.py`, which parses §2. The v0.24 rebuild of axis B changed two of
+these: an accuracy is no longer timing evidence, and a stated share or residual of an aggregate is
+no longer counted as a measured duration.
 
 | Count | Maximum | Reached by |
 |---|---|---|
 | **Q** — quantitatively evidenced stages (axis A) | **6** | BAI-22 **and** LI-25 |
-| **·T** — fully delimited stages (axis B) | **5** | **BAI-22 alone** |
-| **·T + ·(T)** — stages carrying any timing information | **6** | BAI-22 **and** LI-25 |
+| **·T** — measured stage durations (axis B) | **4** | **BAI-22 alone** |
+| **·T + ·(T)** — stages carrying any duration information | **6** | **LI-25 alone** |
 
-Per platform, exactly:
-
-| Platform | Arch. | `·T` fully delimited | `·(T)` partially delimited | `·T`+`·(T)` | What it cannot do |
+| Platform | Arch. | `·T` measured | `·(T)` apportioned | other | What it cannot do |
 |---|---|---|---|---|---|
-| **BAI-22** | A4 | **5** — S1, S2, S4, S5, S7, inside a 0.35 ± 0.15 s function-evaluation cycle | 1 — S8, a **chosen** settling pause, not an observed settling time | **6** | **has no radio-frequency layer** (S6, S9, S10 do not exist on it) |
-| **LI-25** | A3 | **4** — S1, S4, S6, and S10 in a separate static-geometry experiment | 2 — S2 (an RMSD is an *accuracy*, and its share of the 16.76 ms total is not resolved from S1) and S5 (a **residual** of that total, not independently timed) | **6** | **does not command its geometry** (S7 is an external fixture) |
+| **BAI-22** | A4 | **4** — S1, S2, S5, S7, each with its own value and dispersion in SI Table 1 | 1 — S4, optimisation stated as ≈0 | S8 is an **allocated** 0.1 ± 0.05 s pause, not a measured settling time | **has no radio-frequency layer** (S6, S9, S10 do not exist on it) |
+| **LI-25** | A3 | **3** — S4 (thread-timed inference), S6 (oscilloscope bias supply), S10 (oscilloscope, static geometry) | 3 — S1 and S2 are stated shares of the ≈4 ms data-preparation figure; S5 is a residual of the 16.76 ms total | the RMSD of 2.36 mm is an **accuracy**, not timing evidence | **does not command its geometry** (S7 is an external fixture) |
 
-**Only BAI-22 fully delimits five stages, and it does not radiate.** Under the strict reading
-LI-25 reaches four, not five. The 16.76 ms interval it reports is real and is reported; what
-it does not do is delimit each stage inside it.
+The disjointness survives the correction and is unchanged in substance: the two duration-bearing sets
+share S1, S2, S4 and S5 and differ exactly at **S6 and S10 against S7** — LI-25 carries the
+radio-frequency stages and cannot command a shape; BAI-22 carries the mechanical stages and has no radio.
 
-**The disjointness survives the correction and is sharper than before.** Under the
-like-for-like reading — any timing information — the two tie at six. Their sets share S1, S2,
-S4 and S5, and differ exactly at **S6 and S10 against S7 and S8**: LI-25 carries the
-radio-frequency stages and cannot command a shape; BAI-22 carries the mechanical stages and
-has no radio. Neither can be extended into the other by measurement alone.
+**‼ AKR-26 S6 recoded 22 August 2026, from `Q·T` to `Q·(T)`.** The primary source was re-opened. Its
+sub-0.1 ms figure occurs once, in the abstract, and traces to p. 6: the **end-to-end reconfiguration
+time of one 16 × 16 tile**, about 40 μs over LAN or Wi-Fi and **up to 100 μs over USB/UART**, against an
+internal FPGA update of about 40 ns once the configuration is stored. It is not a per-element
+measurement — "per-element" does not occur in the paper — and its end event is the diode-bias write,
+with **no electromagnetic criterion**. AKR-26 measures no meta-atom transition anywhere: full-text search
+returns no "switching time", no "rise time" and no "settl-". S6 is defined as the meta-atom
+electromagnetic state change, so the source supplies a duration bounding an aggregate that *contains*
+S6's electrical write, not a duration for S6 in its own right. AKR-26's measured-duration count is
+therefore **0, not 1**. The three headline maxima are unchanged, because AKR-26 was never at any of them.
+S5 keeps `Q·[R]` alone: the p. 6 aggregate includes the external link, but the authors apportion no share
+to it and we do not derive one. See `source_inventory.md` AKR-26 and `CHANGELOG.md` CH-151.
 
-**Both sets are linked rather than contiguous**, and the wording matters. S3 lies between S2
-and S4 in the chain and is absent from both platforms entirely: neither has a channel
-estimator, because neither is trying to track a channel. A run that skips a stage the
-architecture never implements spans the part of the chain the architecture possesses, not
-the chain.
+Two absences are strengthened by the rebuild. **S8 mechanical settling is now measured by no source at
+all**: NI-22's ≈250 ms viscoelastic term is identified within its 300 ms surface figure rather than
+measured separately, and BAI-22's 0.1 s is an allocated pause. **S9 calibration remains timed by no
+source under any reading.**
 
-⚠ **Wording constraints (binding).** No section may claim "five contiguous stages" or a
-"longest contiguous chain". No section may say "five, reached by two platforms" — that
-figure follows from no consistent rule. No section may write "measures" for a timing count.
-Acceptable: *"no source **fully delimits** more than five of the ten stages, and only one
-reaches five"*; *"no source associates timing with more than six"*; *"no source times S3
-together with S7"*.
+⚠ **Wording constraints (binding).** No section may claim "five contiguous stages", a "longest
+contiguous chain", or "five, reached by two platforms". No section may write "measures" for a duration
+count without naming the axis. Acceptable: *"no source measures the duration of more than four of the
+ten stages, and the one that reaches four does not radiate"*; *"no source carries duration information
+for more than six"*; *"no source times S3 together with S7"*.
 
 ### 3.2 The quantitative count is six for both platforms — which is why the axes were split
 

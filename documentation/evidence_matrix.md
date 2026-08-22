@@ -129,8 +129,8 @@ These rows record how other papers reuse the primary hardware timing values. **T
 | **T-NE-02** | LC switch-off τ_off | 72 ms | relaxation begins | 10 % threshold | A5 | **M** | as above; strongly asymmetric | NEU-24 p. 5 | C-EM-STATE | T-NE-01 |
 | **T-NE-03** | Thinner-LC response | < 2 ms | — | — | A5 | **P — projected** | t_LC = 1 μm, not fabricated | NEU-24 p. 7 | C-NONE | nothing (projection) |
 | **T-NE-04** | Reflectarray-type LC-RIS comparator | τ_on "few seconds", τ_off "10s of seconds" | — | — | A5 | RS (about other work) | — | NEU-24 p. 7 | C-EM-STATE | T-NE-01/02 |
-| **T-AK-01** | Per-element FPGA update | < 0.1 ms | FPGA update command for one element | element control state updated | A5 | **M/design** | — | AKR-26 abstract | C-CTRL | T-AK-02 **only with the distinction stated** |
-| **T-AK-02** | Tile ON/OFF configuration update | < 10 ms | pattern command | tile pattern written | A5 | **M/design** | 16 × 16 tile | AKR-26 pp. 8–9 | C-CTRL | T-AK-01, T-LI-03 |
+| **T-AK-01** ‼ | **End-to-end reconfiguration of one 16 × 16 tile** (abstract wording: "each element … update time below 0.1 ms") | < 0.1 ms | host configuration command issued over the external control link | end-to-end reconfiguration complete — FPGA → latch → diode bias written; **no electromagnetic end criterion stated** | A5 | **M/design bound** | **Object corrected 22 Aug 2026: the tile, NOT one element.** p. 6 gives the decomposition: internal FPGA update ≈40 ns once the configuration is stored; end-to-end ≈40 μs over LAN/Wi-Fi, **up to 100 μs over USB/UART = the abstract's 0.1 ms**. "per-element" does not occur in the paper | AKR-26 abstract p. 1; **decomposition p. 6** | C-CTRL | T-AK-02 — **same object**; both are bounds and are mutually consistent |
+| **T-AK-02** | Tile ON/OFF configuration update | < 10 ms | pattern command | tile pattern written; **no electromagnetic end criterion stated** | A5 | **M/design bound** | 16 × 16 tile, as operated in the near-field measurement campaign | AKR-26 p. 8, conclusion p. 9 | C-CTRL | T-AK-01 — **same object**; T-LI-03 |
 | **T-AK-03** | Multiplexing penalty | ×¼ of raw parallel rate | — | — | A5 | design statement | relative, not absolute | AKR-26 p. 6 | C-NONE | — |
 | **T-BA-01** | Serpentine element mechanical response | < 0.07 s | current applied | stable deformation | A4 | **M** | 18 mm sample, I < 27.5 mA, B = 224 mT | BAI-22 p. 2 | C-MECH-ELEM | T-NI-01 |
 | **T-BA-02** | System morphing | "within 0.1 s" | actuation command | morphed shape | A4 | **M** | 4 × 4 mesh | BAI-22 abstract | C-MECH-SURF | T-NI-02 |
@@ -163,7 +163,9 @@ The following operations are **not licensed** by this matrix and must never appe
 
 - a mean, median or range of "FIM mechanical response time" pooled across T-BA-*, T-NI-*, T-LI-*, T-NE-* or T-AK-*;
 - any statement of the form "FIM adaptation takes X ms";
-- comparison of T-AK-01 (< 0.1 ms per element) with T-BA-02 (< 0.1 s system morphing) as though they measured comparable objects;
+- comparison of T-AK-01 (< 0.1 ms, **one 16 × 16 tile**, control path) with T-BA-02 (< 0.1 s system morphing) as though they measured comparable objects;
+- presentation of T-AK-01 against T-AK-02 as an **element-versus-tile** contrast: both are bounds on the same 16 × 16 tile (source verified 22 Aug 2026), and the element reading was this project's error, not the source's;
+- use of either T-AK figure as evidence of a **PIN-diode or meta-atom electromagnetic transition time**: AKR-26 measures none, and reports no switching time, rise time or settling anywhere;
 - treatment of T-CH-01 (iterations) as a latency;
 - treatment of T-CH-04 or T-CH-05 (protocol units) as wall-clock durations;
 - use of T-NE-03 (< 2 ms projected) or T-LI-08 (< 10 ms projected) as a measurement;

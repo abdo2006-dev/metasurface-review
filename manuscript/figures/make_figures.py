@@ -6,7 +6,7 @@ Publication figures for:
 
 Every value drawn here is transcribed from `Documentation/evidence_matrix.md`
 Part B and `Documentation/timescale_matrix.md`.  No value is invented, derived
-or interpolated in this script.  Figure 3 in particular is a *display* of
+or interpolated in this script.  Figure 2 in particular is a *display* of
 heterogeneous quantities on a common axis: it is drawn in separate labelled
 lanes precisely so that the reader cannot read it as a single latency budget.
 
@@ -97,13 +97,15 @@ def figure1():
     save(fig, "fig1_architecture_evidence_map")
 
 
-# ---------------------------------------------------------------- Figure 2
+# ---------------------------------------------------------------- Figure 3
+# (defined before Figure 2 below; the function names follow the drafting order,
+#  the file names follow the order of first appearance in the manuscript.)
 def figure2():
     """Ten-stage adaptation chain on TWO axes.
 
     Fill colour  = stage evidence status (Q quantitative / D demonstrated / A assumed).
     Appended "T" = timing status: the DURATION of that stage was measured.
-    "(T)"        = partially delimited -- aggregate share, rate factor, residual or chosen wait
+    "(T)"        = share/component/residual of an aggregate; "[R]" = a rate, not a duration
                    from an adjacent stage.
     The point of the figure is the cells that are Q with no T: a radiation
     pattern, a gain or a delivered power is a measurement but not a timing.
@@ -115,11 +117,11 @@ def figure2():
         ("A1  theoretical FIM\n[1], [2], [3], [15]",
          ["", "", "S·T", "S", "", "A", "A", "", "", "A"]),
         ("A3  flexible programmable aperture\n[6]   (geometry imposed)",
-         ["Q·T", "Q·(T)", "", "Q·T", "Q·(T)", "Q·T", "", "", "D", "Q·T*"]),
+         ["Q·(T)", "Q·(T)", "", "Q·T", "Q·(T)", "Q·T", "", "", "D", "Q·T*"]),
         ("A5  rigid reconfigurable RIS\n[4], [5]",
-         ["", "", "", "", "Q·(T)", "Q·T", "", "", "", "Q"]),
+         ["", "", "", "", "Q·[R]", "Q·T", "", "", "", "Q"]),
         ("A4  self-morphing mechanical\n[7], [8]   (no RF layer)",
-         ["Q·T", "Q·T", "", "Q·T", "Q·T", "", "Q·T", "Q·T", "", ""]),
+         ["Q·T", "Q·T", "", "Q·(T)", "Q·T", "", "Q·T", "Q·(T)†", "", ""]),
         ("A7  flexible active array\n[20]",
          ["D", "D", "", "D", "D", "D", "", "", "D", "Q"]),
     ]
@@ -130,7 +132,7 @@ def figure2():
         ax.text(-0.25, y + .5, label, ha="right", va="center", fontsize=7.2,
                 linespacing=1.5, color=INK)
         for i, c in enumerate(codes):
-            base = c.split("·")[0].rstrip("*")
+            base = c.split("·")[0].rstrip("*†")
             fc = {"Q": MEAS, "D": DEMO, "A": ASSUM, "S": ASSUM, "": "white"}[base]
             ax.add_patch(Rectangle((i, y), 1, 1, facecolor=fc,
                                    edgecolor="white" if c else LGREY, lw=1.0))
@@ -142,9 +144,9 @@ def figure2():
     ax.plot([6.05, 6.05, 9.95, 9.95], [-0.10, -0.28, -0.28, -0.10],
             lw=1.0, color=GAP, clip_on=False)
     ax.text(8.0, -0.42,
-            "across the reviewed set, these four stages are timed only on platforms\n"
-            "with no RF layer (S7, S8), not timed at all (S9), or timed only with\n"
-            "the geometry held static (S10)",
+            "across the reviewed set: morphing (S7) is measured only on platforms with no\n"
+            "RF layer; settling (S8) has no measured duration on any platform;\n"
+            "calibration (S9) is untimed; and S10 is measured only with geometry static",
             ha="center", va="top", fontsize=7.1, color=GAP, fontweight="bold",
             linespacing=1.45)
 
@@ -162,16 +164,19 @@ def figure2():
                "A / S  assumed or simulated", "     absent / not applicable"],
               loc="upper left", bbox_to_anchor=(-0.30, -0.01), frameon=False,
               fontsize=7, handlelength=1.1, ncol=2, columnspacing=1.4)
-    ax.text(-3.05, -1.42,
-            "·T  fully delimited: a duration with identifiable start AND end events, separable from its neighbours\n"
-            "·(T)  partially delimited: a share of an aggregate interval, a rate factor, a residual, or a chosen wait\n"
+    ax.text(-3.05, -1.95,
+            "·T  a measured duration for the stage, with identifiable start and end events\n"
+            "·(T)  a duration for the stage that is only a stated share, component or residual of an aggregate\n"
+            "·[R]  a rate, not a duration\n"
+            "†  no independently measured settling duration exists in the reviewed set; the A4 entry is a\n"
+            "     component of an aggregate on one platform and a deliberately allocated wait on the other\n"
             "*  geometry held static throughout the timed interval",
             ha="left", va="bottom", fontsize=6.6, style="italic", color="#555555",
             linespacing=1.6)
-    save(fig, "fig2_adaptation_chain")
+    save(fig, "fig3_adaptation_chain")
 
 
-# ---------------------------------------------------------------- Figure 3
+# ---------------------------------------------------------------- Figure 2
 def figure3():
     """Timing landscape.  Separate lanes by process: NOT a latency budget."""
     lanes = [
@@ -183,8 +188,8 @@ def figure3():
             dict(kind="bar", lo=4e-3, hi=1e-1,
                  text="FIM channel estimation 4\u2013100 ms, desktop CPU \u00b7 A1", ha="left")]),
         ("controller / interface", [
-            dict(kind="point", x=1e-4, text="< 0.1 ms, one element \u00b7 A5", ha="left"),
-            dict(kind="point", x=1e-2, text="< 10 ms, one 16\u00d716 tile \u00b7 A5", ha="left")]),
+            dict(kind="point", x=1e-4, text="< 0.1 ms, whole tile \u00b7 A5", ha="left"),
+            dict(kind="point", x=1e-2, text="< 10 ms, same tile \u00b7 A5", ha="left")]),
         ("material / EM state", [
             dict(kind="bar", lo=1.5e-2, hi=7.2e-2,
                  text="liquid crystal, 15 ms on / 72 ms off \u00b7 A5", ha="left")]),
@@ -241,10 +246,15 @@ def figure3():
                 ax.text(it["hi"] * 1.45, y, it["text"], va="center", ha="left",
                         fontsize=7.0, color=INK, zorder=3)
             elif kind == "multi":
+                # Three markers within half a decade of each other: alternating two
+                # heights above the lane still let the second and third labels touch,
+                # so the third is placed below the lane instead.
+                PLACE = [(.16, "bottom"), (.34, "bottom"), (-.16, "top")]
                 for m, (xv, tag) in enumerate(zip(it["xs"], it["tags"])):
                     ax.plot([xv], [y], marker="o", ms=4.4, color=MEAS, zorder=3)
-                    ax.text(xv, y + (.30 if m % 2 else .16), tag, ha="center",
-                            va="bottom", fontsize=6.4, color="#333333", zorder=3)
+                    dy, va = PLACE[m % len(PLACE)]
+                    ax.text(xv, y + dy, tag, ha="center",
+                            va=va, fontsize=6.4, color="#333333", zorder=3)
                 ax.text(it["xs"][-1] * 1.45, y, it["text"], va="center", ha="left",
                         fontsize=7.0, color=INK, zorder=3)
 
@@ -260,7 +270,7 @@ def figure3():
         ax.spines[sp].set_visible(False)
     ax.grid(axis="x", color=LGREY, lw=0.6, zorder=0)
     ax.set_axisbelow(True)
-    save(fig, "fig3_timing_landscape")
+    save(fig, "fig2_timing_landscape")
 
 
 # ---------------------------------------------------------------- Figure 4
@@ -313,7 +323,7 @@ def figure4():
     ax.text(0.05, -0.62,
             "Dashed links are unsupported by a measurement on a comparable object: architecture mismatch "
             "(red), operation\ndemonstrated but untimed or measured from the wrong start event (amber).  "
-            "G1–G4 name the missing interval (Table 8).",
+            "G1–G4 name the missing interval (Table 4).",
             fontsize=6.9, color="#444444", va="bottom", linespacing=1.5)
     save(fig, "fig4_assumption_evidence_map")
 

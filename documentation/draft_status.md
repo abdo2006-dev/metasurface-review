@@ -1,12 +1,14 @@
 # Draft Status
 
-**Version:** 1.10 · 19 August 2026 · manuscript draft **v0.23** — public-artifact reproducibility freeze (see `CHANGELOG.md` v1.10)
+**Version:** 1.12 · 22 August 2026 · manuscript draft **v0.28a** — professor-readiness audit (see `CHANGELOG.md` v1.12 and `professor_readiness_v0.28a.md`)
 
-> **What v0.23 is.** A **reproducibility and integrity release, not an authoring pass.** No scientific result changed: C1 and C3 were independently recomputed from the published v0.22 files and survive unaltered. What changed is that the public artifact now actually supports the claims the manuscript makes for it. Ten public scripts hardcoded `Documentation/` and failed on a case-sensitive Linux checkout, so the mirror was runnable only on macOS; the CSV builder still contained pre-v0.22 science and could have regenerated the retired F-ANJ-C/F-ANJ-J split; the adaptation-chain matrix still credited two platforms with timing five stages; the screening expression was described as 47 alternatives against an actual 46; and several supporting records still described v0.21 as current. Full change list in `CHANGELOG.md` v1.10.
+> **What v0.28a is.** A **narrow pre-send audit** on top of v0.28: figures renumbered into order of appearance (they were 1, 3, 2, 4), a stale "Table 8" cross-reference removed from inside Figure 4, the §4.2 controller-write / material-transition distinction stated so the section cannot read as a self-contradiction, an unsupported "cheapest" cost claim removed, §5.2 and the conclusion shortened, and the DOCX given real heading and caption styles. No finding, number, attribution or corpus boundary changed. Main-text prose **13 130**, conclusion **650**, manuscript **27 pages**.
 >
-> *Prior passes:* **v0.22** repaired the C1 stage count, collapsed a conference/journal pair the dataset counted as two studies, and published the reproducibility scripts. **v0.21** rebuilt the adaptation-chain coding on two axes, re-executed the forward citation search against an explicit query, bounded all absence language and corrected four over-reaches. **C3 remains at Level A throughout.** A section-number crosswalk from the v0.14 numbering used throughout the older documentation is at the end of `manuscript_argument_map.md`.
+> **What v0.28 was.** A **structural and editorial revision, not a scientific one.** No finding was added, removed or changed; C1, C3, C4 and G1–G4 were recomputed from the canonical registers during the restructure and are unaltered. What changed is the article's shape. Twelve sections and fifty subsections re-proved the same eight findings in up to eight places each, and the audit machinery — the coding scheme, the evidence ladder, the per-source stage matrix, the propagation inventory, the full reporting checklist — occupied the main text rather than the supplement. The manuscript is now **seven sections and sixteen subsections**, each finding established once with at most one callback; the machinery moved to new supplementary sections S6, S7 and S8 with **no row of any moved table dropped**. Full disposition in `journalization_v0.28.md`.
+>
+> *Prior passes:* **v0.27a/b** applied professor-send micro-patches. **v0.27** froze the remaining consistency defects. **v0.25/v0.26** compressed and repaired contradictions found in the rendered export. **v0.24** rebuilt the timing taxonomy from first principles, which is where the `·T` maximum became four. **v0.23** made the public artifact runnable on a case-sensitive checkout. **v0.22** repaired the C1 stage count and collapsed a conference/journal pair the dataset counted as two studies. **C3 remains at Level A throughout.** Section-number crosswalks (v0.14 → v0.20 → v0.28) are at the end of `manuscript_argument_map.md`.
 
-> ⚠ **Two things are load-bearing and must not drift.** (1) **C1 must name its axis.** Three counts exist and differ: quantitatively evidenced stages (max **6**, two platforms), fully delimited `·T` stages (max **5**, **one** platform, which does not radiate), and any timing information `·T`+`·(T)` (max **6**, two platforms). The phrase *"five, reached by two platforms"* follows from no consistent rule and was withdrawn in v0.22. (2) **C3 is stated within its observation window**: 13 of 20 candidate studies read; of the seven unread, exactly one is author-disjoint from both the lineage and all three seeds, and that one study is the whole residual risk to the independence finding.
+> ⚠ **Two things are load-bearing and must not drift.** (1) **C1 must name its axis.** Three counts exist and differ: quantitatively evidenced stages (max **6**, two platforms), measured stage durations `·T` (max **4**, **BAI-22 alone**, which does not radiate), and any timing information `·T`+`·(T)` (max **6**, **LI-25 alone**). The phrase *"five, reached by two platforms"* follows from no consistent rule and was withdrawn in v0.22; the maximum of five was itself superseded at v0.24, when the timing taxonomy was rebuilt and LI-25's RMSD was reclassified as an accuracy. (2) **C3 is stated within its observation window**: 13 of 20 candidate studies read; of the seven unread, exactly one is author-disjoint from both the lineage and all three seeds, and that one study is the whole residual risk to the independence finding.
 
 ---
 
@@ -14,22 +16,19 @@
 
 | § | File | Status | Carries | Evidence sufficiency |
 |---|---|---|---|---|
-| — | `00_front_matter.md` | **complete** | title, abstract, index terms | — |
-| 1 | `01_introduction.md` | **complete** | — | good |
-| 2 | `02_scope_and_method.md` | **complete** | — | good — new section; states the method where a reviewer will look for it |
-| 3 | `03_architectures.md` | **complete** | **Table 1**, **Figure 1** | good |
-| 4 | `04_demand_side.md` | **complete** | **Table 2** | **limited** — the only quantified coherence figure in the corpus is at 2.6 GHz; there is no mmWave coherence measurement, and the 28 GHz Doppler figure is ours. Stated in the text. |
-| 5 | `05_adaptation_chain.md` | **complete** | **Table 3**, **Figure 2** | good |
-| 6 | `06_hardware_evidence.md` | **complete** | **Table 4**, **Table 5** | good — Table 5 is the manuscript's centrepiece and is now produced |
-| 7 | `07_synthesis.md` | **complete** | **Table 6**, **Figure 3** | good |
-| 8 | `08_traceability.md` | **complete** | **Table 7** | **mixed** — rests partly on external sources read as author versions; every one is identified bibliographically in the reference list |
-| 9 | `09_validation_gap.md` | **complete** | **Table 8**, **Figure 4** | good — this section states absences, which the extraction protocol supports |
-| 10 | `10_reporting_framework.md` | **complete** | **Table 9** | good — every field traced to an observed deficiency |
-| 11 | `11_discussion.md` | **complete** | — | good — limitations stated without hedging |
-| 12 | `12_conclusion.md` | **complete** | — | good — answers six questions, ends on priorities |
+| — | `00_front_matter.md` | **complete** | title, abstract (249 words), index terms | — |
+| 1 | `01_introduction.md` | **complete** | — | good — absorbs the old §4.1 coherence-threshold material |
+| 2 | `02_scope_and_method.md` | **complete** | — | good — the symbolic scheme it used to define is now S6 |
+| 3 | `03_architectures.md` | **complete** | **Table 1**, **Figure 1**, the ten-stage definitions | good — merges the old §3, §4 and §5.1 |
+| 4 | `04_hardware_evidence.md` | **complete** | **Table 2**, **Figure 2** (timing landscape), **Figure 3** (chain coverage) | good — the core evidence section; each platform described once |
+| 5 | `05_validation_gap.md` | **complete** | **Table 3**, **Table 4**, **Figure 4** | good — merges the old §7.5, §8 and §9; the traceability inventory is now S8 |
+| 6 | `06_implications.md` | **complete** | **Table 5** | good — merges the old §9.4, §10 and §11 |
+| 7 | `07_conclusion.md` | **complete** | — | good — a five-paragraph, 650-word journal conclusion carrying no timing values |
 | — | `99_references.md` | **complete** | 34 entries | every field verified against Crossref or the arXiv metadata endpoint |
 
-**Word count.** **30 343 words** across the twelve sections, front matter and references, of which **24 738 is prose** and 5 605 is table content. Counted by the standing method: whitespace-delimited tokens per line, with lines beginning `|` attributed to tables. Comparison: v0.21 was 29 049 / 23 472; v0.20 was 25 495 / 19 984; v0.14 was 21 887 / 19 933. The v0.22 growth is almost entirely **bounding and conditioning language** — the three-valued timing axis in §2.4, the three distinct stage counts in §5.3, and the record-versus-study distinction in §8.5. v0.23 changed no manuscript prose except the corrected regex-alternative count in §2.3.
+**Supplementary material.** S1 complete timing register · S2 quantity taxonomy · S3 extraction and version-control notes · S4 the complete reporting checklist · S5 forward-citation flow and study register · **S6 coding scheme, evidence ladder and per-source matrix (new)** · **S7 states tracked (new)** · **S8 propagation inventory (new)**. Assembled by `tools/build_supplement_combined.py`, which fails if a part is missing.
+
+**Word count.** **17 030 words** across seven sections, front matter and references, of which **14 761 is prose** and 2 269 is table content; the main text excluding references is **15 399 / 13 130 prose**. Counted by the standing method: whitespace-delimited tokens per line, with lines beginning `|` attributed to tables. Comparison: v0.27b main text was 22 668 / 18 713 prose, so the journalization removed **31.7 %** of the main text and **29.4 %** of its prose while the supplement grew from 4 551 to 7 729 words. Rendered pages: manuscript **27** (41 at v0.27b, 28 at v0.28), supplement **15** (was 8), brief **2** (unchanged).
 
 ## 2. What is now done that was not
 
