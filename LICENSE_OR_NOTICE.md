@@ -1,6 +1,6 @@
 # Copyright and Distribution Notice
 
-**Snapshot: manuscript v0.30, documentation v1.15, generated 2026-09-03 17:21 UTC.**
+**Snapshot: manuscript v0.30, documentation v1.15, generated 2026-09-03 17:58 UTC.**
 
 ## Status of the manuscript text and original analysis
 

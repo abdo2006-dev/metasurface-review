@@ -1,6 +1,6 @@
 # Source Version Map
 
-**Snapshot: manuscript v0.30, documentation v1.15, generated 2026-09-03 17:21 UTC.**
+**Snapshot: manuscript v0.30, documentation v1.15, generated 2026-09-03 17:58 UTC.**
 
 Bibliographic identity and version-inspection status for every source cited in the manuscript's numbered reference list (`manuscript/99_references.md`), plus every external source verified for the bibliography but cited only in passing. **This is metadata only — no source PDF is distributed in this repository.** Every DOI and arXiv identifier here was resolved against the publisher-deposited Crossref record or the arXiv metadata endpoint on 18 August 2026 (`documentation/source_inventory.md` §3b). Full extraction detail, per-quantity locators, and independence-group definitions are in `documentation/source_inventory.md` and `documentation/audits/independence_audit.md`; this table is a navigation aid, not a replacement for them.
 
@@ -22,7 +22,7 @@ Bibliographic identity and version-inspection status for every source cited in t
 | [13] | LFIM-26 | Achievable rate optimisation for large FIM-assisted downlink MISO under statistical CSI | He, Kumar, Papazafeiropoulos, Wen, Tran, Chafii | 2026 | *Proc. IEEE ICC*, pp. 1–6 · 10.1109/ICC59461.2026.11588269; preprint arXiv:2601.15471 | N | **N — identified bibliographically only** | see [12] | 1,S |
 | [14] | FAS-26 | Fluid antenna systems enabling 6G HRLLC with port switching delay | Zhu, Wong, H. Xu, Rao, Shin | 2026 | arXiv:2605.06275 | N | **N — identified bibliographically only**; cited solely as a delay-aware-modelling precedent in an adjacent field | 1 |
 | [32] | ANJ-MIMO | FIMs for enhancing MIMO communications | An, Han, Niyato, Debbah, Yuen, Hanzo | 2025 | arXiv:2502.16478 | N | N — author version only; *IEEE Trans. Commun.* record not retrieved | shares authors (An, Yuen) with [1], [2], [35] — see the cross-cutting authorship note below | 3,5,S |
-| [33] | HU-26 | Weighted sum-rate enhancement for FIM-assisted multicell systems | Hu, An, Gan, H. Li, Al-Dhahir, Karagiannidis, Nallanathan | 2026 | *IEEE TWC* 25:18579–18595 · 10.1109/TWC.2026.3701359 | N | Y (read as arXiv:2606.06845) | shares author (An) with [1], [2], [32], [35] | 5,S |
+| [33] | HU-26 | Weighted sum-rate enhancement for FIM-assisted multicell systems | Hu, An, Gan, H. Li, Al-Dhahir, Karagiannidis, Nallanathan | 2026 | *IEEE TWC* 25:18579–18595 · 10.1109/TWC.2026.3701359 | Y — **version of record obtained, read and archived 3 Sep 2026**; §5.2's tracing was re-run against it | Y | shares author (An) with [1], [2], [32], [35] | 5,S |
 | [34] | XIA-26 | Channel estimation for FIMs: model-based approaches to neural operators | Xiao, J. Wang, Cui, Y. Yang, X. Li, Niyato, Yuen | 2026 | *IEEE TWC* 25:10684–10701 · 10.1109/TWC.2026.3654581 | N | Y (read as arXiv:2508.00268v4) | shares author (Yuen) with [1], [3] | 5,S |
 | [35] | ANJ-25J | FIMs for downlink multiuser MISO communications | An, Yuen, Di Renzo, Debbah, Poor, Hanzo | 2025 | *IEEE TWC* 24(4):2940–2955 · 10.1109/TWC.2025.3526843 | N (read from an open institutional repository, not archived locally) | Y | **IG-2 — journal extension of [2]**, same result, not independent | 5,S |
 

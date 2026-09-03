@@ -2,7 +2,7 @@
 
 > ⚠ **Section numbers in this file are v0.14 numbering.** The manuscript was restructured into twelve sections on 18 August 2026 (draft v0.20). Use the crosswalk at the end of `manuscript_argument_map.md`; most often, **§6.5 → §8** (traceability) and **§9.4 → §11.4** (limitations). The scientific content of this file is unchanged and still governs.
 
-**Version:** 1.2 · **Search conducted:** 17 August 2026; **forward citation search (S11) 18 August 2026**; **corpus-boundary searches S12–S13, 3 September 2026** · **Searcher:** Claude (Opus 5)
+**Version:** 1.2 · **Search conducted:** 17 August 2026; **forward citation search (S11) 18 August 2026**; **corpus-boundary searches S12–S13 and version-of-record re-audit S14, 3 September 2026** · **Searcher:** Claude (Opus 5)
 **Purpose:** to record every search performed *beyond* the supplied project corpus, so that novelty and absence claims can be scoped honestly.
 
 ---
@@ -225,11 +225,27 @@ A second researcher can reproduce retrieval and stage-1 screening exactly, and c
 
 ---
 
+### S14 — 3 Sep 2026 · Objective O4 (**version-of-record re-audit of the traced premise**)
+
+**Why this search exists.** §5.2's traceability finding is the review's most contestable claim, and until now it rested on the arXiv HTML of the citing paper. A finding about how a value travels through the literature should be checkable against the version a reader will actually retrieve.
+
+**What was obtained.** The published version of record of Hu *et al.*, *IEEE Trans. Wireless Commun.*, vol. 25, pp. 18579–18595, 2026, doi:10.1109/TWC.2026.3701359, through an institutional subscription. Archived as `external_sources/HU-26_Weighted_Sum_Rate_FIM_Multicell_IEEE_TWC_2026_VERSION_OF_RECORD.pdf`. **It is not added to the reviewed set**, for the reason given in S12 and S13: the extraction protocol of §2 was not applied to it, and it is not coded on the adaptation-chain matrix.
+
+**What survived the check.** Everything previously recorded. Table I, *Key Parameters of Existing FIMs*, is on p. 18580 and gives Morphing Period **30 ms / 10 ms / 500 ms** for the Ni, Bai and Niu columns, with the Bai column carrying **5.5 mm / 18 mm ≈ 0.3**, which matches Bai's reported sample size and 30 % out-of-plane deformation. §III-E states verbatim that *"the response time of FIM surface morphing reaches 10 ms according to Table I"* and, separately, that *"the deformation response of FIMs operates on the order of milliseconds (with the fastest reaching 1 ms)"*. Both escalations are therefore properties of the published article, not of a preprint.
+
+**What was new.** A bibliographic mapping discrepancy inside Table I. *Reference numbers in this entry are that paper's own, not this project's.* Its column headers read **Ni et al. 38, 2022**, **Bai et al. 39, 2021**, **Niu et al. 40, 2022**. Its own reference list gives **38** = D. Tse and P. Viswanath, *Fundamentals of Wireless Communication* (Cambridge Univ. Press, 2005); **39** = Ni *et al.*, *Nature Commun.* **13**:5576, Sep. 2022; **40** = Bai *et al.*, *Nature* **609**:701–708, Sep. 2022; **41** = Niu *et al.*, *Smart Mater. Struct.* **30**, Art. 125032, Dec. 2021. The **body prose cites all three hardware papers correctly** — its reference 39 for "nanotube-based mesh structures onto thin silicone layers … gallium-indium liquid metal", its 40 for "a mesh of filamentary metal traces … distributed Lorentz forces", its 41 for "a bilayer structure … through heat or light" — and its 38 is used elsewhere for a textbook claim about deep fading. So it is the **table's column labels** that are displaced, by one, relative to both the bibliography and the body. The **years for Bai and Niu are interchanged** relative to the bibliography records. And the §III-E "1 ms" sentence carries the triple **38, 39, 40**, which matches the table's labels rather than the bibliography.
+
+**How this is recorded.** As an **unresolved source-level discrepancy**: `evidence_matrix.md` E-FP-02b, Supplementary Table S8 row **P0**, manuscript §5.2. **No reading is selected as authoritative and no intent is inferred.** It is not called misconduct or fabrication, and it is **not counted** as a propagation instance — the coding definition of one is the reuse of a primary timing value with its scope changed, and no timing value is reused by a citation number. The five instances, the four studies and C3's wording are therefore unchanged; the reason is stated in S8's caption rather than left implicit.
+
+**Column identity is not in doubt.** Each column's material, actuation principle and deformation figures match one primary source and no other, which is why P1's element-to-surface finding for the Ni column stands independently of how the column is numbered.
+
+---
+
 ## 4. Sources identified externally — status table
 
 | Source | Relevance | Status |
 |---|---|---|
-| arXiv:2606.06845 · Hu et al., multicell FIM | **critical** — source of the audited Table I feasibility claim | ✅ **full text retrieved and read 18 Aug 2026 (S11)**; Table I and both escalations verified verbatim (E-FP-01, E-FP-02) |
+| Hu et al., multicell FIM — *IEEE TWC* **25**:18579–18595, 2026, doi:10.1109/TWC.2026.3701359 (preprint arXiv:2606.06845) | **critical** — source of the audited Table I feasibility claim | ✅ **version of record obtained, read and archived 3 Sep 2026 (S14)**, superseding the 18 Aug preprint reading. Table I (p. 18580) and both escalations verified verbatim against it (E-FP-01, E-FP-02); one new finding, E-FP-02b |
 | arXiv:2502.16478 · An et al., FIM MIMO (IEEE TCOM) | **critical** — Remark 4 coherence-block assumption | ✅ **full text retrieved and read 18 Aug 2026 (S11)**; attaches **no** timing figure — recorded as counterexample E-FP-C2 |
 | arXiv:2510.07466 · Hu et al., FIM radio environments | high — unattributed "order of milliseconds" claim | HTML inspected |
 | arXiv:2512.23045 · Kumar et al., statistical-CSI FIM | **critical for novelty boundary** | ✅ **full text retrieved and read 18 Aug 2026 (S11)**; no author overlap with the FIM lineage and **no timing claim** — counterexample (E-FP-C1) |

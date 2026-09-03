@@ -30,9 +30,15 @@ INVENTORY = DOC / "source_inventory.md"
 
 
 def present():
-    """Corpus PDFs in the working tree: every PDF at the repository root that is not a
+    """Corpus PDFs in the working tree: every PDF at the repository *root* that is not a
     generated figure. The public mirror carries no PDFs, so there it returns None and the
-    file-count check is skipped rather than failed."""
+    file-count check is skipped rather than failed.
+
+    `external_sources/` is deliberately not searched. Files there were located by a documented
+    external search, are cited in the manuscript, and have been archived so a traced claim can be
+    re-checked -- but the extraction protocol of Section 2 was never applied to them, they are not
+    coded on the adaptation-chain matrix, and they are not the reviewed set. Counting them would
+    change what the corpus totals mean."""
     pdfs = [p.name for p in ROOT.glob("*.pdf") if not FIGURE_PDF.match(p.name)]
     return sorted(pdfs) if pdfs else None
 
@@ -67,7 +73,10 @@ def main():
     if files is None:
         print("working tree      : no corpus PDFs here (public mirror) -- file-count check skipped")
     else:
-        print(f"working tree      : {len(files)} non-figure PDFs")
+        ext = sorted((ROOT / "external_sources").glob("*.pdf"))
+        print(f"working tree      : {len(files)} non-figure PDFs at the root (the reviewed set)")
+        print(f"external_sources/ : {len(ext)} archived external PDFs — excluded from every count "
+              f"by design")
         if len(files) != files_ms:
             fails.append(f"the stated file count ({files_ms}) is not the number of corpus PDFs "
                          f"present ({len(files)}). Either a source was added or removed without "
