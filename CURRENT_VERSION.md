@@ -1,19 +1,19 @@
 # Current Review Snapshot
 
 Manuscript: v0.30e
-Documentation: v1.21
+Documentation: v1.22
 
 Private source repository commit:
-`8f2c2dd93a25cfad563f74a99596520691787625`
+`9d6d5547658858e05d7a5a9e232fa77d5dad82cb`
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-09-03 20:33 UTC`
+`2026-09-03 22:31 UTC`
 
 Scientific freeze status:
-`Manuscript v0.30e / documentation v1.21. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.21.`
+`Manuscript v0.30e / documentation v1.22. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.22.`
 
 Known unresolved blockers:
 - no domain-expert review has occurred; extraction and classification were performed by a single reviewer and were not independently duplicated or adjudicated
