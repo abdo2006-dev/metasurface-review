@@ -53,6 +53,8 @@ FIM adaptation names a sequence, not an event, and the sequence crosses three ph
 | S9 | Calibration | re-establishment of the geometry-to-RF-response mapping after the shape changed |
 | S10 | Stabilised RF operation | the interval over which the configured surface delivers its intended behaviour |
 
+S1 spans two observation tasks with different drivers, and the distinction matters once timescales are discussed. Geometry sensing, written S1-G, follows deformation of the aperture; channel or pilot acquisition, written S1-C, follows the channel state and is what feeds S3. These are analytical sublabels used only where a timescale requirement is at issue. They are not additional stages: S1 remains one stage of ten for every coverage count, duration count and coded cell in this review.
+
 Across the four reviewed FIM system papers — three distinct studies, since one is a short version of another — stages S5 through S9 are absent from the model or assumed instantaneous. Geometry takes the value the optimiser assigns it, at the moment the optimiser assigns it. Section 4 records what has been measured for each stage, and Supplementary Section S6 gives the per-source coded matrix from which those counts are taken.
 
 ### 3.3 What the surface is being asked to track

@@ -35,6 +35,8 @@ The two axes are genuinely orthogonal, and one cell proves it: **YAN-25's S3 is 
 | # | Stage | Definition used throughout this project |
 |---|---|---|
 | S1 | **Sensing / acquisition** | physical observation of the surface or the environment (strain sensors, imaging, pilots received) |
+
+*S1 branch note (analytical only).* Where timescale requirements are discussed, S1 is read as two task branches: **S1-G**, geometry/surface sensing, which follows aperture deformation; and **S1-C**, channel-observation or pilot acquisition, which follows the channel state and feeds S3. **These are sublabels, not stages.** Every coded cell, coverage count and duration count in this matrix and in Supplementary Section S6 keys to the single stage S1, and the chain remains ten stages.
 | S2 | **Geometry estimation** | conversion of raw sensor data into a surface-shape estimate |
 | S3 | **Channel estimation** | acquisition of the wireless channel (instantaneous or statistical) |
 | S4 | **Optimisation / inference** | computation of the desired geometry and/or phase configuration |

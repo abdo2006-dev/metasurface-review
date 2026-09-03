@@ -20,7 +20,7 @@
 
 [10] A. Tishchenko, M. Khalily, A. Shojaeifard, F. Burton, E. Björnson, M. Di Renzo, and R. Tafazolli, "The emergence of multi-functional and hybrid reconfigurable intelligent surfaces for integrated sensing and communications — A survey," *IEEE Commun. Surveys Tuts.*, vol. 27, no. 5, pp. 2895–2936, Oct. 2025, doi: 10.1109/COMST.2024.3519785.
 
-[11] W. Ma, L. Zhu, Y. Tan, B. Zheng, Y. Zhang, Y. Zhang, K. Ying, Z. Gao, H. Sun, X. Shao, Z. Xiao, D. Niyato, and R. Zhang, "A survey on reconfigurable and movable antennas for wireless communications and sensing," *IEEE Commun. Surveys Tuts.*, vol. 28, pp. 4842–4882, 2026, doi: 10.1109/COMST.2026.3663021. (Preprint: arXiv:2602.17977. Locators to this entry are given as section numbers rather than pages, because the passages were verified in the preprint and the published pagination was not accessible to us.)
+[11] W. Ma, L. Zhu, Y. Tan, B. Zheng, Y. Zhang, Y. Zhang, K. Ying, Z. Gao, H. Sun, X. Shao, Z. Xiao, D. Niyato, and R. Zhang, "A survey on reconfigurable and movable antennas for wireless communications and sensing," *IEEE Commun. Surveys Tuts.*, vol. 28, pp. 4842–4882, 2026, doi: 10.1109/COMST.2026.3663021. (Preprint: arXiv:2602.17977. The published record and page range were verified, but the version-of-record full text was not available to us; passage locators are therefore given as section numbers, verified in the preprint.)
 
 [12] V. Kumar, A. Papazafeiropoulos, P. Kourtessis, J. Senior, M. Chafii, D. I. Kaklamani, and I. S. Venieris, "Flexible intelligent metasurface for downlink communications under statistical CSI," *IEEE Wireless Commun. Lett.*, vol. 15, pp. 1150–1154, 2026, doi: 10.1109/LWC.2025.3649732.
 

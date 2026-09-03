@@ -1,19 +1,19 @@
 # Current Review Snapshot
 
-Manuscript: v0.30
-Documentation: v1.15
+Manuscript: v0.30b
+Documentation: v1.17
 
 Private source repository commit:
-`2db3c2bd65d3fd22c32b5de721fb40d7fbd38d7d` (private working tree was NOT clean at sync time -- see below)
+`7f981d7426dee4313acca8cac70cebd7599b5ae1`
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-09-03 17:59 UTC`
+`2026-09-03 18:17 UTC`
 
 Scientific freeze status:
-`Manuscript v0.30 / documentation v1.15. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.15.`
+`Manuscript v0.30b / documentation v1.17. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.17.`
 
 Known unresolved blockers:
 - no domain-expert review has occurred; extraction and classification were performed by a single reviewer and were not independently duplicated or adjudicated
