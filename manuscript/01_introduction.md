@@ -16,7 +16,7 @@ This has two consequences, and the first constrains what the present manuscript 
 
 A FIM-dedicated overview article does exist outside the reviewed set, and the external search recorded in Section 2 did not return it. It introduces FIM hardware architectures, sets out application scenarios and case studies, and states this review's question in almost these terms: whether the surface "can morph fast enough to track small-scale fading remains uncertain", and "if morphing speed is slower than the channel coherence time, instantaneous channel-aware designs may become impractical" [15, p. 10]. An independent group arriving at the same uncertainty is corroboration rather than pre-emption, and we treat it as such. What that article does not do is what the four contributions below do. It decomposes no adaptation chain into stages; it records no value with a timed object, a start event and an end event — it reports no numeric timing value at all, and its hardware table classifies shape reconfiguration qualitatively; and it traces none of the hardware-feasibility premises of the FIM system literature back to the primary measurements those premises rest on. Those are the gaps this review addresses, and they are unaffected by its existence.
 
-That is the gap this review addresses, and the question it asks is:
+The question examined here is therefore:
 
 > Which operations in a FIM-assisted high-mobility ISAC system must track fast channel variation, which may follow slower geometric or statistical change, and how well are the resulting timescales supported by existing hardware and control demonstrations?
 
