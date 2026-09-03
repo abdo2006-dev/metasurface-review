@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED REVIEW COPY -->
 <!-- DO NOT EDIT DIRECTLY -- edit the section files in manuscript/ and re-run tools/sync_review_repo.py -->
 
-> Manuscript v0.30c · generated 2026-09-03 18:24 UTC · private working-repository commit `5d4f5e34362c0f1b90b3e0988fd78cc5b4beccc3`
+> Manuscript v0.30c · generated 2026-09-03 19:14 UTC · private working-repository commit `83e17b43c1373beacc0a2c99d25ca7041614cde9`
 
 ---
 
