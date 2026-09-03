@@ -36,7 +36,7 @@ The flexible active antenna array work [23] demonstrates two 256-element, 30 × 
 
 ### 4.5 The register
 
-Table 2 consolidates the values that carry an argument in this manuscript, grouped by quantity type so that the comparability rule can be applied by eye: compare within a block, never across blocks. The complete 50-entry register, which keeps the start and end events in separate columns and continues the same row numbering, is Supplementary Table S1.
+Table 2 consolidates the values that carry an argument in this manuscript, grouped by quantity type so that the comparability rule can be applied by eye: compare within a block, never across blocks. The complete 35-entry register, which keeps the start and end events in separate columns and continues the same row numbering, is Supplementary Table S1.
 
 **Table 2 — Timing register (load-bearing entries).** Status: M = measured · S = simulated · P = projected · D = derived by us · A = assumed. Architecture classes are those of Table 1. Bold text inside a cell marks a qualification that limits what the value may be compared with.
 

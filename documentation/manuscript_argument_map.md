@@ -216,7 +216,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 
 **Essential claims**
 1. The answer, stated **conditionally on the two-timescale premise**, with the premise named as a premise and attributed to the literature that supplies it.
-2. Demand is established by modelling; supply on the electronic stage is measured on rigid panels. **The comparison inherits the weaker evidence type.**
+2. Demand is established by modelling; supply on the electronic stage is measured, on A5 rigid panels and one A3 flexible aperture. **The comparison inherits the weaker evidence type.**
 3. Three consequences for system modelling; three experiments for hardware work.
 4. Limitations without hedging: non-systematic search; **no uncertainty on any headline value**; one preprint claim that did not survive its version of record; the supplement that corrected us; three image-only sources; single-reviewer extraction; small set; **no domain-expert review**.
 5. §12 answers six questions — what the hardware can do, what is not established, which substitutions are unsafe, which states demand speed, which may be slower, what would close the gap — and ends on **concrete priorities**, not "future work is needed".
