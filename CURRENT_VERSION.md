@@ -1,19 +1,19 @@
 # Current Review Snapshot
 
-Manuscript: v0.28a
-Documentation: v1.12
+Manuscript: v0.30
+Documentation: v1.15
 
 Private source repository commit:
-`63fc674ca509f55b7fa5c38370264d62057f9d12`
+`7297986c29fea21568a2919ea531692406a49032`
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-08-22 10:56 UTC`
+`2026-09-03 17:21 UTC`
 
 Scientific freeze status:
-`Manuscript v0.28a / documentation v1.12. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.12.`
+`Manuscript v0.30 / documentation v1.15. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.15.`
 
 Known unresolved blockers:
 - no domain-expert review has occurred; extraction and classification were performed by a single reviewer and were not independently duplicated or adjudicated
@@ -37,18 +37,15 @@ Files synchronized from private source:
 - `documentation/audits/latency_definition_audit.md`
 - `documentation/audits/redundancy_audit.md`
 - `documentation/audits/terminology_audit.md`
-- `documentation/draft_status.md`
+- `documentation/citation_display_map.csv`
 - `documentation/evidence_matrix.md`
 - `documentation/evidence_strength_matrix.md`
 - `documentation/forward_citation_records_raw.csv`
 - `documentation/forward_citation_search_results.csv`
 - `documentation/forward_citation_works_deduplicated.csv`
-- `documentation/journalization_v0.28.md`
 - `documentation/literature_search_log.md`
 - `documentation/manuscript_argument_map.md`
 - `documentation/novelty_boundary.md`
-- `documentation/professor_brief.md`
-- `documentation/professor_readiness_v0.28a.md`
 - `documentation/s11_manual_decisions.csv`
 - `documentation/s11_study_citations.csv`
 - `documentation/s11_study_register.md`
@@ -59,6 +56,7 @@ Files synchronized from private source:
 - `documentation/supplement_forward_citation.md`
 - `documentation/supplement_propagation.md`
 - `documentation/supplement_quantity_taxonomy.md`
+- `documentation/supplement_reference.md`
 - `documentation/supplement_reporting_motivation.md`
 - `documentation/supplement_states.md`
 - `documentation/supplement_timing_register.md`
@@ -87,9 +85,12 @@ Files synchronized from private source:
 - `tools/build_forward_citation_csv.py`
 - `tools/build_s11_study_register.py`
 - `tools/c1_stage_counts.py`
+- `tools/check_corpus_counts.py`
 - `tools/check_mirror_links.py`
 - `tools/check_s11_consistency.py`
+- `tools/check_supplement_matrix.py`
 - `tools/export_manual_decisions.py`
+- `tools/renumber_citations.py`
 - `tools/reproduce_forward_citation_search.py`
 - `tools/retrieve_306_records.py`
 - `tools/s11_counts.py`

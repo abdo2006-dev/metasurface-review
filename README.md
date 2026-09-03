@@ -1,6 +1,6 @@
 # FIM High-Mobility ISAC — Public Review Mirror
 
-This repository is a **sanitized, read-only mirror** of the supporting documentation and manuscript drafts for a structured critical review:
+This repository is a **sanitized, read-only mirror** of the manuscript and the supporting evidence records for a structured critical review:
 
 > *Flexible Intelligent Metasurfaces for High-Mobility ISAC: Hardware Evidence, Adaptation Timescales, and Validation Gaps*
 
@@ -9,7 +9,7 @@ It exists **only** so that an independent reviewer can inspect the manuscript, i
 ## What this is not
 
 - **Not the working repository.** The authoritative repository — including the full downloaded literature corpus (journal and conference PDFs) — is private and stays private. This mirror is regenerated from it by a one-way, whitelist-based sync script; nothing flows back.
-- **Not a publication.** This is an unpublished draft under active revision. See `manuscript/00_front_matter.md` for the current version and freeze status, and `documentation/draft_status.md` for exactly what is and is not done.
+- **Not a published article.** This is the author's manuscript of a review that has not been submitted to or accepted by any venue, and no journal, volume, page range or acceptance date is claimed anywhere in it. What the mirror carries is a specific, dated snapshot: see [`CURRENT_VERSION.md`](CURRENT_VERSION.md) for which one, and the private commit it was generated from.
 - **Not the CST/full-wave companion project.** That project is explicitly out of scope for this manuscript and is not mirrored here.
 
 ## Start here

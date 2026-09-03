@@ -2,7 +2,7 @@
 
 > ⚠ **Section numbers in this file are v0.14 numbering.** The manuscript was restructured into twelve sections on 18 August 2026 (draft v0.20). Use the crosswalk at the end of `manuscript_argument_map.md`; most often, **§6.5 → §8** (traceability) and **§9.4 → §11.4** (limitations). The scientific content of this file is unchanged and still governs.
 
-**Version:** 1.1 · **Search conducted:** 17 August 2026; **forward citation search (S11) 18 August 2026** · **Searcher:** Claude (Opus 5)
+**Version:** 1.2 · **Search conducted:** 17 August 2026; **forward citation search (S11) 18 August 2026**; **corpus-boundary searches S12–S13, 3 September 2026** · **Searcher:** Claude (Opus 5)
 **Purpose:** to record every search performed *beyond* the supplied project corpus, so that novelty and absence claims can be scoped honestly.
 
 ---
@@ -109,7 +109,7 @@ Recorded as `E-ASM-03`. `[EXTERNAL — HTML INSPECTED]`
 
 ### S10 — 17 Aug 2026 · Objective O1 (final check)
 **String:** `"flexible intelligent metasurfaces" tutorial survey overview 2026 An Debbah Yuen`
-**Finding:** returns only primary FIM research articles plus the broad *Emerging Technologies in Intelligent Metasurfaces* piece (IEEE TAP, 2025) which is not a FIM hardware-validation review. **No FIM-specific survey found.**
+**Finding:** returns only primary FIM research articles plus the broad *Emerging Technologies in Intelligent Metasurfaces* piece (IEEE TAP, 2025) which is not a FIM hardware-validation review. ~~**No FIM-specific survey found.**~~ ‼ **SUPERSEDED BY S12, 3 Sep 2026 — this finding was wrong.** A FIM-dedicated overview article (arXiv:2603.11886) had been public since 12 March 2026 and was not returned. The record of what was run is left standing; the conclusion drawn from it is withdrawn.
 **Bibliographic by-product:** An et al., *"Flexible intelligent metasurfaces for downlink multiuser MISO communications," IEEE Trans. Wireless Commun.*, **24**(4), 2940–2955, 2025 — probable journal version of ANJ-25. `[VERIFY]`
 
 ---
@@ -179,6 +179,51 @@ It is therefore a **second fully author-disjoint counterexample**, alongside Kum
 | `tools/check_s11_consistency.py`, `tools/validate_public_snapshot.py` | fail if any active document disagrees with the authoritative counts, or if the mirror is not portable |
 
 A second researcher can reproduce retrieval and stage-1 screening exactly, and can audit — though not re-derive — stages 2 and 3. ⚠ **Correction (v0.23):** this list previously named `Documentation/forward_citation_stage1_raw.csv` and described it as "the unmodified stage-1 retrieval". That file held 262 *deduplicated* rows carrying decision columns, not the 306-record raw retrieval; it was renamed to `forward_citation_works_deduplicated.csv` in v0.22 and the genuine 306-record artefact was published alongside it.
+
+### S12 — 3 Sep 2026 · Objective O1 (**re-run; S1/S10 returned a false negative**) ‼
+
+**Why this search exists.** S1 and S10 were run on 17 Aug 2026 to answer O1, and both concluded that no FIM-specific survey exists. **That conclusion was wrong.** A FIM-dedicated overview article had been public on arXiv since 12 March 2026, five months earlier. S12 records the corrected outcome and the search that reached it.
+
+**Services:** arXiv Atom API (`https://export.arxiv.org/api/query`, HTTPS — the HTTP endpoint returns empty result sets and was the likely cause of at least one earlier miss), Crossref REST API, arXiv PDF endpoint. All three are deterministic and re-runnable.
+**Date:** 3 September 2026.
+**Terms:** `flexible intelligent metasurface` combined with each of `overview`, `magazine`, `tutorial`, `next-generation wireless`; and an author-name check against the four authors of the located article across the 306 forward-citation records.
+
+**Finding — O1 is answered YES.**
+
+- **Magbool, Kumar, Di Renzo & Flanagan, "Beyond the Limits of Rigid Arrays: Flexible Intelligent Metasurfaces for Next-Generation Wireless Networks," arXiv:2603.11886, 12 Mar 2026 (v1, 11 pp.).** Full text retrieved and read. A FIM-dedicated overview: hardware architectures (Table I), integration into wireless systems, application scenarios, case studies, open challenges.
+
+**Inclusion rationale.** It is cited in §1 as the FIM-dedicated overview it is, and its statement of the morphing-speed question is quoted. It is **not** added to the reviewed set: the reviewed set is the corpus this review extracts from under the protocol of §2, and adding one source to it retrospectively without applying the extraction protocol to it would misrepresent both. It is also **not** added to the S11 study register or to any C3 count. S11's population is defined by an automatic, dated cited-by retrieval on three seeds; this article was not returned by that retrieval and inserting it by hand would break the property that makes S11 reproducible.
+
+**Bearing on the manuscript's claims.** The article contains **no numeric timing value** (verified by full-text scan: zero occurrences of "millisecond" or "response time"; its Table I classifies shape reconfiguration qualitatively). It decomposes no adaptation chain, builds no definition-preserving register, and traces no feasibility premise to a primary measurement. C1–C4 are therefore unaffected. What it does falsify is **absence claim A3**, which is withdrawn (`absence_claims.md`).
+
+**Lesson recorded, not hidden.** A targeted, non-protocol-driven search returned a confident negative on the one question most likely to pre-empt the manuscript. The caveat this log already carried — that such a search yields a search outcome and not an established absence — was correct and insufficient, because the outcome itself was wrong. This is the strongest argument in this project for item 1 of §5.
+
+---
+
+### S13 — 3 Sep 2026 · Objectives O3, O5 (**morphing / origami / 4D-printed radiating apertures**)
+
+**Why this search exists.** G1 and the empty cell of Figure 1 are claims about the *co-occurrence* of a commanded geometry and measured radio-frequency performance. Neither had been tested against the mechanically reconfigurable antenna literature, which is where such a co-occurrence would most plausibly be found.
+
+**Services:** Crossref REST API; Europe PMC REST (`fullTextXML`) for open-access full texts; NCBI E-utilities. Deterministic and re-runnable.
+**Date:** 3 September 2026.
+**Terms:** `4D-printed` / `origami` / `shape memory polymer` each combined with `reflecting surface`, `intelligent reflecting surface`, `antenna array`, `beam steering`, `reconfigurable`; plus `morphing antenna` with `recovery time` and `actuation time`.
+
+**Finding — two platforms located, one of them directly load-bearing.**
+
+| Source | What it is | Why it matters |
+|---|---|---|
+| **Kim, Phon, Park & Lim**, *Microsyst. Nanoeng.* **10**:157, 29 Oct 2024, doi:10.1038/s41378-024-00795-1 (open access; full text read via Europe PMC, PMC11519457) | 27.2 GHz IRS, 225 PIN diodes on 15 printed substrate columns over a silver-paste ground; column gaps changed by SMP hinges on a multimaterial FDM 4D-printed structure; scattering patterns **measured** at two spacings | A radiating aperture with a programmable electromagnetic layer, a changing geometry, and a **stated duration for the geometric change: 240 s**. This is the closest thing in the located literature to the measurement G1 asks for |
+| **Park, Park, Lee & Lim**, *ACS Appl. Mater. Interfaces* **15**(42):49843–49853, Oct 2023, doi:10.1021/acsami.3c11425 (paywalled; **abstract and bibliographic record only**) | 4D-printed multimaterial Miura-origami antenna array at 2.4 GHz; measured maximum beam direction changes 0° → 50° by thermal morphing, with recovery to the memorised state | Same family, same combination. Cited for existence and class membership only; **no claim beyond the abstract is drawn from it**, and no timing value is taken from it |
+
+**Inclusion rationale.** Both are cited, and the first is confronted at length in §3.1 and in G1. Neither is added to the reviewed set, for the same reason as S12: the extraction protocol was not applied to them, and the reviewed set is defined by that protocol.
+
+**Exclusion / boundary rationale — stated explicitly because it is contestable.** These platforms are **not** A1 FIM hardware, on three grounds, each checkable in the source: (i) the control variable is an **in-plane column spacing** or a fold angle, not an element coordinate along the surface normal, which is what the FIM formulation optimises [1, Eqs. (1a)–(3)]; (ii) the actuation is **thermally driven shape-memory recovery** — the Kim platform is heated to 65 °C, deformed by an **external force**, cooled, and later returns to one **memorised** state — so it has two geometries rather than a coordinate vector, and no controller selects either; (iii) the 240 s figure is reported without a named start event, a named end event or an electromagnetic criterion, so it bounds the recovery of a printed structure and not the onset of trustworthy radiation. **These grounds are definitional, and §2 says so.** A reader who draws the boundary differently should read G1 and the empty cell of Figure 1 accordingly, and the manuscript now tells them so on the page.
+
+**Bearing on the manuscript's claims.** G1 is **narrowed** and stated for the commanded case specifically (§5.3). No numerical value in Table 2 or Supplementary Table S1 is contradicted; the 240 s figure is three orders of magnitude above every mechanical value in the register and is consistent with the review's substantive point. C1–C4, G2, G3, G4, the A1–A7 taxonomy, the S1–S10 decomposition and every count are unaffected.
+
+**Not exhaustive, and not claimed to be.** This is a targeted search of one adjacent family, run on the two services that expose full text without a subscription. It establishes that at least one such platform exists. It does not establish how many.
+
+---
 
 ## 4. Sources identified externally — status table
 

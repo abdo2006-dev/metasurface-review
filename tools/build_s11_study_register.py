@@ -19,12 +19,33 @@ from s11_counts import counts
 # this package holds scientific content: that is what let a retired family split survive
 # inside build_forward_citation_csv.py until v0.23.
 def _citations():
-    import csv as _csv
+    """Study families -> canonical citation, and -> the bibliography number a reader will see.
+
+    The CSV keys each family to a *stable source number*, which is what the internal registers
+    use and what survives a renumbering. The manuscript's bibliography is numbered in order of
+    first appearance, so the two diverge; `citation_display_map.csv` is the translation, and
+    the register prints the display number so a reader can look the entry up. Printing the
+    stable number, which this generator used to do, sends them to the wrong entry."""
+    import csv as _csv, re as _re
+    disp = {}
+    mapfile = DOC / "citation_display_map.csv"
+    if mapfile.is_file():
+        with mapfile.open(encoding="utf-8") as fh:
+            for r in _csv.DictReader(fh):
+                disp[int(r["stable_source_number"])] = int(r["display_reference_number"])
+
+    def to_display(cell):
+        # "[2] / [32]" -> "[2] / [35]"; an unmapped number is a supplement-only source and is
+        # left alone rather than silently renumbered into the main list.
+        return _re.sub(r"\[(\d+)\]",
+                       lambda m: f"[{disp[int(m.group(1))]}]" if int(m.group(1)) in disp
+                                 else f"[{m.group(1)}\u2020]", cell)
+
     cit, ref = {}, {}
     with (DOC / "s11_study_citations.csv").open(encoding="utf-8") as fh:
         for r in _csv.DictReader(fh):
             cit[r["version_family"]] = r["canonical_citation"]
-            ref[r["version_family"]] = r["manuscript_ref"]
+            ref[r["version_family"]] = to_display(r["stable_source_ref"])
     return cit, ref
 
 
@@ -92,6 +113,12 @@ def main():
           a_["studies_unread_ids"],
           "No content claim of any kind is made about these. They bound every count above from below.")
 
+    L.append("The **Ref.** column gives the number the entry carries in the manuscript's "
+             "bibliography, which is ordered by first appearance. The decision CSV keys each family "
+             "to a *stable* source number instead, so that a renumbering cannot invalidate it; "
+             "`citation_display_map.csv` is the translation between the two, and this column is "
+             "produced through it. A number marked \u2020 is cited only in the supplementary "
+             "material, where it appears in the separate supplementary reference list.\n")
     L.append("## 4. Version families containing more than one record\n")
     L.append("| Family | Relationship | Records |\n|---|---|---|")
     L.append("| **F-ANJ-DL** | conference → journal extension (GLOBECOM 2024 → IEEE TWC 2025; identical author list) | W4408324568, W4406727975 |")

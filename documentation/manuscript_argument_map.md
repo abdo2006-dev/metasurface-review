@@ -39,7 +39,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 | 10 | A reporting framework for FIM adaptation | **Table 9** |
 | 11 | Discussion | — |
 | 12 | Conclusion | — |
-| — | References | **34** entries, numbered by first appearance |
+| — | References | **36** entries, numbered by first appearance; one supplement-only source listed separately as [S1] |
 
 **Table and figure inventory.** Nine tables and four figures. The count rose from the seven placeholder tables of v0.14 because two objects that were previously prose needed tabulating: the **timing-quantity taxonomy** (Table 4), which the register is unreadable without, and the **propagation cases** (Table 7), which are the evidence for C3 and were previously buried in a paragraph. The v0.14 placeholders "system assumptions vs evidence" and "validation gaps" were **merged into one table** (Table 8), because separately they repeated each other's rows.
 
@@ -193,7 +193,7 @@ The ten-section outline was restructured into twelve. Four changes, each with a 
 1. The gap is **not** flexibility, shape sensing, fast electronic control, or deformation compensation — all reach L5 or L6.
 2. The gap is the transition from compensating an exogenous shape to commanding one and knowing when it has arrived, on an aperture that must also radiate.
 3. **Table 8** runs assumption → implied capability → closest evidence → level → missing measurement, and names G1–G4.
-4. The **structural** gap is deeper than any timing gap: four platforms each hold three of the four required components. *(C10)*
+4. The **structural** gap is deeper than any timing gap: the two best-covered radiating platforms hold three of the four required components ([7], [23]); the commanded-geometry platforms hold two ([22]) and none ([8]), and contribute the component that is not in the set. No platform holds all four. *(C10)*
 5. Ranked by closability: G3 (a timed re-run of an existing experiment) → G1/G2 (instrumented morphing of an RF-loaded flexible panel) → G4 → the integration programme.
 6. §9.5 states what the review does not show. **Absence of measurement is not evidence of impossibility.**
 

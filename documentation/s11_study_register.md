@@ -24,10 +24,10 @@ A primary timing value is reused with its scope changed. Instances: P1, P2, P3, 
 
 | Study family | Records | Canonical citation | Ref. | Full text read | Primary hardware cited | Timing hit | Table 7 | Author-network relationship |
 |---|---|---|---|---|---|---|---|---|
-| **F-ANJ-DL** | 2 | An, Yuen, Di Renzo, Debbah, Poor & Hanzo — GLOBECOM 2024 (conf.) / IEEE TWC 2025 (journal ext.), doi:10.1109/twc.2025.3526843 | [2] / [32] | yes | BAI|NI | yes | P4 | FIM lineage (An, Yuen) |
-| **F-HU** | 2 | Hu, An, Gan, Li, Al-Dhahir, Karagiannidis & Nallanathan — GLOBECOM 2025 (conf.) / IEEE TWC 2026 (journal ext.), doi:10.1109/twc.2026.3701359 | [30] | yes | BAI|NI; NI | yes | P1;P2 | shares author (An) with FIM lineage |
+| **F-ANJ-DL** | 2 | An, Yuen, Di Renzo, Debbah, Poor & Hanzo — GLOBECOM 2024 (conf.) / IEEE TWC 2025 (journal ext.), doi:10.1109/twc.2025.3526843 | [2] / [35] | yes | BAI|NI | yes | P4 | FIM lineage (An, Yuen) |
+| **F-HU** | 2 | Hu, An, Gan, Li, Al-Dhahir, Karagiannidis & Nallanathan — GLOBECOM 2025 (conf.) / IEEE TWC 2026 (journal ext.), doi:10.1109/twc.2026.3701359 | [33] | yes | BAI|NI; NI | yes | P1;P2 | shares author (An) with FIM lineage |
 | **F-RAN** | 1 | Ranasinghe, An, Morales Sandoval, Rou, de Abreu, Yuen & Debbah, IEEE TWC, 2026, doi:10.1109/twc.2026.3668992 | [1] | yes | BAI|NI | yes | P5 | FIM lineage (An, Yuen) |
-| **F-XIA** | 2 | Xiao, Wang, Cui, Yang, Li, Niyato & Yuen, IEEE TWC, 2026, doi:10.1109/twc.2026.3654581 | [31] | yes | BAI|LI|NI | yes | P3 | shares author (Yuen) with FIM lineage |
+| **F-XIA** | 2 | Xiao, Wang, Cui, Yang, Li, Niyato & Yuen, IEEE TWC, 2026, doi:10.1109/twc.2026.3654581 | [34] | yes | BAI|LI|NI | yes | P3 | shares author (Yuen) with FIM lineage |
 
 ## 2. No timing value — 9 studies, 11 records
 
@@ -35,8 +35,8 @@ A primary timing value is reused with its scope changed. Instances: P1, P2, P3, 
 
 | Study family | Records | Canonical citation | Ref. | Full text read | Primary hardware cited | Timing hit | Table 7 | Author-network relationship |
 |---|---|---|---|---|---|---|---|---|
-| **F-ANJ-MIMO** | 1 | An, Han, Niyato, Debbah, Yuen & Hanzo, IEEE Trans. Commun., 73(9):7349-7365, Sep. 2025, doi:10.1109/tcomm.2025.3550318 | [29] | yes | BAI | no | N2 | FIM lineage (An, Yuen) |
-| **F-BAN** | 1 | Bansal, Hewson, Santer & Whittow, EuCAP 2024, doi:10.23919/EuCAP60739.2024.10501383 | [34] | yes | BAI | no | N3 | AUTHOR-DISJOINT from FIM lineage and from all three seeds |
+| **F-ANJ-MIMO** | 1 | An, Han, Niyato, Debbah, Yuen & Hanzo, IEEE Trans. Commun., 73(9):7349-7365, Sep. 2025, doi:10.1109/tcomm.2025.3550318 | [32] | yes | BAI | no | N2 | FIM lineage (An, Yuen) |
+| **F-BAN** | 1 | Bansal, Hewson, Santer & Whittow, EuCAP 2024, doi:10.23919/EuCAP60739.2024.10501383 | [36] | yes | BAI | no | N3 | AUTHOR-DISJOINT from FIM lineage and from all three seeds |
 | **F-FAA** | 2 | Yang, An, Xiu, Lyu, Ning, Zhang, Debbah & Yuen — ICCT 2024 (conf.) / IEEE TWC 2025 (journal ext.), doi:10.1109/twc.2025.3545305 |  | yes | BAI | no | — | disjoint from FIM lineage |
 | **F-FCA** | 1 | Guo, Yang, Dong, Yang, Deng, Zhang & Yuen, IEEE Internet Things J., 2025, doi:10.1109/jiot.2025.3580372 |  | yes | BAI | no | — | disjoint from FIM lineage |
 | **F-KUM** | 1 | Kumar, Papazafeiropoulos, Kourtessis, Senior, Chafii, Kaklamani & Venieris, IEEE Wireless Commun. Lett., 2025, doi:10.1109/lwc.2025.3649732 | [12] | yes | BAI | no | N1 | AUTHOR-DISJOINT from FIM lineage and from all three seeds |
@@ -53,11 +53,13 @@ No content claim of any kind is made about these. They bound every count above f
 |---|---|---|---|---|---|---|---|---|
 | **F-APS** | 1 | Zuo, Cheng, Qian, Liao & Ding, Acta Physica Sinica 75(1), 2026, doi:10.7498/aps.75.20260154 |  | **no** | NI | unknown | — | AUTHOR-DISJOINT from FIM lineage and from all three seeds (published-record authorship only; full text not read) |
 | **F-DRL** | 1 | Wang, Zhang, An, Cheng, Dong & Wang, IEEE Wireless Commun. Lett., 2026, doi:10.1109/lwc.2026.3709756 |  | **no** | BAI | unknown | — | shares author (An) with FIM lineage (published-record authorship only; full text not read) |
-| **F-HUA** | 1 | Huang, Chen, Xu, Zhu, Pan, Tafazolli & Huang, IEEE J. Sel. Areas Commun., 2025, doi:10.1109/jsac.2025.3639197 | [33] | **no** | LI | unknown | — | disjoint from FIM lineage; shares author (T. Pan) with seed LI |
+| **F-HUA** | 1 | Huang, Chen, Xu, Zhu, Pan, Tafazolli & Huang, IEEE J. Sel. Areas Commun., 2025, doi:10.1109/jsac.2025.3639197 | [33†] | **no** | LI | unknown | — | disjoint from FIM lineage; shares author (T. Pan) with seed LI |
 | **F-MING** | 1 | Ming, An, Gan, Nallanathan & Al-Dhahir, IEEE Trans. Veh. Technol., 2025, doi:10.1109/tvt.2025.3614693 |  | **no** | BAI|NI | unknown | — | shares author (An) with FIM lineage (published-record authorship only; full text not read) |
 | **F-SRM** | 1 | Jiang, An, Gan, Al-Dhahir & Karagiannidis, ICC 2026, doi:10.1109/icc59461.2026.11587389 |  | **no** | BAI|NI | unknown | — | shares author (An) with FIM lineage (published-record authorship only; full text not read) |
 | **F-TAP** | 1 | An, Debbah, Cui, Chen & Yuen, IEEE Trans. Antennas Propag., 2025, doi:10.1109/tap.2025.3571069 |  | **no** | BAI|NI | unknown | — | FIM lineage (An, Yuen, Debbah) (published-record authorship only; full text not read) |
 | **F-ZAR** | 1 | Zarini, Kazemi, Sookhak, Ghrayeb & Di Renzo, PIMRC 2025, doi:10.1109/pimrc62392.2025.11274788 |  | **no** | BAI | unknown | — | shares author (Di Renzo) with FIM lineage (published-record authorship only; full text not read) |
+
+The **Ref.** column gives the number the entry carries in the manuscript's bibliography, which is ordered by first appearance. The decision CSV keys each family to a *stable* source number instead, so that a renumbering cannot invalidate it; `citation_display_map.csv` is the translation between the two, and this column is produced through it. A number marked † is cited only in the supplementary material, where it appears in the separate supplementary reference list.
 
 ## 4. Version families containing more than one record
 

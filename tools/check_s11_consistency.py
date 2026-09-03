@@ -55,8 +55,6 @@ STALE = [
     (r"\bEight retrieved papers\b", "eight -> nine studies"),
     (r"\beight (?:further |retrieved )?papers cite\b", "eight -> nine studies"),
     (r"\bTwo platforms reach five\b", "C1: only one platform reaches five under ·T"),
-    (r"\b33 (?:numbered )?references\b", "33 -> current bibliography count"),
-    (r"\b33 entries\b", "33 -> current bibliography count"),
     (r"two platforms reach five", "C1: only one platform reaches five under a strict ·T reading"),
     (r"five stages it times", "C1: LI-25 fully delimits four, not five"),
     (r"`·T`[^.\n]{0,60}\(max \*\*5\*\*", "C1: max ·T is 4 since the v0.24 taxonomy rebuild"),
@@ -94,6 +92,19 @@ def active_files():
 
 def executable_tools():
     return sorted((ROOT / "tools").glob("*.py"))
+
+
+def bibliography_count():
+    """The number of entries in the manuscript's reference list, read from the list.
+
+    This used to be guarded by literal patterns for the counts that had gone stale ("33
+    references", "33 entries"). That is the wrong shape of test: it catches yesterday's
+    wrong number and nothing else. The v0.29 renumbering, which moved the supplement-only
+    source into its own list, made "33" the correct count and the guard a false positive.
+    """
+    import re as _re
+    src = (MANUSCRIPT / "99_references.md").read_text(encoding="utf-8")
+    return len(_re.findall(r"^\[\d+\] ", src, _re.M))
 
 
 def wireless_alternative_count():
@@ -135,6 +146,7 @@ def main():
                          m.group(0)))
 
     n_alt = wireless_alternative_count()
+    n_bib = bibliography_count()
     for f in active_files():
         for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
             if EXEMPT_LINE.search(line):
@@ -145,6 +157,11 @@ def main():
                     hits.append((f.relative_to(ROOT), i,
                                  f"regex alternative count {m.group(1)} != len(WIRELESS_TERMS)={n_alt}",
                                  line.strip()[:110]))
+            for m in re.finditer(r"\b(\d+) (?:numbered references|references\b|entries\b)", line):
+                if int(m.group(1)) != n_bib and f.name != "source_inventory.md":
+                    hits.append((f.relative_to(ROOT), i,
+                                 f"bibliography count {m.group(1)} != {n_bib} in 99_references.md",
+                                 line.strip()[:110]))
 
     if hits:
         print(f"STALE S11/C1 COUNTS: {len(hits)} hit(s)\n")
@@ -154,6 +171,7 @@ def main():
     print(f"No stale S11/C1 counts found. Scanned {len(active_files())} active documents "
           f"and {len(executable_tools())} executable tools.")
     print(f"regex: len(WIRELESS_TERMS) = {wireless_alternative_count()}")
+    print(f"bibliography: {bibliography_count()} entries in the manuscript reference list")
     print(f"authoritative: {R['records_pre_dedup']} records -> {R['unique_works']} works -> "
           f"{R['stage1_pass']} stage-1 -> {R['stage2_records']} records -> {R['distinct_studies']} studies "
           f"-> {A['studies_read']} read / {A['studies_unread']} unread")

@@ -2,7 +2,7 @@
 """
 Publication figures for:
   "Flexible Intelligent Metasurfaces for High-Mobility ISAC:
-   Hardware Evidence, Adaptation Timescales, and Validation Gaps"  (draft v0.22)
+   Hardware Evidence, Adaptation Timescales, and Validation Gaps"
 
 Every value drawn here is transcribed from `Documentation/evidence_matrix.md`
 Part B and `Documentation/timescale_matrix.md`.  No value is invented, derived
@@ -55,11 +55,11 @@ def figure1():
     cells = {
         (0, 1): ("", ""),                      # top-left: empty cell
         (1, 1): ("A4  self-morphing mechanical",
-                 "Bai [7], Ni [8]\ncommanded shape, closed-loop verified\n"
+                 "Bai [22], Ni [8]\ncommanded shape, closed-loop verified\n"
                  "no meta-atoms, no bias network, no RF ground"),
         (0, 0): ("A2 · A3 · A5 · A7  radiating apertures",
-                 "[4], [5], [6], [16], [17], [18],\n"
-                 "[20], [24], [25], [26], [27], [28]\n"
+                 "[5], [6], [7], [19], [20], [21],\n"
+                 "[23], [28], [29], [30], [31]\n"
                  "geometry externally imposed or fixed"),
         (1, 0): ("A6  movable / reconfigurable antennas",
                  "outside the reviewed measurement scope"),
@@ -114,15 +114,15 @@ def figure2():
               "S5\ncontrol\ntx", "S6\nelectronic\nupdate", "S7\nmechanical\nmorphing",
               "S8\nsettling", "S9\ncalibration", "S10\nstabilised\nRF"]
     rows = [
-        ("A1  theoretical FIM\n[1], [2], [3], [15]",
+        ("A1  theoretical FIM\n[1], [2], [3], [18]",
          ["", "", "S·T", "S", "", "A", "A", "", "", "A"]),
-        ("A3  flexible programmable aperture\n[6]   (geometry imposed)",
+        ("A3  flexible programmable aperture\n[7]   (geometry imposed)",
          ["Q·(T)", "Q·(T)", "", "Q·T", "Q·(T)", "Q·T", "", "", "D", "Q·T*"]),
-        ("A5  rigid reconfigurable RIS\n[4], [5]",
+        ("A5  rigid reconfigurable RIS\n[5], [6]",
          ["", "", "", "", "Q·[R]", "Q·T", "", "", "", "Q"]),
-        ("A4  self-morphing mechanical\n[7], [8]   (no RF layer)",
+        ("A4  self-morphing mechanical\n[8], [22]   (no RF layer)",
          ["Q·T", "Q·T", "", "Q·(T)", "Q·T", "", "Q·T", "Q·(T)†", "", ""]),
-        ("A7  flexible active array\n[20]",
+        ("A7  flexible active array\n[23]",
          ["D", "D", "", "D", "D", "D", "", "", "D", "Q"]),
     ]
     fig, ax = plt.subplots(figsize=(7.6, 3.8))
@@ -203,9 +203,9 @@ def figure3():
             dict(kind="multi", xs=[1e-1, 3e-1, 6.5e-1],
                  tags=["< 0.1 s", "300 ms", "650 ms"],
                  text="A4, no RF layer", ha="left")]),
-        ("mechanical loop \u2014 replay", [
+        ("mechanical loop \u2014 model-driven", [
             dict(kind="point", x=1e-1,
-                 text="10 fps open-loop replay, voltages known \u00b7 A4", ha="left")]),
+                 text="10 fps open-loop, model-designed voltages \u00b7 A4", ha="left")]),
         ("mechanical loop \u2014 search", [
             dict(kind="point", x=1.5e2,
                  text="\u2248 2.5 min closed-loop convergence \u00b7 A4", ha="right")]),
@@ -288,11 +288,11 @@ def figure4():
         "command transport and\nelectronic update are free",
     ]
     evidence = [
-        ("commanded shape control\n[7], [8] \u2014 no RF layer", "mismatch"),
+        ("commanded shape control\n[8], [22] \u2014 no RF layer", "mismatch"),
         ("≈300 ms surface morph\n[8] — bare elastomer", "mismatch"),
         ("no bound, condition or\nexperiment in reviewed set", "none"),
-        ("closed-loop refocusing\n[20] \u2014 not timed", "untimed"),
-        ("16.7 ms to stabilised RF\n[6] \u2014 geometry static", "wrongevent"),
+        ("closed-loop refocusing\n[23] \u2014 not timed", "untimed"),
+        ("16.7 ms to stabilised RF\n[7] \u2014 geometry static", "wrongevent"),
         ("≈5.5 ms of 16.76 ms; ×¼\nmultiplexing — measured", "measured"),
     ]
     gaps = {0: "G1", 1: "G2", 2: "—", 3: "G3", 4: "G4", 5: "—"}

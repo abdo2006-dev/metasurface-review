@@ -122,7 +122,7 @@ Two independent platforms (IG-8, IG-9) both place element-level mechanical respo
 |---|---|---|---|---|
 | System morphing | "within 0.1 s" | 4 × 4 filamentary mesh | measured | T-BA-02 |
 | Full surface from flat | **≈300 ms**, of which ≈250 ms is membrane viscoelasticity | liquid-metal/elastomer surface | measured | T-NI-02 |
-| Shape-to-shape switching | ≈650 ms (300 + 50 script + 300) | same surface | measured | T-NI-03 |
+| Shape-to-shape switching | ≈650 ms — **our sum** of three source-stated measured components (300 + ≈50 script + 300); the source prints no single figure | same surface | measured components, derived total | T-NI-03 |
 
 **A within-platform observation, and only that.** Compare Categories 5 and 6 within each platform, never across them:
 - BAI-22: element < 70 ms → system < 100 ms (factor ≈1.4)
@@ -142,13 +142,13 @@ The two platforms disagree about the *size* of the element→surface penalty, an
 | Iteration cost | **4(N+M)+2 = 34 cycles** for a 4 × 4 sample | same | source statement — **not a duration** | T-BA-04 |
 | Convergence | **5–15 iterations = 170–510 function evaluations** | same | measured | T-BA-05 |
 | **Convergence time** | **≈2.5 min** (average, 4 × 4, from zero-actuation state) | same | **measured — stated directly by the source** | **T-BA-05** |
-| Open-loop replay rate | **10 fps** once voltages are known | same | measured — **a rate, not a latency** | T-BA-06 |
+| Open-loop actuation update rate | **10 fps**, for sequences whose voltages were designed by the source's **model-driven** inverse method | same | measured — **a rate, not a latency** | T-BA-06 |
 
 > **⚠ Corrected 17 August 2026.** This category previously recorded an "implied convergence time" of ≈1.25–3.75 s derived as 5–15 × 0.25 s. **That derivation was invalid and is retracted** (E-DR-03; `citation_audit.md` C5): an iteration comprises 34 feedback cycles, and the supplementary information states the convergence time directly as ≈2.5 min — about forty times larger.
 
 One entry, one platform, no RF. But it is the only measurement in this corpus of *what it costs to make a surface actually reach a commanded shape under feedback*, and **on that same platform** it is more than three orders of magnitude larger than the element response (T-BA-01, < 0.07 s) that the system literature cites as the feasibility argument. Because no second platform measures closed-loop convergence, this level of the comparison is **not independently replicated** and must never be presented as one.
 
-The two figures in this category must not be collapsed. **≈2.5 min is the cost of *searching* for the actuation voltages that realise a new target shape** on a nonlinear structure with a camera in the loop; **10 fps is the cost of *replaying* voltages already known.** Both are properties of the same platform. Which one is relevant to a FIM depends on whether the required geometry can be precomputed — a question no reviewed system paper poses. The informal phrase "morphing time" does not distinguish them, which is precisely the failure this matrix exists to prevent.
+The two figures in this category must not be collapsed. **≈2.5 min is the cost of *searching* for the actuation voltages that realise a new target shape** on a nonlinear structure with a camera in the loop; **10 fps is the rate at which the platform actuates when the voltages come from the source's model-driven inverse method instead**, which is how the source's own demonstrations at that rate were produced. It is not a replay of what the search found, and the register does not describe it as one. Both are properties of the same platform. Which one is relevant to a FIM depends on whether the required geometry can be precomputed — a question no reviewed system paper poses. The informal phrase "morphing time" does not distinguish them, which is precisely the failure this matrix exists to prevent.
 
 ---
 
@@ -203,13 +203,13 @@ Because the categories are not commensurable, the manuscript presents them as **
  [PARTIAL LOOP]                          ├─ FISP 16.76 ms, shape acq → bias out (A3, T-LI-04) ─┤
  [MECH ELEM]                             ├─ ribbon 30 ms (A4) · beam <70 ms (A4) ─┤
  [MECH SURF]                                      ├─ <0.1 s (A4) · 300 ms (A4) · 650 ms (A4) ─┤
- [MECH LOOP — replay]                     ◄ 10 fps open-loop, voltages known (A4, T-BA-06)
+ [MECH LOOP — model-driven]               ◄ 10 fps open-loop, voltages model-designed (A4, T-BA-06)
  [MECH LOOP — search]                                                              ├── ≈2.5 min closed-loop convergence (A4, T-BA-05) ──┤
  [RF STABILISATION, static geometry]     ├─ 16.7 ms trigger → stable RF (A3, T-LI-06) ─┤
  [COMMANDED ACTUATION, RADIATING APERTURE]                          ▓▓ NO MEASUREMENT FOUND IN REVIEWED SET ▓▓
  [RF SETTLING AFTER COMMANDED MORPH]              ▓▓ NO MEASUREMENT FOUND IN REVIEWED SET ▓▓
 ```
 
-*Figure note: the two `MECH LOOP` rows belong to one platform and differ by more than three orders of magnitude because they time different operations — replaying a known shape versus searching for an unknown one. Any rendering of this figure must keep them on separate rows and label them, or it will reproduce the substitution the manuscript documents.*
+*Figure note: the two `MECH LOOP` rows belong to one platform and differ by more than three orders of magnitude because they time different operations — actuating from a precomputed sequence versus searching for one. Any rendering of this figure must keep them on separate rows and label them, or it will reproduce the substitution the manuscript documents.*
 
 The two shaded bands are the manuscript's conclusion. Every process for which a number exists is measured on an architecture that is missing at least one of: an RF layer, controlled geometry, or a channel.

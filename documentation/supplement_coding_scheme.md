@@ -59,25 +59,25 @@ No reviewed source reaches L7. The reason is the integration gap stated in §5.3
 | **Ranasinghe *et al.* [1]** | A1 | ✗ | ✗ | A | S | ✗ | ✗ | A (instant) | ✗ | ✗ | A — unbounded shape reuse | 0 | 0 |
 | **An *et al.* [2]** | A1 | ✗ | ✗ | A (perfect CSI) | S | ✗ | ✗ | A (instant) | ✗ | ✗ | A (quasi-static) | 0 | 0 |
 | **Yang *et al.* [3]** | A1 | ✗ | ✗ | **S·T** runtime | S | ✗ | A (per slot) | A (per subframe) | ✗ | ✗ | A | 1 | 0 |
-| **Morales Sandoval *et al.* [15]** | A1 | ✗ | ✗ | A | S | ✗ | ✗ | A | ✗ | ✗ | A | 0 | 0 |
-| **Xu *et al.* [19]** | A5 | S (pilots) | n/a | S | S | ✗ | A | n/a | n/a | ✗ | S | 0 | 0 |
-| **Li *et al.* [6]** | A3 | **Q·(T)** ≈2 ms reception (share of ≈4 ms) | **Q·(T)** ≈2 ms processing; RMSD 2.36 mm is an *accuracy* | ✗ absent | **Q·T** ANN ≈2 ms | **Q·(T)** ≈5.5 ms RS-232 residual | **Q·T** 5.25 ms supply | ✗ external | ✗ | D (folded into a learned map) | **Q·T**‡ | **3** | 3 |
-| **Lu *et al.* [18]** | A3 | ✗ | ✗ (a priori) | ✗ | S | ? | D | ✗ (static) | ✗ | D per curvature | **Q** patterns | 0 | 0 |
-| **Neuder *et al.* [5]** | A5 | ✗ | n/a | ✗ | ✗ | ✗ | **Q·T** 15 / 72 ms | n/a | n/a | ✗ | **Q** patterns | 1 | 0 |
-| **Akram *et al.* [4]** | A5 | ✗ | n/a | ✗ | ✗ | **Q·[R]** ×¼ multiplexing rate | **Q·T** <0.1 ms / <10 ms | n/a | n/a | ✗ | **Q** patterns, power | **1** | 0 |
-| **Bai *et al.* [7]** | A4 | **Q·T** 0.08 ± 0.04 s | **Q·T** 0.11 ± 0.05 s | n/a | **Q·(T)** optimisation ≈0 | **Q·T** 0.06 ± 0.01 s | n/a | **Q·T** <0.07 s / <0.1 s | **Q·[A]** 0.1 ± 0.05 s allocated pause | ✗ | ✗ no RF layer | **4** | 1 |
+| **Morales Sandoval *et al.* [18]** | A1 | ✗ | ✗ | A | S | ✗ | ✗ | A | ✗ | ✗ | A | 0 | 0 |
+| **Xu *et al.* [4]** | A5 | S (pilots) | n/a | S | S | ✗ | A | n/a | n/a | ✗ | S | 0 | 0 |
+| **Li *et al.* [7]** | A3 | **Q·(T)** ≈2 ms reception (share of ≈4 ms) | **Q·(T)** ≈2 ms processing; RMSD 2.36 mm is an *accuracy* | ✗ absent | **Q·T** ANN ≈2 ms | **Q·(T)** ≈5.5 ms RS-232 residual | **Q·T** 5.25 ms supply | ✗ external | ✗ | D (folded into a learned map) | **Q·T**‡ | **3** | 3 |
+| **Lu *et al.* [21]** | A3 | ✗ | ✗ (a priori) | ✗ | S | ? | D | ✗ (static) | ✗ | D per curvature | **Q** patterns | 0 | 0 |
+| **Neuder *et al.* [6]** | A5 | ✗ | n/a | ✗ | ✗ | ✗ | **Q·T** 15 / 72 ms | n/a | n/a | ✗ | **Q** patterns | 1 | 0 |
+| **Akram *et al.* [5]** | A5 | ✗ | n/a | ✗ | ✗ | **Q·[R]** ×¼ multiplexing rate | **Q·(T)** <0.1 ms and <10 ms are upper bounds on the same 16 × 16 tile, both ending at the configuration write; they bound an aggregate containing this stage rather than timing it | n/a | n/a | ✗ | **Q** patterns, 20.2 dBi, 8.25–13 W — **untimed** | **0** | 1 |
+| **Bai *et al.* [22]** | A4 | **Q·T** 0.08 ± 0.04 s | **Q·T** 0.11 ± 0.05 s | n/a | **Q·(T)** optimisation ≈0 | **Q·T** 0.06 ± 0.01 s | n/a | **Q·T** <0.07 s / <0.1 s | **Q·[A]** 0.1 ± 0.05 s allocated pause | ✗ | ✗ no RF layer | **4** | 1 |
 | **Ni *et al.* [8]** | A4 | ✗ | ✗ | n/a | ✗ (scripted) | **Q·(T)** ≈50 ms script (component of ≈650 ms) | n/a | **Q·T** 30 / 300 ms | **Q·(T)** ≈250 ms within the 300 ms | ✗ | ✗ no RF layer | **1** | 2 |
-| **Gal-Katziri *et al.* [20]** | A7 | D self-sensing | D | ✗ | D | D | D | ✗ external | ✗ | **D — no duration** | **Q** ≈80 mW at 1 m | 0 | 0 |
+| **Gal-Katziri *et al.* [23]** | A7 | D self-sensing | D | ✗ | D | D | D | ✗ external | ✗ | **D — no duration** | **Q** ≈80 mW at 1 m | 0 | 0 |
 | **Ma *et al.* [11]** | A6 review | RS | RS | RS | RS | RS | RS | RS — names movement time as a required model input | RS — names settling likewise | RS | RS | 0 | 0 |
 
-‡ **The one cell that records two experiments.** [6]'s S10 must not be collapsed. In the dynamic-bending demonstration the geometry is changing — a QPSK video link is held at error vector magnitude around −20 dB while the surface is bent — and nothing is timed. In the second experiment an interval of 16.7 ms from trigger to stabilised radiation is recorded, and the geometry is static throughout. Writing "[6] times S10" without that condition would assert a post-morph stabilisation measurement that does not exist.
+‡ **The one cell that records two experiments.** [7]'s S10 must not be collapsed. In the dynamic-bending demonstration the geometry is changing — a QPSK video link is held at error vector magnitude around −20 dB while the surface is bent — and nothing is timed. In the second experiment an interval of 16.7 ms from trigger to stabilised radiation is recorded, and the geometry is static throughout. Writing "[7] times S10" without that condition would assert a post-morph stabilisation measurement that does not exist.
 
 ## S6.4 The counts that follow
 
 | Count | Value | Reached by |
 |---|---|---|
-| Quantitatively evidenced stages (Axis A = Q) | **6** | [6], [7] |
-| Measured stage durations (`·T`) | **4** | [7] alone |
-| Stages carrying any duration information (`·T` + `·(T)`) | **6** | [6] alone |
+| Quantitatively evidenced stages (Axis A = Q) | **6** | [7], [22] |
+| Measured stage durations (`·T`) | **4** | [22] alone |
+| Stages carrying any duration information (`·T` + `·(T)`) | **6** | [7] alone |
 
-The timed sets of the two best-covered platforms overlap at S1, S2, S4 and S5 and differ exactly at the boundary the review is about: [6] carries S6 and S10 and cannot command a shape, while [7] carries S7 and does not radiate. These counts are recomputed from the matrix above by `tools/c1_stage_counts.py` in the public reproducibility repository, so they cannot drift from the prose.
+The timed sets of the two best-covered platforms overlap at S1, S2, S4 and S5 and differ exactly at the boundary the review is about: [7] carries S6 and S10 and cannot command a shape, while [22] carries S7 and does not radiate. These counts are recomputed from the matrix above by `tools/c1_stage_counts.py` in the public reproducibility repository, so they cannot drift from the prose.
