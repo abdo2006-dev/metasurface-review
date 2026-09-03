@@ -86,8 +86,11 @@ for f in sections:
     for m in WORD_CLAIM.finditer(text):
         stated.append((f.name, None, m.group(0)))
 
-ck("manuscript states the register count exactly once",
-   len(stated) == 1, "; ".join(f"{a}: {c}" for a, _, c in stated) or "no statement found")
+# The mirror's manuscript directory also holds `COMPLETE_MANUSCRIPT.md`, the generated
+# concatenation of the sections, so the statement legitimately appears more than once
+# there. What matters is that at least one exists and that every one of them agrees.
+ck("manuscript states the register count",
+   bool(stated), "; ".join(f"{a}: {c}" for a, _, c in stated) or "no statement found")
 
 for name, value, phrase in stated:
     ck(f"stated count in {name} is a number, not a word",
@@ -101,5 +104,5 @@ for f in sections:
        OBSOLETE not in f.read_text(encoding="utf-8"),
        on_fail=f'contains the obsolete phrase "{OBSOLETE}"')
 
-print(f"\n{len(sections) * 1 + 5 + 2 * len(stated) - len(fails)} passed, {len(fails)} failed")
+print(f"\n{len(sections) + 5 + 2 * len(stated) - len(fails)} passed, {len(fails)} failed")
 sys.exit(1 if fails else 0)
