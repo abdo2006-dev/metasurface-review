@@ -4,7 +4,7 @@ Manuscript: v0.30d
 Documentation: v1.20
 
 Private source repository commit:
-`367a58917295a34bee94871621d374ec3f0897c6`
+`367a58917295a34bee94871621d374ec3f0897c6` (private working tree was NOT clean at sync time -- see below)
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
@@ -86,6 +86,7 @@ Files synchronized from private source:
 - `tools/build_s11_study_register.py`
 - `tools/c1_stage_counts.py`
 - `tools/check_corpus_counts.py`
+- `tools/check_manuscript_claims.py`
 - `tools/check_mirror_links.py`
 - `tools/check_s11_consistency.py`
 - `tools/check_supplement_matrix.py`
