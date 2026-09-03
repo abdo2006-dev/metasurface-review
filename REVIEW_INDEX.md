@@ -8,10 +8,10 @@
 
 | | |
 |---|---|
-| Manuscript version | **v0.30d** |
-| Documentation version | **v1.20** |
-| Snapshot generated | 2026-09-03 19:44 UTC |
-| Corresponding private working-repository commit | `8598816dcb40dad1b53155a40767a02c7bdb4654` |
+| Manuscript version | **v0.30e** |
+| Documentation version | **v1.21** |
+| Snapshot generated | 2026-09-03 20:33 UTC |
+| Corresponding private working-repository commit | `8f2c2dd93a25cfad563f74a99596520691787625` |
 | Corresponding public review-repository commit | this commit (see `git log -1` in this repository) |
 
 Full detail in [`CURRENT_VERSION.md`](CURRENT_VERSION.md).
@@ -55,7 +55,7 @@ The manuscript's four contributions, quoted rather than paraphrased so their evi
 
 > **C1 — Architecture-aware adaptation-chain framework.** FIM adaptation is decomposed into ten stages from sensing to stabilised radiation, and each source's treatment of each stage is coded on two axes: what the source establishes about the stage, and what it establishes about how long the stage takes. Applied to the reviewed set, no platform measures the duration of more than four of the ten stages, and the platform reaching four has no radio-frequency layer.
 >
-> **C2 — Definition-preserving timing register.** Every reported value is recorded with its timed object, start event, end event and measurement status, and values may be compared only within a comparability class. Two common simplifications do not survive that discipline: an element-level update time cannot stand in for an aperture-level configuration time, as one panel's own two bounds show; and the reported ranges for electronic and mechanical processes overlap once the tuning mechanism is named, so an architecture label alone does not order them.
+> **C2 — Definition-preserving timing register.** Every reported value is recorded with its timed object, start event, end event and measurement status, and values may be compared only within a comparability class. Two common simplifications fail that test: an element-level update time cannot stand in for an aperture-level configuration time, as one panel's own two bounds show; and the reported ranges for electronic and mechanical processes overlap once the tuning mechanism is named, so an architecture label alone does not order them.
 >
 > **C3 — Traceability audit of the hardware-feasibility premises.** Three premises from the FIM system literature are traced to the primary measurements behind them. Among the 13 of 20 candidate citing studies whose full texts were accessible, four reuse a timing value with its scope changed, and those four form one connected co-authorship network; the remainder cite the same hardware and attach no timing value at all. Every count is a lower bound on a partially observed set, and no prevalence claim is made. Section 5.2 gives the instances and the bounds.
 >

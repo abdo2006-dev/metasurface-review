@@ -1,6 +1,6 @@
 # Source Version Map
 
-**Snapshot: manuscript v0.30d, documentation v1.20, generated 2026-09-03 19:44 UTC.**
+**Snapshot: manuscript v0.30e, documentation v1.21, generated 2026-09-03 20:33 UTC.**
 
 Bibliographic identity and version-inspection status for every source cited in the manuscript's numbered reference list (`manuscript/99_references.md`), plus every external source verified for the bibliography but cited only in passing. **This is metadata only — no source PDF is distributed in this repository.** Every DOI and arXiv identifier here was resolved against the publisher-deposited Crossref record or the arXiv metadata endpoint on 18 August 2026 (`documentation/source_inventory.md` §3b). Full extraction detail, per-quantity locators, and independence-group definitions are in `documentation/source_inventory.md` and `documentation/audits/independence_audit.md`; this table is a navigation aid, not a replacement for them.
 
@@ -69,6 +69,6 @@ Bibliographic identity and version-inspection status for every source cited in t
 | [17] | PAR-23 | Shape-morphing antenna array by 4D-printed multimaterial Miura origami | S. Park, E. Park, M. Lee, Lim | 2023 | *ACS Appl. Mater. Interfaces* 15(42):49843–49853 · 10.1021/acsami.3c11425 | **N — abstract and Crossref record only; full text paywalled and not read** | **not independent of [16]**; no claim beyond its abstract is drawn, and no timing value is taken from it | 2,3 |
 | [36] | BAN-24 | Optimal morphing metasurface lens for next-generation RF sensing and communications | Bansal, Hewson, Santer, Whittow | 2024 | *EuCAP*, pp. 1–3 · 10.23919/EuCAP60739.2024.10501383 | N | **author-disjoint** from the FIM lineage and from all three forward-citation seeds — one of the two counterexample studies behind C3's restraint finding (`documentation/s11_study_register.md`, F-BAN) | 5,S |
 
-## Held but not cited in the manuscript text (as of v0.30d)
+## Held but not cited in the manuscript text (as of v0.30e)
 
 `TAG-20` (Taghvaee, *Scalability Analysis of Programmable Metasurfaces for Beam Steering*, arXiv:2004.06917) is present in the project corpus and belongs to the separate, out-of-scope CST/full-wave companion project (`documentation/article_type_assessment.md` §6). It does not appear in `manuscript/99_references.md` and carries no manuscript-section citation.
