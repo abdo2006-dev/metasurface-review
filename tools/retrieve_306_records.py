@@ -17,11 +17,15 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _paths import ROOT, DOC, MANUSCRIPT, DECISIONS, WORKS, RECORDS, REGISTER, MATRIX
-import csv, json, sys, time, urllib.parse, urllib.request
+import csv, json, os, sys, time, urllib.parse, urllib.request
 from pathlib import Path
 
 OPENALEX = "https://api.openalex.org/works"
-MAILTO = "abdo.studyy@gmail.com"
+# OpenAlex asks for a contact address in the polite pool. It affects the rate tier the
+# request is served from and nothing else -- the result set is fixed by the filter -- so
+# a placeholder reproduces the same records. Override with OPENALEX_MAILTO to be served
+# from the polite pool under your own address. Matches reproduce_forward_citation_search.py.
+MAILTO = os.environ.get("OPENALEX_MAILTO", "metasurface-review@example.org")
 
 SEEDS = {
     "BAI": {"openalex": "W4296552404", "doi": "10.1038/s41586-022-05061-w"},
