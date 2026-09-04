@@ -125,7 +125,7 @@ supplies evidence for, and of what kind.
 |---|---|
 | Corpus | **24 distinct research contributions** across 34 files (26 unique documents) |
 | Bibliography | **36 entries** |
-| Timing register | **35 entries**, each with object, start event, end event and measurement status |
+| Timing register | complete **35-entry register**, each row carrying its timed object, start event, end event and measurement status |
 | Adaptation chain | ten stages, S1–S10 (S1-G and S1-C are analytical sublabels of one stage) |
 | Architecture classes | A1–A7 |
 | Validation gaps | G1–G4 |
@@ -181,4 +181,4 @@ v0.30e. Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
 
 ---
 
-<sub>Snapshot generated 2026-09-04 15:24 UTC from private commit `5988fea8b0f1752c06c30ef92195f78d62b3905b`.</sub>
+<sub>Snapshot generated 2026-09-04 15:25 UTC from private commit `54f0aa97a13252e7e9390b05d080d8f675a5b2a5`.</sub>
