@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: >-
+  If you refer to this work, please cite it as an unpublished manuscript using the
+  metadata below. It has not been submitted to or accepted by any venue and has not
+  been peer reviewed.
+title: >-
+  Flexible Intelligent Metasurfaces for High-Mobility ISAC: Hardware Evidence,
+  Adaptation Timescales, and Validation Gaps
+abstract: >-
+  Reproducibility package for a structured critical review of flexible intelligent
+  metasurfaces in high-mobility integrated sensing and communication. It contains the
+  manuscript, the adaptation-stage and timing evidence registers behind it, the
+  citation-traceability audit, and the scripts that reproduce the literature search
+  and the consistency checks. The corpus PDFs themselves are not distributed.
+type: software
+authors:
+  - given-names: Abdulrahman
+    family-names: Ahmad
+    affiliation: Constructor University
+    email: abdo.studyy@gmail.com
+version: "v0.30e"
+date-released: "2026-09-04"
+repository-code: https://github.com/abdo2006-dev/metasurface-review
+keywords:
+  - flexible intelligent metasurface
+  - reconfigurable intelligent surface
+  - integrated sensing and communication
+  - high mobility
+  - adaptation latency
+  - hardware validation
+  - evidence synthesis
+  - research reproducibility
+preferred-citation:
+  type: manuscript
+  title: >-
+    Flexible Intelligent Metasurfaces for High-Mobility ISAC: Hardware Evidence,
+    Adaptation Timescales, and Validation Gaps
+  authors:
+    - given-names: Abdulrahman
+      family-names: Ahmad
+      affiliation: Constructor University
+  year: 2026
+  notes: >-
+    Unpublished manuscript, version v0.30e. Not submitted to or accepted
+    by any venue; not peer reviewed. No open-source licence is granted over the manuscript
+    text or the original analysis -- see LICENSE_OR_NOTICE.md in this repository.

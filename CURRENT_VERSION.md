@@ -4,13 +4,13 @@ Manuscript: v0.30e
 Documentation: v1.23
 
 Private source repository commit:
-`98fca5b2879fc066857c6da6e983a1f0e4d39d3f`
+`5988fea8b0f1752c06c30ef92195f78d62b3905b`
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-09-03 23:04 UTC`
+`2026-09-04 15:24 UTC`
 
 Scientific freeze status:
 `Manuscript v0.30e / documentation v1.23. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.23.`
