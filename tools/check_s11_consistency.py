@@ -27,6 +27,16 @@ R, A, RO, C1 = C["retrieval"], C["access"], C["roles"], C["c1"]
 
 # Files whose old numbers are legitimately historical.
 EXEMPT_FILES = {"CHANGELOG.md", "s11_study_register.md"}
+
+# Private records that live outside Documentation/. They are scanned -- a stale count in a
+# drafting or QA record is still a stale count -- but the correction history is exempt for
+# the same reason CHANGELOG.md is: CORRECTION_REPORT.md and FINAL_AUDIT_REPORT.md are dated
+# records of what was believed and what was found at the time, and CORRECTION_REPORT.md §14
+# explicitly refuses to rewrite the audit report because its text *is* the record of what
+# the audit said. Rewriting either to satisfy a count guard would destroy the evidence the
+# guard exists to protect.
+INTERNAL_ROOT = ROOT / "90_INTERNAL"
+HISTORICAL_DIRS = {"01_CORRECTION_HISTORY"}
 # Lines marked as historical are exempt anywhere.
 EXEMPT_LINE = re.compile(r"historical|superseded|v0\.2[01] said|was recorded as|earlier draft|"
                          r"corrected second pass|What the corrected|v1\.[0-9]+ |was wrong|recount|→|earlier version|credited|Comparison:|Correction \(v0|previously named|previously said|Prior passes|prior revision", re.I)
@@ -87,6 +97,15 @@ def active_files():
     tmpl = ROOT / "tools" / "review_repo_templates"
     if tmpl.is_dir():
         out += sorted(tmpl.glob("*.tmpl"))
+    # The drafting and publication-QA records moved out of Documentation/ when the project
+    # was organised; they were scanned there and they are scanned here. Following them was
+    # the point -- a validator that stopped checking a file because the file was tidied away
+    # would be enforcing an accidental layout rather than a claim.
+    if INTERNAL_ROOT.is_dir():
+        for sub in sorted(p for p in INTERNAL_ROOT.iterdir() if p.is_dir()):
+            if sub.name in HISTORICAL_DIRS:
+                continue
+            out += sorted(sub.rglob("*.md"))
     return [f for f in dict.fromkeys(out) if f.name not in EXEMPT_FILES]
 
 

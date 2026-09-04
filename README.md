@@ -181,4 +181,4 @@ v0.30e. Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
 
 ---
 
-<sub>Snapshot generated 2026-09-04 15:26 UTC from private commit `e1b764e645b9f91fd7decb42c35bde72c857dabb`.</sub>
+<sub>Snapshot generated 2026-09-04 16:07 UTC from private commit `b68d3058dd1a7df0e47847ef60407634c61e029c`.</sub>

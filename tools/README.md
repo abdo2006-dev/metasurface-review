@@ -21,6 +21,7 @@ two retrieval scripts; the rest work offline against the committed CSVs.
 | Study-level register and counts | `build_s11_study_register.py`, `s11_counts.py` | **generated** from the CSVs |
 | C1 per-source stage counts | `c1_stage_counts.py` | **generated** by parsing `documentation/adaptation_chain_matrix.md` |
 | Stale-count guard | `check_s11_consistency.py` | fails if any active document disagrees with the authoritative counts |
+| Corpus membership | `check_corpus_counts.py` | checks the two prose statements of the corpus totals against each other, and — in the working repository — against a manifest that declares the reviewed set file by file with its SHA-256 |
 
 Both retrieval scripts **report drift** against the recorded snapshot rather than
 overwriting it. If OpenAlex has changed since 18 August 2026, you will see the
@@ -37,6 +38,21 @@ difference printed; the committed CSVs remain the snapshot the manuscript descri
 
 No third-party full text is included in this repository. Titles, DOIs and author
 lists are bibliographic metadata.
+
+## The corpus check, in this repository and in the working one
+
+`check_corpus_counts.py` asserts two different things depending on where it runs. Everywhere, it
+requires the file, document and contribution totals stated in manuscript §2 to match those stated
+in `source_inventory.md`. In the working repository it additionally reads
+`03_SOURCES/00_INDEX/CORPUS_MANIFEST.csv`, which declares each reviewed source with its SHA-256,
+and requires the row count to equal the stated file count, every declared file to be present and
+unaltered, and no duplicate or undeclared source.
+
+This repository carries no third-party PDFs and therefore no manifest, so that half does not apply
+here. It is skipped only because this repository is **identified** as the public snapshot, by a
+file only the snapshot has — never because no PDFs were found. The earlier version inferred the
+opposite way round, and would have stopped checking anything at all if the sources were ever moved.
+`test_check_corpus_counts.py` covers each failure mode, including that one.
 
 ## Run
 

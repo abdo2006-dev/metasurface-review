@@ -10,8 +10,8 @@
 |---|---|
 | Manuscript version | **v0.30e** |
 | Documentation version | **v1.23** |
-| Snapshot generated | 2026-09-04 15:26 UTC |
-| Corresponding private working-repository commit | `e1b764e645b9f91fd7decb42c35bde72c857dabb` |
+| Snapshot generated | 2026-09-04 16:07 UTC |
+| Corresponding private working-repository commit | `b68d3058dd1a7df0e47847ef60407634c61e029c` |
 | Corresponding public review-repository commit | this commit (see `git log -1` in this repository) |
 
 Full detail in [`CURRENT_VERSION.md`](CURRENT_VERSION.md).
