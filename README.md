@@ -13,8 +13,38 @@ anywhere in it. This is a **structured critical review, not a systematic review*
 distinction is argued in `documentation/article_type_assessment.md` and matters for how the
 counts below should be read.
 
-Current snapshot: manuscript **v0.30e**, documentation **v1.23** — see
+Current snapshot: manuscript **v0.30e**, documentation **v1.24** — see
 [`CURRENT_VERSION.md`](CURRENT_VERSION.md).
+
+---
+
+## What this project demonstrates
+
+A short orientation for a reader arriving without context. Each item links to where the work
+itself is, and each is bounded by the limitations in §9.
+
+- **Architecture-aware analysis of FIM hardware evidence** — reported timing evidence is read
+  against the platform class that produced it, so a measurement is never transferred to a
+  platform that could not have produced it. [`documentation/architecture_taxonomy.md`](documentation/architecture_taxonomy.md)
+- **A ten-stage adaptation framework** — adaptation is decomposed from sensing to stabilised
+  radiation, and every source is assessed against the same ten stages on two axes: what it
+  establishes about a stage, and what it establishes about how long that stage takes.
+  [`documentation/adaptation_chain_matrix.md`](documentation/adaptation_chain_matrix.md)
+- **A 35-entry timing register with explicit definitions** — every reported value carries its
+  timed object, start event, end event and measurement status, so two values are compared only
+  when they are genuinely comparable. [`documentation/supplement_timing_register.md`](documentation/supplement_timing_register.md)
+- **A citation-traceability analysis** — hardware-feasibility premises traced through the
+  citation chain to the primary measurements behind them, with every count stated as a lower
+  bound. [`documentation/audits/citation_audit.md`](documentation/audits/citation_audit.md)
+- **Reproducible literature-search and consistency-check scripts** — the forward-citation
+  retrieval and the validators that hold the prose to the registers both run from
+  [`tools/`](tools/), offline, against committed records.
+- **A full review manuscript and supplementary evidence package** — seven sections, four
+  figures, 36 bibliography entries and the registers behind them.
+  [`manuscript/COMPLETE_MANUSCRIPT.md`](manuscript/COMPLETE_MANUSCRIPT.md)
+
+The manuscript is **unpublished and not peer reviewed**, extraction was performed by a single
+reviewer, and no domain-expert review has taken place. §9 states the limitations in full.
 
 ---
 
@@ -181,4 +211,4 @@ v0.30e. Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
 
 ---
 
-<sub>Snapshot generated 2026-09-04 16:07 UTC from private commit `b68d3058dd1a7df0e47847ef60407634c61e029c`.</sub>
+<sub>Snapshot generated 2026-09-08 21:54 UTC from private commit `ee9a1594a75f196dbb5e817bf8910e5fec45929c`.</sub>

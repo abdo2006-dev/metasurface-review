@@ -2,7 +2,7 @@
 
 > ⚠ **Section numbers in this file are v0.14 numbering.** The manuscript was restructured into twelve sections on 18 August 2026 (draft v0.20). Use the crosswalk at the end of `manuscript_argument_map.md`; most often, **§6.5 → §8** (traceability) and **§9.4 → §11.4** (limitations). The scientific content of this file is unchanged and still governs.
 
-**Version:** 1.2 · **Search conducted:** 17 August 2026; **forward citation search (S11) 18 August 2026**; **corpus-boundary searches S12–S13 and version-of-record re-audit S14, 3 September 2026** · **Searcher:** Claude (Opus 5)
+**Version:** 1.2 · **Search conducted:** 17 August 2026; **forward citation search (S11) 18 August 2026**; **corpus-boundary searches S12–S13 and version-of-record re-audit S14, 3 September 2026** · **Searcher:** single AI-assisted analyst; no independent second screener (see §1)
 **Purpose:** to record every search performed *beyond* the supplied project corpus, so that novelty and absence claims can be scoped honestly.
 
 ---
@@ -17,7 +17,7 @@ This log records a **targeted verification search**, not a systematic search. Sp
 | Protocol registered or pre-specified before searching | ✗ not done |
 | Exhaustive Boolean strings with controlled vocabulary / MeSH-equivalent | ✗ not done |
 | Year, language and document-type filters applied and recorded | ✗ not applied |
-| Two independent screeners, disagreement resolution | ✗ single agent |
+| Two independent screeners, disagreement resolution | ✗ single AI-assisted analyst |
 | Full backward citation chasing (all reference lists) | ✗ partial only |
 | Full forward citation chasing (cited-by) | ✅ **done 18 Aug 2026 (S11)** — exhaustive cited-by retrieval for BAI-22, NI-22 and LI-25 via the OpenAlex citation graph, 262 unique works screened. Bounded by full-text access: 13 of 20 system papers retrieved, 7 paywalled |
 | Duplicate handling and screening flow counts (PRISMA-style) | ✗ not done |

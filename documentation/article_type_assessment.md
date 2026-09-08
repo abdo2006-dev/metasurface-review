@@ -31,7 +31,7 @@ A systematic claim requires a reproducible *search*, not merely a reproducible *
 | Screening procedure with counts (PRISMA flow) | ✗ | — |
 | Backward citation searching | partial | reference lists of RAN-25 and MOR-26 inspected; not exhaustive |
 | Forward citation searching | ✗ | **the highest-value missing step** |
-| Two independent screeners | ✗ single agent | — |
+| Two independent screeners | ✗ single AI-assisted analyst | — |
 | Risk-of-bias / quality appraisal instrument | ✓ **substitute present** — the evidence ladder L1–L7 in `evidence_strength_matrix.md` functions as a domain-appropriate appraisal instrument | — |
 
 Calling this a systematic review would be a methodological misstatement of exactly the kind the manuscript criticises in others. It would also be the easiest thing for a reviewer to reject.
@@ -87,7 +87,7 @@ Applying the gate criteria in the project brief §16:
 
 | Criterion | Status |
 |---|---|
-| CST methodology validated | ✗ — no CST results exist yet; the sprint (E0–E6 in the workbook) has not started |
+| CST methodology validated | ✗ — no CST results existed when this assessment was made (August 2026) |
 | Result relevant to the review's central argument | ✗ — the central question is *when* operations must occur and *what has been measured*. The CST study asks how much beam degradation is attributable to curvature, oblique incidence and phase quantisation on a **static** aperture. It contains no time variable. |
 | Result provides an interpretable contribution to this argument | ✗ |
 | Original technical work suits the selected article type | ✗ — a structured critical review does not require, and a reviewer would not expect, an embedded unrelated full-wave study |

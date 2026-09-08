@@ -1,6 +1,6 @@
 # Source Inventory
 
-**Version:** 1.1 · **Compiled:** 17 August 2026 · **Amended:** 18 August 2026 (freeze consistency gate) · **Compiler:** Claude (Opus 5), acting as research/evidence-audit agent
+**Version:** 1.1 · **Compiled:** 17 August 2026 · **Amended:** 18 August 2026 (freeze consistency gate) · **Compiled by:** single AI-assisted analyst, working as the project's evidence auditor; not independently duplicated
 **Scope:** every file physically present in `Metasurfaces/` as of the compilation date, plus sources identified through the documented external search (see `literature_search_log.md`).
 
 ---

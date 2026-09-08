@@ -1,19 +1,19 @@
 # Current Review Snapshot
 
 Manuscript: v0.30e
-Documentation: v1.23
+Documentation: v1.24
 
 Private source repository commit:
-`b68d3058dd1a7df0e47847ef60407634c61e029c`
+`ee9a1594a75f196dbb5e817bf8910e5fec45929c` (private working tree was NOT clean at sync time -- see below)
 
 Public review repository commit:
 `this commit` (see `git log -1` in this repository)
 
 Generated:
-`2026-09-04 16:07 UTC`
+`2026-09-08 21:54 UTC`
 
 Scientific freeze status:
-`Manuscript v0.30e / documentation v1.23. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.23.`
+`Manuscript v0.30e / documentation v1.24. Seven numbered sections. The v0.24 pass rebuilt the timing taxonomy on two axes, which is where the measured-duration maximum became 4; v0.28 restructured the article from twelve sections to seven and moved the audit machinery to the supplementary material; v0.28a renumbered the figures into order of appearance and corrected the object attributed to one cited control-path bound after re-reading the primary source. Current C1 maxima: quantitatively evidenced stages 6; measured stage durations 4; stages carrying any duration information 6. Current S11 flow: 306 records -> 262 works -> 65 stage-1 -> 24 records -> 20 studies -> 13 read / 7 unread. See CHANGELOG.md v1.24.`
 
 Known unresolved blockers:
 - no domain-expert review has occurred; extraction and classification were performed by a single reviewer and were not independently duplicated or adjudicated
